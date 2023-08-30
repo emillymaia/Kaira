@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
+		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
+		EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */; };
+		EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE182F722A9F6FE000CE30C8 /* Assets.xcassets */; };
+		EE182F762A9F6FE000CE30C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE182F742A9F6FE000CE30C8 /* LaunchScreen.storyboard */; };
+		EE182F812A9F6FE000CE30C8 /* KairaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F802A9F6FE000CE30C8 /* KairaTests.swift */; };
+		EE182F8B2A9F6FE000CE30C8 /* KairaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */; };
+		EE182F8D2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE182F7D2A9F6FE000CE30C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE182F5E2A9F6FDE00CE30C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE182F652A9F6FDF00CE30C8;
+			remoteInfo = Kaira;
+		};
+		EE182F872A9F6FE000CE30C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE182F5E2A9F6FDE00CE30C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE182F652A9F6FDF00CE30C8;
+			remoteInfo = Kaira;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE182F722A9F6FE000CE30C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE182F752A9F6FE000CE30C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE182F772A9F6FE000CE30C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE182F7C2A9F6FE000CE30C8 /* KairaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KairaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE182F802A9F6FE000CE30C8 /* KairaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaTests.swift; sourceTree = "<group>"; };
+		EE182F862A9F6FE000CE30C8 /* KairaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KairaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITests.swift; sourceTree = "<group>"; };
+		EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE182F632A9F6FDF00CE30C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE182F792A9F6FE000CE30C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE182F832A9F6FE000CE30C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE182F5D2A9F6FDE00CE30C8 = {
+			isa = PBXGroup;
+			children = (
+				EE182F682A9F6FDF00CE30C8 /* Kaira */,
+				EE182F7F2A9F6FE000CE30C8 /* KairaTests */,
+				EE182F892A9F6FE000CE30C8 /* KairaUITests */,
+				EE182F672A9F6FDF00CE30C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE182F672A9F6FDF00CE30C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE182F662A9F6FDF00CE30C8 /* Kaira.app */,
+				EE182F7C2A9F6FE000CE30C8 /* KairaTests.xctest */,
+				EE182F862A9F6FE000CE30C8 /* KairaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE182F682A9F6FDF00CE30C8 /* Kaira */ = {
+			isa = PBXGroup;
+			children = (
+				EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */,
+				EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */,
+				EE182F9D2A9F74A300CE30C8 /* Extension */,
+				EE182F9C2A9F749100CE30C8 /* Controller */,
+				EE182F9B2A9F748100CE30C8 /* View */,
+				EE182F9A2A9F747900CE30C8 /* Model */,
+				EE182F722A9F6FE000CE30C8 /* Assets.xcassets */,
+				EE182F742A9F6FE000CE30C8 /* LaunchScreen.storyboard */,
+				EE182F772A9F6FE000CE30C8 /* Info.plist */,
+			);
+			path = Kaira;
+			sourceTree = "<group>";
+		};
+		EE182F7F2A9F6FE000CE30C8 /* KairaTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE182F802A9F6FE000CE30C8 /* KairaTests.swift */,
+			);
+			path = KairaTests;
+			sourceTree = "<group>";
+		};
+		EE182F892A9F6FE000CE30C8 /* KairaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */,
+				EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */,
+			);
+			path = KairaUITests;
+			sourceTree = "<group>";
+		};
+		EE182F9A2A9F747900CE30C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE182F9B2A9F748100CE30C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE182F9C2A9F749100CE30C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE182F9D2A9F74A300CE30C8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE182F652A9F6FDF00CE30C8 /* Kaira */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE182F902A9F6FE000CE30C8 /* Build configuration list for PBXNativeTarget "Kaira" */;
+			buildPhases = (
+				EE182F622A9F6FDF00CE30C8 /* Sources */,
+				EE182F632A9F6FDF00CE30C8 /* Frameworks */,
+				EE182F642A9F6FDF00CE30C8 /* Resources */,
+				EE182F992A9F735C00CE30C8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kaira;
+			productName = Kaira;
+			productReference = EE182F662A9F6FDF00CE30C8 /* Kaira.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE182F7B2A9F6FE000CE30C8 /* KairaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE182F932A9F6FE000CE30C8 /* Build configuration list for PBXNativeTarget "KairaTests" */;
+			buildPhases = (
+				EE182F782A9F6FE000CE30C8 /* Sources */,
+				EE182F792A9F6FE000CE30C8 /* Frameworks */,
+				EE182F7A2A9F6FE000CE30C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE182F7E2A9F6FE000CE30C8 /* PBXTargetDependency */,
+			);
+			name = KairaTests;
+			productName = KairaTests;
+			productReference = EE182F7C2A9F6FE000CE30C8 /* KairaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE182F852A9F6FE000CE30C8 /* KairaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE182F962A9F6FE000CE30C8 /* Build configuration list for PBXNativeTarget "KairaUITests" */;
+			buildPhases = (
+				EE182F822A9F6FE000CE30C8 /* Sources */,
+				EE182F832A9F6FE000CE30C8 /* Frameworks */,
+				EE182F842A9F6FE000CE30C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE182F882A9F6FE000CE30C8 /* PBXTargetDependency */,
+			);
+			name = KairaUITests;
+			productName = KairaUITests;
+			productReference = EE182F862A9F6FE000CE30C8 /* KairaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE182F5E2A9F6FDE00CE30C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EE182F652A9F6FDF00CE30C8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					EE182F7B2A9F6FE000CE30C8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EE182F652A9F6FDF00CE30C8;
+					};
+					EE182F852A9F6FE000CE30C8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EE182F652A9F6FDF00CE30C8;
+					};
+				};
+			};
+			buildConfigurationList = EE182F612A9F6FDE00CE30C8 /* Build configuration list for PBXProject "Kaira" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE182F5D2A9F6FDE00CE30C8;
+			productRefGroup = EE182F672A9F6FDF00CE30C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE182F652A9F6FDF00CE30C8 /* Kaira */,
+				EE182F7B2A9F6FE000CE30C8 /* KairaTests */,
+				EE182F852A9F6FE000CE30C8 /* KairaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE182F642A9F6FDF00CE30C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE182F762A9F6FE000CE30C8 /* LaunchScreen.storyboard in Resources */,
+				EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE182F7A2A9F6FE000CE30C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE182F842A9F6FE000CE30C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE182F992A9F735C00CE30C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE182F622A9F6FDF00CE30C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */,
+				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
+				EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE182F782A9F6FE000CE30C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE182F812A9F6FE000CE30C8 /* KairaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE182F822A9F6FE000CE30C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE182F8B2A9F6FE000CE30C8 /* KairaUITests.swift in Sources */,
+				EE182F8D2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE182F7E2A9F6FE000CE30C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE182F652A9F6FDF00CE30C8 /* Kaira */;
+			targetProxy = EE182F7D2A9F6FE000CE30C8 /* PBXContainerItemProxy */;
+		};
+		EE182F882A9F6FE000CE30C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE182F652A9F6FDF00CE30C8 /* Kaira */;
+			targetProxy = EE182F872A9F6FE000CE30C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE182F742A9F6FE000CE30C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE182F752A9F6FE000CE30C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE182F8E2A9F6FE000CE30C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE182F8F2A9F6FE000CE30C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE182F912A9F6FE000CE30C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kaira/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.Kaira;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE182F922A9F6FE000CE30C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kaira/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.Kaira;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE182F942A9F6FE000CE30C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.KairaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaira.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kaira";
+			};
+			name = Debug;
+		};
+		EE182F952A9F6FE000CE30C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.KairaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaira.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kaira";
+			};
+			name = Release;
+		};
+		EE182F972A9F6FE000CE30C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.KairaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kaira;
+			};
+			name = Debug;
+		};
+		EE182F982A9F6FE000CE30C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.KairaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kaira;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE182F612A9F6FDE00CE30C8 /* Build configuration list for PBXProject "Kaira" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE182F8E2A9F6FE000CE30C8 /* Debug */,
+				EE182F8F2A9F6FE000CE30C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE182F902A9F6FE000CE30C8 /* Build configuration list for PBXNativeTarget "Kaira" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE182F912A9F6FE000CE30C8 /* Debug */,
+				EE182F922A9F6FE000CE30C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE182F932A9F6FE000CE30C8 /* Build configuration list for PBXNativeTarget "KairaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE182F942A9F6FE000CE30C8 /* Debug */,
+				EE182F952A9F6FE000CE30C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE182F962A9F6FE000CE30C8 /* Build configuration list for PBXNativeTarget "KairaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE182F972A9F6FE000CE30C8 /* Debug */,
+				EE182F982A9F6FE000CE30C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE182F5E2A9F6FDE00CE30C8 /* Project object */;
+}
