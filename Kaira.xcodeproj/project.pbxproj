@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABDFC8842AA4F21C00F19D1A /* HiddenObjectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8832AA4F21C00F19D1A /* HiddenObjectScene.swift */; };
+		ABDFC8862AA5391900F19D1A /* HiddenObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8852AA5391900F19D1A /* HiddenObjectViewController.swift */; };
+		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
 		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
 		EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABDFC8832AA4F21C00F19D1A /* HiddenObjectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenObjectScene.swift; sourceTree = "<group>"; };
+		ABDFC8852AA5391900F19D1A /* HiddenObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenObjectViewController.swift; sourceTree = "<group>"; };
+		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABDFC8802AA4F1C600F19D1A /* HiddenObjectMechanic */ = {
+			isa = PBXGroup;
+			children = (
+				ABDFC8832AA4F21C00F19D1A /* HiddenObjectScene.swift */,
+				ABDFC8852AA5391900F19D1A /* HiddenObjectViewController.swift */,
+			);
+			path = HiddenObjectMechanic;
+			sourceTree = "<group>";
+		};
+		ABDFC8872AA6196E00F19D1A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		EE182F5D2A9F6FDE00CE30C8 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +119,11 @@
 		EE182F682A9F6FDF00CE30C8 /* Kaira */ = {
 			isa = PBXGroup;
 			children = (
+				ABDFC8872AA6196E00F19D1A /* Shared */,
+				ABDFC8802AA4F1C600F19D1A /* HiddenObjectMechanic */,
 				EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */,
 				EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */,
+				ABDFC8882AA61D2200F19D1A /* MenuView.swift */,
 				EE182F9D2A9F74A300CE30C8 /* Extension */,
 				EE182F9C2A9F749100CE30C8 /* Controller */,
 				EE182F9B2A9F748100CE30C8 /* View */,
@@ -299,7 +324,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -308,9 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDFC8842AA4F21C00F19D1A /* HiddenObjectScene.swift in Sources */,
 				EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
+				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,
 				EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */,
+				ABDFC8862AA5391900F19D1A /* HiddenObjectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
