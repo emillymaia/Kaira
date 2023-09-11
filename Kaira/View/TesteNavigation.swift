@@ -19,7 +19,7 @@ class TesteNavigation: SKScene {
     }
 
     @objc func botaoTocado() {
-        let botaoPress = Int(arc4random_uniform(11))
+        let botaoPress = Int.random(in: 1...11)
         print("\(botaoPress)")
         customDelegate?.didUpdateData(data: botaoPress + 1)
     }

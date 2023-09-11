@@ -9,3 +9,9 @@ class ContinentModel {
         self.countries = countries
     }
 }
+
+let continents: [ContinentModel] = [
+    ContinentModel(name: "Ásia", countries: asia),
+    ContinentModel(name: "Europa", countries: europa),
+    ContinentModel(name: "América", countries: america)
+]
