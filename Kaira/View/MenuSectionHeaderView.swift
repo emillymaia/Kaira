@@ -6,7 +6,7 @@ final class MenuSectionHeaderView: UICollectionReusableView {
     lazy var title: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.textColor = .red
+        title.font = UIFont(name: "Pally-Bold", size: 31)
         return title
     }()
 

@@ -59,6 +59,18 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 22)
     }
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+//        return CGSize(width: collectionView.frame.width, height: 20)
+//    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 24
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 24, left: 39, bottom: 48, right: 39)
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let scene = TesteNavigation(size: view.bounds.size)
@@ -78,14 +90,12 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let header = menuView.menuCollectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: indexPath) as? MenuSectionHeaderView
         header?.title.text = "\(taPassandoDados)"
     }
+
 }
 
 extension MenuViewController: DataDelegate {
     func didUpdateData(data: Int) {
         taPassandoDados = data
         print(taPassandoDados)
-        //        for section in 0..<continents.count {
-        //            configureSectionHeader(section)
-        //        }
     }
 }

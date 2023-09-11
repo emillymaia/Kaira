@@ -18,7 +18,6 @@ final class MenuView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: 130, height: 222)
-        layout.minimumLineSpacing = 20
         return layout
     }()
 
