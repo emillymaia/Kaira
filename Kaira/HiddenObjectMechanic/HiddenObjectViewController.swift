@@ -15,11 +15,11 @@ final class HiddenObjectViewController: UIViewController {
         skView.addGestureRecognizer(tapGesture)
     }
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        let touchLocation = sender.location(in: sender.view)
-        if let scene = sender.view as? HiddenObjectScene,
-           let hiddenObject = scene.hiddenObject,
-           hiddenObject.frame.contains(touchLocation) {
-            scene.showHiddenObjectAlert()
-        }
+        _ = sender.location(in: sender.view)
+//        if let scene = sender.view as? HiddenObjectScene,
+//           let hiddenObject = scene.hiddenObject,
+//           hiddenObject.frame.contains(touchLocation) {
+//            scene.showHiddenObjectAlert()
+//        }
     }
 }

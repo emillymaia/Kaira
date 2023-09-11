@@ -4,9 +4,9 @@ import SpriteKit
 final class MenuViewController: UIViewController {
     let menuView = MenuView()
     let continents: [ContinentModel] = [
-        ContinentModel(name: "Asia", countries: asia),
+        ContinentModel(name: "Ásia", countries: asia),
         ContinentModel(name: "Europa", countries: europa),
-        ContinentModel(name: "America", countries: america)
+        ContinentModel(name: "América", countries: america)
     ]
     var taPassandoDados = 0
     
@@ -50,6 +50,9 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
             let continentName = continents[indexPath.section].name
             header.title.text = continentName
+            if continentName.count > 6 {
+                header.title.font = UIFont(name: "Pally-Bold", size: 27)
+            }
             return header
         default:
             return UICollectionReusableView()
@@ -59,10 +62,6 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 22)
     }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.frame.width, height: 20)
-//    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 24
@@ -84,7 +83,8 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         navigationController?.pushViewController(gameViewController, animated: true)
     }
-    
+
+    // nao estou mais utilizando
     func configureSectionHeader(_ section: Int) {
         let indexPath = IndexPath(item: 0, section: section)
         let header = menuView.menuCollectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: indexPath) as? MenuSectionHeaderView
