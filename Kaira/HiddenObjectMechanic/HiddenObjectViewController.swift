@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-//classe  temporária, criada para testar a visualização da mecânica
+// classe  temporária, criada para testar a visualização da mecânica
 final class HiddenObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
