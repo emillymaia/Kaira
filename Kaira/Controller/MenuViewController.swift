@@ -8,9 +8,11 @@ final class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = menuView
+        SoundManager.shared.playBackgroundMusic("backgroundSound")
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.dataSource = self
         didUpdateData(data: taPassandoDados)
+        
     }
 }
 extension MenuViewController: UICollectionViewDataSource {

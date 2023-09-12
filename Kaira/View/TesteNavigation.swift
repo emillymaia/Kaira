@@ -16,11 +16,14 @@ class TesteNavigation: SKScene {
         button.addTarget(self, action: #selector(botaoTocado), for: .touchUpInside)
         let skView = view
         skView.addSubview(button)
+       
+
     }
 
     @objc func botaoTocado() {
         let botaoPress = Int.random(in: 1...11)
         print("\(botaoPress)")
+        SoundManager.shared.playEffectSound("CheckEffect")
         customDelegate?.didUpdateData(data: botaoPress + 1)
     }
 }
