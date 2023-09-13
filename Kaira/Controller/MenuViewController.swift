@@ -62,9 +62,6 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
             }
             let continentName = continents[indexPath.section].name
             header.title.text = continentName
-            if continentName.count > 6 {
-                header.title.font = UIFont(name: "Pally-Bold", size: 27)
-            }
             return header
         default:
             return UICollectionReusableView()
