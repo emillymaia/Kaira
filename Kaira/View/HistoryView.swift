@@ -14,6 +14,7 @@ class HistoryView: UIView {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.font = UIFont(name: "Pally-Regular", size: 17)
+        title.textAlignment = .center
         title.numberOfLines = 0
         return title
     }()
@@ -21,6 +22,7 @@ class HistoryView: UIView {
     var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.clipsToBounds = true
         return button
     }()
 
@@ -45,18 +47,19 @@ class HistoryView: UIView {
 extension HistoryView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            image.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            image.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 96),
             image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19),
             image.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -19),
-            image.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -200),
+            image.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -307),
 
-            text.topAnchor.constraint(equalTo: image.bottomAnchor),
+            text.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 24),
             text.leadingAnchor.constraint(equalTo: image.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: image.trailingAnchor),
 
-            button.topAnchor.constraint(equalTo: text.bottomAnchor),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -48)
+            button.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 8),
+            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 313),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -24)
         ])
     }
 

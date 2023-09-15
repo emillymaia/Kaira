@@ -37,7 +37,7 @@ class HistoryViewController: UIViewController {
         historyView.image.image = UIImage(named: page.image)
         historyView.text.text = page.text
         if page.button == .finish {
-            historyView.button.setImage(UIImage(named: "Pular"), for: .normal)
+            historyView.button.setImage(UIImage(named: "Start"), for: .normal)
         } else {
             historyView.button.setImage(UIImage(named: "NextPage"), for: .normal)
         }
