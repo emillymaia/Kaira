@@ -25,7 +25,6 @@ class Challenge: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         createBackground()
-        setupBorders()
         setupBottomBar()
         winnerNode = setupWinner()
         if winnerNode == nil {
@@ -47,14 +46,20 @@ extension Challenge {
                 self.currentNode = touchedNodes.first
             }
             if currentNode == winnerNode {
-                print("Win")
                 if let setter = setter {
-                    if (setter == 0) {
-                        customDelegate?.didUpdateData(data: 1)
+                    if setter == 0 {
+//                        self.setter! += 1
+//                        print("doin")
+//                        customDelegate?.didUpdateData(data: 1)
+                        let scene = Ending()
+                        scene.size = self.size
+                        scene.scaleMode = .aspectFill
+                        scene.customDelegate = self.customDelegate
+                        view?.presentScene(scene)
                     }
-                    if (setter == 1) {
-                        customDelegate?.didUpdateData(data: 2)
-                    }
+//                    if (setter == 1) {
+//                        customDelegate?.didUpdateData(data: 2)
+//                    }
                 }
             }
         }
@@ -65,7 +70,12 @@ extension Challenge {
             let touchLocation = touch.location(in: self)
 //            node.position = touchLocation
 
-            if !(touchLocation.x < (view?.frame.minX)!+node.frame.width/2 || touchLocation.x > 343 || touchLocation.y < 220 || touchLocation.y > 750) {
+            if !(
+                touchLocation.x < (view?.frame.minX)!+node.frame.width/2
+                || touchLocation.x > 343
+                || touchLocation.y < 220
+                || touchLocation.y > 750
+            ) {
 //            if !(touchLocation.y < 220 || touchLocation.y > 750) {
                 node.position = touchLocation
             }
@@ -83,7 +93,6 @@ extension Challenge {
 
     }
 }
-
 
 extension Challenge {
 
@@ -104,7 +113,7 @@ extension Challenge {
     }
 
     func setupSprites() {
-        for index in 1 ... 10 {
+        for index in 1 ... 20 {
             let imageName = imageNames[Int.random(in: 0...imageNames.count-1)]
             let imageNode = SKSpriteNode(imageNamed: imageName)
             imageNode.size = CGSize(width: 80, height: 80)
@@ -141,40 +150,6 @@ extension Challenge {
         winner.size = CGSize(width: 80, height: 80)
         addChild(winner)
         return winnerSprite
-    }
-
-    func setupBorders() {
-        self.bottomBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: frame.width, height: 1))
-        self.bottomBorder.physicsBody?.affectedByGravity = false
-        self.bottomBorder.physicsBody?.isDynamic = false
-        self.bottomBorder.position = .init(x: frame.width/2, y: frame.height/4.5)
-        self.bottomBorder.name = "wall"
-
-        addChild(self.bottomBorder)
-
-        self.topBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: frame.width, height: 1))
-        self.topBorder.physicsBody?.affectedByGravity = false
-        self.topBorder.physicsBody?.isDynamic = false
-        self.topBorder.position = .init(x: frame.width/2, y: frame.height)
-        self.topBorder.name = "wall"
-
-        addChild(self.topBorder)
-
-        self.leftBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: frame.height))
-        self.leftBorder.physicsBody?.affectedByGravity = false
-        self.leftBorder.physicsBody?.isDynamic = false
-        self.leftBorder.position = .init(x: 0, y: frame.height/2)
-        self.leftBorder.name = "wall"
-
-        addChild(self.leftBorder)
-
-        self.rightBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: frame.height))
-        self.rightBorder.physicsBody?.affectedByGravity = false
-        self.rightBorder.physicsBody?.isDynamic = false
-        self.rightBorder.position = .init(x: frame.width, y: frame.height/2)
-        self.rightBorder.name = "wall"
-
-        addChild(self.rightBorder)
     }
 
     func createBackground() {
@@ -236,4 +211,3 @@ extension UIImage {
         return scaledImage
     }
 }
-

@@ -37,13 +37,12 @@ extension MenuViewController: UICollectionViewDataSource {
 
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let scene = Challenge(size: view.bounds.size)
-        scene.scaleMode = .aspectFill
+        let scene = Inicio(size: view.bounds.size)
+//        scene.scaleMode = .aspectFill
         scene.customDelegate = self
+        scene.setter = taPassandoDados
         let skView = SKView(frame: view.frame)
         skView.presentScene(scene)
-        
-        let gameViewController = UIViewController()
         gameViewController.view = skView
 
         if taPassandoDados == 0 {
@@ -52,10 +51,8 @@ extension MenuViewController: UICollectionViewDelegate {
             present(gameViewController, animated: true)
         }
         if taPassandoDados == 2 {
-            print("CABOU")
         }
-        
-//        navigationController?.pushViewController(gameViewController, animated: true)
+
     }
 }
 
@@ -95,21 +92,9 @@ extension MenuViewController: DataDelegate {
     func didUpdateData(data: Int) {
         taPassandoDados = data
 
-        if taPassandoDados == 1 {
-            let scene = Challenge()
-            scene.size = view.bounds.size
-            scene.setter = taPassandoDados
-            scene.scaleMode = .aspectFill
-            scene.customDelegate = self
-
-            let skView = SKView(frame: view.frame)
-            skView.presentScene(scene)
-
-            gameViewController.modalPresentationStyle = .fullScreen
-            gameViewController.view = skView
-        }
         if taPassandoDados == 2 {
             dismiss(animated: true)
+            taPassandoDados = 0
         }
     }
 }
