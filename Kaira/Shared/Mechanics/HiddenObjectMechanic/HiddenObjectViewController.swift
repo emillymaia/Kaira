@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-//classe  temporária, criada para testar a visualização da mecânica
+// classe  temporária, criada para testar a visualização da mecânica
 final class HiddenObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,11 +15,11 @@ final class HiddenObjectViewController: UIViewController {
         skView.addGestureRecognizer(tapGesture)
     }
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        let touchLocation = sender.location(in: sender.view)
-        if let scene = sender.view as? HiddenObjectScene,
-           let hiddenObject = scene.hiddenObject,
-           hiddenObject.frame.contains(touchLocation) {
-            scene.showHiddenObjectAlert()
-        }
+        _ = sender.location(in: sender.view)
+//        if let scene = sender.view as? HiddenObjectScene,
+//           let hiddenObject = scene.hiddenObject,
+//           hiddenObject.frame.contains(touchLocation) {
+//            scene.showHiddenObjectAlert()
+//        }
     }
 }

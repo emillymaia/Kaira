@@ -12,8 +12,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let viewController = HiddenObjectViewController()
-        window?.rootViewController = viewController
+        let viewController: UIViewController
+        if UserDefaultsManager.shared.didUserReceivedOnboarding == true {
+            viewController = MenuViewController()
+        } else {
+            viewController = onboardingView
+        }
+        window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.makeKeyAndVisible()
     }
 

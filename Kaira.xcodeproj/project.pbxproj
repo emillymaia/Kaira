@@ -10,11 +10,24 @@
 		ABDFC8842AA4F21C00F19D1A /* HiddenObjectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8832AA4F21C00F19D1A /* HiddenObjectScene.swift */; };
 		ABDFC8862AA5391900F19D1A /* HiddenObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8852AA5391900F19D1A /* HiddenObjectViewController.swift */; };
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
+		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
+		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
+		ABDFC88F2AAB4E7200F19D1A /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88E2AAB4E7200F19D1A /* MenuCollectionViewCell.swift */; };
+		ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */; };
+		ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */; };
+		ABDFC8952AAE98C000F19D1A /* TesteNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8942AAE98C000F19D1A /* TesteNavigation.swift */; };
+		ABDFC89A2AAF447100F19D1A /* Pally-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDFC8972AAF447100F19D1A /* Pally-Medium.otf */; };
+		ABDFC89B2AAF447100F19D1A /* Pally-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDFC8982AAF447100F19D1A /* Pally-Bold.otf */; };
+		ABDFC89C2AAF447100F19D1A /* Pally-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDFC8992AAF447100F19D1A /* Pally-Regular.otf */; };
+		ABDFC89F2AB232D500F19D1A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC89E2AB232D500F19D1A /* OnboardingView.swift */; };
+		ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A12AB241B400F19D1A /* UserDefaultsManager.swift */; };
+		ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */; };
+		ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */; };
+		ABDFC8A92AB47BAA00F19D1A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */; };
 		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
 		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
 		EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */; };
 		EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE182F722A9F6FE000CE30C8 /* Assets.xcassets */; };
-		EE182F762A9F6FE000CE30C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE182F742A9F6FE000CE30C8 /* LaunchScreen.storyboard */; };
 		EE182F812A9F6FE000CE30C8 /* KairaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F802A9F6FE000CE30C8 /* KairaTests.swift */; };
 		EE182F8B2A9F6FE000CE30C8 /* KairaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */; };
 		EE182F8D2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */; };
@@ -41,12 +54,25 @@
 		ABDFC8832AA4F21C00F19D1A /* HiddenObjectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenObjectScene.swift; sourceTree = "<group>"; };
 		ABDFC8852AA5391900F19D1A /* HiddenObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenObjectViewController.swift; sourceTree = "<group>"; };
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
+		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
+		ABDFC88E2AAB4E7200F19D1A /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionHeaderView.swift; sourceTree = "<group>"; };
+		ABDFC8942AAE98C000F19D1A /* TesteNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteNavigation.swift; sourceTree = "<group>"; };
+		ABDFC8972AAF447100F19D1A /* Pally-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pally-Medium.otf"; sourceTree = "<group>"; };
+		ABDFC8982AAF447100F19D1A /* Pally-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pally-Bold.otf"; sourceTree = "<group>"; };
+		ABDFC8992AAF447100F19D1A /* Pally-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pally-Regular.otf"; sourceTree = "<group>"; };
+		ABDFC89E2AB232D500F19D1A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		ABDFC8A12AB241B400F19D1A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE182F722A9F6FE000CE30C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EE182F752A9F6FE000CE30C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE182F772A9F6FE000CE30C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE182F7C2A9F6FE000CE30C8 /* KairaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KairaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F802A9F6FE000CE30C8 /* KairaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaTests.swift; sourceTree = "<group>"; };
@@ -92,8 +118,36 @@
 		ABDFC8872AA6196E00F19D1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				ABDFC89D2AB232A600F19D1A /* Mechanics */,
+				ABDFC8962AAF439E00F19D1A /* Font */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		ABDFC8962AAF439E00F19D1A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				ABDFC8982AAF447100F19D1A /* Pally-Bold.otf */,
+				ABDFC8972AAF447100F19D1A /* Pally-Medium.otf */,
+				ABDFC8992AAF447100F19D1A /* Pally-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		ABDFC89D2AB232A600F19D1A /* Mechanics */ = {
+			isa = PBXGroup;
+			children = (
+				ABDFC8802AA4F1C600F19D1A /* HiddenObjectMechanic */,
+			);
+			path = Mechanics;
+			sourceTree = "<group>";
+		};
+		ABDFC8A02AB239D200F19D1A /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				ABDFC8A12AB241B400F19D1A /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		EE182F5D2A9F6FDE00CE30C8 = {
@@ -119,17 +173,15 @@
 		EE182F682A9F6FDF00CE30C8 /* Kaira */ = {
 			isa = PBXGroup;
 			children = (
+				ABDFC8A02AB239D200F19D1A /* UserDefaults */,
 				ABDFC8872AA6196E00F19D1A /* Shared */,
-				ABDFC8802AA4F1C600F19D1A /* HiddenObjectMechanic */,
 				EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */,
 				EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */,
-				ABDFC8882AA61D2200F19D1A /* MenuView.swift */,
 				EE182F9D2A9F74A300CE30C8 /* Extension */,
 				EE182F9C2A9F749100CE30C8 /* Controller */,
 				EE182F9B2A9F748100CE30C8 /* View */,
 				EE182F9A2A9F747900CE30C8 /* Model */,
 				EE182F722A9F6FE000CE30C8 /* Assets.xcassets */,
-				EE182F742A9F6FE000CE30C8 /* LaunchScreen.storyboard */,
 				EE182F772A9F6FE000CE30C8 /* Info.plist */,
 			);
 			path = Kaira;
@@ -155,6 +207,9 @@
 		EE182F9A2A9F747900CE30C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */,
+				ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */,
+				ABDFC88C2AA7620000F19D1A /* CountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +217,12 @@
 		EE182F9B2A9F748100CE30C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */,
+				ABDFC89E2AB232D500F19D1A /* OnboardingView.swift */,
+				ABDFC8882AA61D2200F19D1A /* MenuView.swift */,
+				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionViewCell.swift */,
+				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
+				ABDFC8942AAE98C000F19D1A /* TesteNavigation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +230,9 @@
 		EE182F9C2A9F749100CE30C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */,
 				EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */,
+				ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,7 +349,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE182F762A9F6FE000CE30C8 /* LaunchScreen.storyboard in Resources */,
+				ABDFC89C2AAF447100F19D1A /* Pally-Regular.otf in Resources */,
+				ABDFC89B2AAF447100F19D1A /* Pally-Bold.otf in Resources */,
+				ABDFC89A2AAF447100F19D1A /* Pally-Medium.otf in Resources */,
 				EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,11 +398,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */,
+				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				ABDFC8842AA4F21C00F19D1A /* HiddenObjectScene.swift in Sources */,
+				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionViewCell.swift in Sources */,
+				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */,
+				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,
+				ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */,
+				ABDFC8952AAE98C000F19D1A /* TesteNavigation.swift in Sources */,
+				ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */,
+				ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */,
 				EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */,
+				ABDFC89F2AB232D500F19D1A /* OnboardingView.swift in Sources */,
+				ABDFC8A92AB47BAA00F19D1A /* HistoryViewController.swift in Sources */,
 				ABDFC8862AA5391900F19D1A /* HiddenObjectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,17 +449,6 @@
 			targetProxy = EE182F872A9F6FE000CE30C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EE182F742A9F6FE000CE30C8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE182F752A9F6FE000CE30C8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EE182F8E2A9F6FE000CE30C8 /* Debug */ = {
