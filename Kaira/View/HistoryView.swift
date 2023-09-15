@@ -59,7 +59,7 @@ extension HistoryView {
             button.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 8),
             button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 313),
             button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -24)
+            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -23)
         ])
     }
 
