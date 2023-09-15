@@ -31,6 +31,7 @@
 		EE182F812A9F6FE000CE30C8 /* KairaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F802A9F6FE000CE30C8 /* KairaTests.swift */; };
 		EE182F8B2A9F6FE000CE30C8 /* KairaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */; };
 		EE182F8D2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */; };
+		EEC53F792AB4950300B24261 /* TestflightPrototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F782AB4950300B24261 /* TestflightPrototype.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		EE182F862A9F6FE000CE30C8 /* KairaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KairaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITests.swift; sourceTree = "<group>"; };
 		EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEC53F782AB4950300B24261 /* TestflightPrototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestflightPrototype.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		ABDFC8872AA6196E00F19D1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				EEC53F772AB494F000B24261 /* Prototypes */,
 				ABDFC89D2AB232A600F19D1A /* Mechanics */,
 				ABDFC8962AAF439E00F19D1A /* Font */,
 			);
@@ -242,6 +245,14 @@
 			children = (
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EEC53F772AB494F000B24261 /* Prototypes */ = {
+			isa = PBXGroup;
+			children = (
+				EEC53F782AB4950300B24261 /* TestflightPrototype.swift */,
+			);
+			path = Prototypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +413,7 @@
 				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				ABDFC8842AA4F21C00F19D1A /* HiddenObjectScene.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionViewCell.swift in Sources */,
+				EEC53F792AB4950300B24261 /* TestflightPrototype.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */,
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,

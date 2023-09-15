@@ -4,6 +4,7 @@ import SpriteKit
 final class MenuViewController: UIViewController {
     let menuView = MenuView()
     var taPassandoDados = 0
+    var gameViewController = UIViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ extension MenuViewController: UICollectionViewDataSource {
 
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let scene = TesteNavigation(size: view.bounds.size)
+        let scene = Challenge(size: view.bounds.size)
         scene.scaleMode = .aspectFill
         scene.customDelegate = self
         let skView = SKView(frame: view.frame)
@@ -44,8 +45,17 @@ extension MenuViewController: UICollectionViewDelegate {
         
         let gameViewController = UIViewController()
         gameViewController.view = skView
+
+        if taPassandoDados == 0 {
+            gameViewController.view = skView
+            gameViewController.modalPresentationStyle = .fullScreen
+            present(gameViewController, animated: true)
+        }
+        if taPassandoDados == 2 {
+            print("CABOU")
+        }
         
-        navigationController?.pushViewController(gameViewController, animated: true)
+//        navigationController?.pushViewController(gameViewController, animated: true)
     }
 }
 
@@ -84,13 +94,36 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
 extension MenuViewController: DataDelegate {
     func didUpdateData(data: Int) {
         taPassandoDados = data
-        print(taPassandoDados)
-    }
-    
-    // nao estou mais utilizando
-    func configureSectionHeader(_ section: Int) {
-        let indexPath = IndexPath(item: 0, section: section)
-        let header = menuView.menuCollectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: indexPath) as? MenuSectionHeaderView
-        header?.title.text = "\(taPassandoDados)"
+
+        if taPassandoDados == 1 {
+            let scene = Challenge()
+            scene.size = view.bounds.size
+            scene.setter = taPassandoDados
+            scene.scaleMode = .aspectFill
+            scene.customDelegate = self
+
+            let skView = SKView(frame: view.frame)
+            skView.presentScene(scene)
+
+            gameViewController.modalPresentationStyle = .fullScreen
+            gameViewController.view = skView
+        }
+        if taPassandoDados == 2 {
+            dismiss(animated: true)
+        }
     }
 }
+
+//extension MenuViewController: DataDelegate {
+//    func didUpdateData(data: Int) {
+//        taPassandoDados = data
+//        print(taPassandoDados)
+//    }
+//
+//    // nao estou mais utilizando
+//    func configureSectionHeader(_ section: Int) {
+//        let indexPath = IndexPath(item: 0, section: section)
+//        let header = menuView.menuCollectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: indexPath) as? MenuSectionHeaderView
+//        header?.title.text = "\(taPassandoDados)"
+//    }
+//}
