@@ -14,9 +14,6 @@ final class MenuCollectionViewCell: UICollectionViewCell {
     var card: UIImageView = {
         let card = UIImageView()
         card.translatesAutoresizingMaskIntoConstraints = false
-        card.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        card.layer.borderWidth = 3
-        card.layer.cornerRadius = 25
         card.layer.masksToBounds = true
         return card
     }()

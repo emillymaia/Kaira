@@ -11,7 +11,5 @@ class ContinentModel {
 }
 
 let continents: [ContinentModel] = [
-    ContinentModel(name: "Ásia", countries: asia),
-    ContinentModel(name: "Europa", countries: europa),
-    ContinentModel(name: "América", countries: america)
+    ContinentModel(name: "Europa", countries: europa)
 ]
