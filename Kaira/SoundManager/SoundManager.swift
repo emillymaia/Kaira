@@ -14,7 +14,8 @@ class SoundManager: NSObject {
     private var backgroundMusicPlayer: AVAudioPlayer?
     private var effectSoundPlayer: AVAudioPlayer?
 
-    private var backgroundVolume: Float = 1.0
+    private var backgroundVolume: Float = 0.7
+    
 
     private override init() {}
 
@@ -39,7 +40,7 @@ class SoundManager: NSObject {
         if let url = Bundle.main.url(forResource: filename, withExtension: "mp3") {
             do {
                 
-                backgroundVolume = backgroundMusicPlayer?.volume ?? 1.0
+                backgroundVolume = backgroundMusicPlayer?.volume ?? 0.7
                 
                 backgroundMusicPlayer?.setVolume(0.3, fadeDuration: 1)
 

@@ -8,6 +8,13 @@ protocol DataDelegate: AnyObject {
 class TesteNavigation: SKScene {
 
     weak var customDelegate: DataDelegate?
+    
+    let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+
+    func performGameAction() {
+        impactFeedbackGenerator.prepare()
+        impactFeedbackGenerator.impactOccurred()
+    }
 
     override func didMove(to view: SKView) {
         let button = UIButton(type: .system)
@@ -21,6 +28,8 @@ class TesteNavigation: SKScene {
     }
 
     @objc func botaoTocado() {
+        performGameAction()
+
         let botaoPress = Int.random(in: 1...11)
         print("\(botaoPress)")
         SoundManager.shared.playEffectSound("CheckEffect")
