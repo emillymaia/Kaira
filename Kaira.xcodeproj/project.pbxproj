@@ -24,6 +24,7 @@
 		ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */; };
 		ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */; };
 		ABDFC8A92AB47BAA00F19D1A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */; };
+		ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroView.swift */; };
 		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
 		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
 		EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1IntroView.swift; sourceTree = "<group>"; };
 		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		EE182F5D2A9F6FDE00CE30C8 = {
 			isa = PBXGroup;
 			children = (
+				ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroView.swift */,
 				EE182F682A9F6FDF00CE30C8 /* Kaira */,
 				EE182F7F2A9F6FE000CE30C8 /* KairaTests */,
 				EE182F892A9F6FE000CE30C8 /* KairaUITests */,
@@ -423,6 +426,7 @@
 				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				ABDFC8842AA4F21C00F19D1A /* HiddenObjectScene.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionViewCell.swift in Sources */,
+				ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroView.swift in Sources */,
 				EEC53F7D2AB4A0C100B24261 /* TestflightInit.swift in Sources */,
 				EEC53F792AB4950300B24261 /* TestflightPrototype.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,

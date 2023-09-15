@@ -37,18 +37,18 @@ extension MenuViewController: UICollectionViewDataSource {
 
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let scene = Inicio(size: view.bounds.size)
-//        scene.scaleMode = .aspectFill
-        scene.customDelegate = self
-        scene.setter = taPassandoDados
-        let skView = SKView(frame: view.frame)
-        skView.presentScene(scene)
-        gameViewController.view = skView
+//        let scene = Inicio(size: view.bounds.size)
+//        scene.customDelegate = self
+//        scene.setter = taPassandoDados
+//        let skView = SKView(frame: view.frame)
+//        skView.presentScene(scene)
+//        gameViewController.view = skView
 
         if taPassandoDados == 0 {
-            gameViewController.view = skView
-            gameViewController.modalPresentationStyle = .fullScreen
-            present(gameViewController, animated: true)
+//            gameViewController.view = skView
+            chapter1IntroView.navigationItem.setHidesBackButton(true, animated: false)
+            navigationController?.pushViewController(chapter1IntroView, animated: true)
+
         }
         if taPassandoDados == 2 {
         }
