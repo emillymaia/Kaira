@@ -22,11 +22,11 @@ extension Ending {
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let scene = Thanks()
-        scene.size = self.size
-        scene.scaleMode = .aspectFill
-        scene.customDelegate = self.customDelegate
-        view?.presentScene(scene)
+//        let scene = Thanks()
+//        scene.size = self.size
+//        scene.scaleMode = .aspectFill
+//        scene.customDelegate = self.customDelegate
+//        view?.presentScene(scene)
     }
 }
 
@@ -34,12 +34,6 @@ extension Ending {
     func createBackground() {
 
         guard let image = UIImage(named: "OBJ2") else { return }
-//        let scaledImage = image?.scalePreservingAspectRatio(
-//            targetSize: CGSize(
-//                width: (view?.frame.width)!,
-//                height: (view?.frame.height)!
-//            )
-//        )
 
         let backgroundTexture = SKTexture(image: image)
 

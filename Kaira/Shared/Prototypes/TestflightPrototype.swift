@@ -46,21 +46,11 @@ extension Challenge {
                 self.currentNode = touchedNodes.first
             }
             if currentNode == winnerNode {
-                if let setter = setter {
-                    if setter == 0 {
-//                        self.setter! += 1
-//                        print("doin")
-//                        customDelegate?.didUpdateData(data: 1)
-                        let scene = Ending()
-                        scene.size = self.size
-                        scene.scaleMode = .aspectFill
-                        scene.customDelegate = self.customDelegate
-                        view?.presentScene(scene)
-                    }
-//                    if (setter == 1) {
-//                        customDelegate?.didUpdateData(data: 2)
-//                    }
-                }
+                let scene = Ending()
+                scene.size = self.size
+                scene.scaleMode = .aspectFill
+                scene.customDelegate = self.customDelegate
+                view?.presentScene(scene)
             }
         }
     }
