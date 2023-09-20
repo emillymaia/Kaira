@@ -28,7 +28,6 @@ class HistoryView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         addSubviews()
         setupConstraints()
         button.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
@@ -41,7 +40,6 @@ class HistoryView: UIView {
     @objc private func pressButton() {
         didPressButton?()
     }
-
 }
 
 extension HistoryView {

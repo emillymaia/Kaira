@@ -1,8 +1,8 @@
 import UIKit
 
-final class MenuCollectionViewCell: UICollectionViewCell {
+final class MenuCollectionCellView: UICollectionViewCell {
 
-    static let identifier = "MenuCollectionViewCell"
+    static let identifier = "MenuCollectionCellView"
 
     var title: UILabel = {
         let title = UILabel()
@@ -27,7 +27,7 @@ final class MenuCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension MenuCollectionViewCell {
+extension MenuCollectionCellView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: topAnchor, constant: 1),
@@ -41,7 +41,7 @@ extension MenuCollectionViewCell {
     }
 }
 
-extension MenuCollectionViewCell {
+extension MenuCollectionCellView {
     func configureCard(country: String, withImage named: String) {
         title.text = country
         card.image = UIImage(named: named)

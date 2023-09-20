@@ -1,15 +1,6 @@
 import Foundation
 
-class CountryModel {
+struct CountryModel {
     let name: String
-    var background: String
-
-    init(name: String, background: String) {
-        self.name = name
-        self.background = background
-    }
+    let background: String
 }
-
-let europa: [CountryModel] = [
-    CountryModel(name: "Inglaterra", background: "Fase1Selo")
-]

@@ -1,15 +1,6 @@
 import Foundation
 
-class ContinentModel {
-    var name: String
-    var countries: [CountryModel]
-
-    init(name: String, countries: [CountryModel]) {
-        self.name = name
-        self.countries = countries
-    }
+struct ContinentModel {
+    let name: String
+    let countries: [CountryModel]
 }
-
-let continents: [ContinentModel] = [
-    ContinentModel(name: "Europa", countries: europa)
-]

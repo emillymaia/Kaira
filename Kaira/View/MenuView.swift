@@ -26,7 +26,7 @@ final class MenuView: UIView {
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.isScrollEnabled = true
         collection.alwaysBounceVertical = true
-        collection.register(MenuCollectionViewCell.self, forCellWithReuseIdentifier: "MenuCollectionViewCell")
+        collection.register(MenuCollectionCellView.self, forCellWithReuseIdentifier: "MenuCollectionCellView")
         collection.register(MenuSectionHeaderView.self,
                             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                             withReuseIdentifier: MenuSectionHeaderView.identifier)
@@ -36,8 +36,8 @@ final class MenuView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         menuCollectionView.collectionViewLayout = collectionViewLayout
-        addSubviews()
         setupConstraints()
+        addSubviews()
     }
 
     required init?(coder: NSCoder) {

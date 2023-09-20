@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if UserDefaultsManager.shared.didUserReceivedOnboarding == true {
             viewController = MenuViewController()
         } else {
-            viewController = onboardingView
+            viewController = HistoryViewController(historyPages: onboardingPages) {
+                UserDefaultsManager.shared.didUserReceivedOnboarding = true
+            }
         }
         window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.makeKeyAndVisible()

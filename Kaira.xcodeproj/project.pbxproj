@@ -12,7 +12,7 @@
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
 		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
-		ABDFC88F2AAB4E7200F19D1A /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88E2AAB4E7200F19D1A /* MenuCollectionViewCell.swift */; };
+		ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */; };
 		ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */; };
 		ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */; };
 		ABDFC8952AAE98C000F19D1A /* TesteNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8942AAE98C000F19D1A /* TesteNavigation.swift */; };
@@ -24,7 +24,7 @@
 		ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */; };
 		ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */; };
 		ABDFC8A92AB47BAA00F19D1A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */; };
-		ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroView.swift */; };
+		ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroViewController.swift */; };
 		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
 		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
 		EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */; };
@@ -36,6 +36,10 @@
 		EEC53F7B2AB4990C00B24261 /* TestflightEnding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F7A2AB4990C00B24261 /* TestflightEnding.swift */; };
 		EEC53F7D2AB4A0C100B24261 /* TestflightInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F7C2AB4A0C100B24261 /* TestflightInit.swift */; };
 		EEC53F7F2AB4A3B600B24261 /* TestflightThanks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F7E2AB4A3B600B24261 /* TestflightThanks.swift */; };
+		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
+		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
+		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
+		EEC53F8D2ABB1F6D00B24261 /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F8C2ABB1F6D00B24261 /* GameConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +65,7 @@
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
 		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
-		ABDFC88E2AAB4E7200F19D1A /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionCellView.swift; sourceTree = "<group>"; };
 		ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionHeaderView.swift; sourceTree = "<group>"; };
 		ABDFC8942AAE98C000F19D1A /* TesteNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteNavigation.swift; sourceTree = "<group>"; };
@@ -73,7 +77,7 @@
 		ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1IntroView.swift; sourceTree = "<group>"; };
+		ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1IntroViewController.swift; sourceTree = "<group>"; };
 		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,10 @@
 		EEC53F7A2AB4990C00B24261 /* TestflightEnding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestflightEnding.swift; sourceTree = "<group>"; };
 		EEC53F7C2AB4A0C100B24261 /* TestflightInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestflightInit.swift; sourceTree = "<group>"; };
 		EEC53F7E2AB4A3B600B24261 /* TestflightThanks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestflightThanks.swift; sourceTree = "<group>"; };
+		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
+		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
+		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
+		EEC53F8C2ABB1F6D00B24261 /* GameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,9 @@
 		ABDFC8872AA6196E00F19D1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				EEC53F8B2ABB1F5D00B24261 /* Mocks */,
+				EEC53F862ABB1D4000B24261 /* Protocols */,
+				EEC53F832ABB1B5500B24261 /* Enums */,
 				EEC53F772AB494F000B24261 /* Prototypes */,
 				ABDFC89D2AB232A600F19D1A /* Mechanics */,
 				ABDFC8962AAF439E00F19D1A /* Font */,
@@ -164,7 +175,6 @@
 		EE182F5D2A9F6FDE00CE30C8 = {
 			isa = PBXGroup;
 			children = (
-				ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroView.swift */,
 				EE182F682A9F6FDF00CE30C8 /* Kaira */,
 				EE182F7F2A9F6FE000CE30C8 /* KairaTests */,
 				EE182F892A9F6FE000CE30C8 /* KairaUITests */,
@@ -222,6 +232,7 @@
 				ABDFC8A32AB2456000F19D1A /* HistoryModel.swift */,
 				ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */,
 				ABDFC88C2AA7620000F19D1A /* CountryModel.swift */,
+				EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,10 +240,10 @@
 		EE182F9B2A9F748100CE30C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */,
 				ABDFC89E2AB232D500F19D1A /* OnboardingView.swift */,
+				ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */,
 				ABDFC8882AA61D2200F19D1A /* MenuView.swift */,
-				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionViewCell.swift */,
+				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
 				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
 				ABDFC8942AAE98C000F19D1A /* TesteNavigation.swift */,
 			);
@@ -242,6 +253,7 @@
 		EE182F9C2A9F749100CE30C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroViewController.swift */,
 				ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */,
 				EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */,
 				ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */,
@@ -265,6 +277,30 @@
 				EEC53F7E2AB4A3B600B24261 /* TestflightThanks.swift */,
 			);
 			path = Prototypes;
+			sourceTree = "<group>";
+		};
+		EEC53F832ABB1B5500B24261 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		EEC53F862ABB1D4000B24261 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EEC53F8B2ABB1F5D00B24261 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EEC53F8C2ABB1F6D00B24261 /* GameConstants.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,8 +461,12 @@
 				EEC53F7B2AB4990C00B24261 /* TestflightEnding.swift in Sources */,
 				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				ABDFC8842AA4F21C00F19D1A /* HiddenObjectScene.swift in Sources */,
-				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionViewCell.swift in Sources */,
-				ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroView.swift in Sources */,
+				EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */,
+				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
+				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
+				EEC53F8D2ABB1F6D00B24261 /* GameConstants.swift in Sources */,
+				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
+				ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroViewController.swift in Sources */,
 				EEC53F7D2AB4A0C100B24261 /* TestflightInit.swift in Sources */,
 				EEC53F792AB4950300B24261 /* TestflightPrototype.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,

@@ -1,10 +1,6 @@
 import UIKit
 import SpriteKit
 
-protocol DataDelegate: AnyObject {
-    func didUpdateData(data: Int)
-}
-
 class TesteNavigation: SKScene {
 
     weak var customDelegate: DataDelegate?
