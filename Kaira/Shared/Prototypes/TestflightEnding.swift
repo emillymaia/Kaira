@@ -8,6 +8,7 @@ class Ending: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         createBackground()
+        print("Custom Delegate END: \(String(describing: customDelegate))")
     }
 }
 
@@ -22,11 +23,11 @@ extension Ending {
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let scene = Thanks()
-//        scene.size = self.size
-//        scene.scaleMode = .aspectFill
-//        scene.customDelegate = self.customDelegate
-//        view?.presentScene(scene)
+        let scene = Thanks()
+        scene.size = self.size
+        scene.scaleMode = .aspectFill
+        scene.customDelegate = self.customDelegate
+        view?.presentScene(scene)
     }
 }
 

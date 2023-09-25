@@ -8,6 +8,7 @@ class Thanks: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         createBackground()
+        print("Custom Delegate THNK: \(String(describing: customDelegate))")
     }
 }
 

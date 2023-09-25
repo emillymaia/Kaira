@@ -36,8 +36,8 @@ final class MenuView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         menuCollectionView.collectionViewLayout = collectionViewLayout
-        setupConstraints()
         addSubviews()
+        setupConstraints()
     }
 
     required init?(coder: NSCoder) {

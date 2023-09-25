@@ -5,6 +5,8 @@ final class MenuViewController: UIViewController {
     
     let menuView = MenuView()
     var taPassandoDados = 0
+    var continentModel: [ContinentModel] = [ContinentModel(name: "Europa", countries: [CountryModel(name: "Inglaterra", background: "Fase1Selo"), CountryModel(name: "França", background: "Fase1Selo")])]
+    var gamePhases: [GamePhaseModel] = [GamePhaseModel(countryName: "England", background: "background-test", assets: ["tic-1", "tic-2", "tic-3", "tic-4", "tic-5"])]
 //    var gameViewController = UIViewController()
     
     override func viewDidLoad() {
@@ -19,7 +21,7 @@ extension MenuViewController: UICollectionViewDataSource {
         guard section < continents.count else {
             return 0
         }
-        return continents[section].countries.count
+        return continentModel[section].countries.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -27,7 +29,7 @@ extension MenuViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        let continent = continents[indexPath.section]
+        let continent = continentModel[indexPath.section]
         let country = continent.countries[indexPath.row]
         
         cell.configureCard(country: country.name, withImage: country.background)
@@ -37,19 +39,13 @@ extension MenuViewController: UICollectionViewDataSource {
 
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-        if taPassandoDados == 0 {
-            chapter1IntroView.navigationItem.setHidesBackButton(true, animated: false)
-            navigationController?.pushViewController(chapter1IntroView, animated: true)
-        }
-        if taPassandoDados == 2 {
-        }
+        historyPresentation(continent: continentModel[indexPath.section].countries[indexPath.row].name, stopPoint: 0)
     }
 }
 
 extension MenuViewController: UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return continents.count
+        return continentModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -58,7 +54,7 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MenuSectionHeaderView.identifier, for: indexPath) as? MenuSectionHeaderView else {
                 return UICollectionReusableView()
             }
-            let continentName = continents[indexPath.section].name
+            let continentName = continentModel[indexPath.section].name
             header.title.text = continentName
             return header
         default:
@@ -81,6 +77,40 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
 
 extension MenuViewController: DataDelegate {
     func didUpdateData(data: Int) {
+        if data == 2 {
+            self.dismiss(animated: true)
+        }
+    }
+}
 
+extension MenuViewController {
+    func historyPresentation(continent: String, stopPoint: Int) {
+        if continent == "Inglaterra" {
+            mech1.gamePhaseModel = gamePhases.first
+            mech2.gamePhaseModel = gamePhases.first
+            mech3.gamePhaseModel = gamePhases.first
+            mech1.historyViewController = history1
+            mech2.historyViewController = history2
+            mech3.historyViewController = history3
+            mech1.customDelegate = self
+            mech2.customDelegate = self
+            mech3.customDelegate = self
+
+
+//            let history = [HistoryPageModel(image: "OBJ1", text: textChapter1IntroView, button: .finish, nextViewController: mechanic)]
+//
+//            let game = HistoryViewController(historyPages: history) {
+//                print("foi")
+//            }
+
+            if taPassandoDados == 0 {
+                mech1.navigationItem.setHidesBackButton(true, animated: false)
+                mech1.modalPresentationStyle = .fullScreen
+                present(mech1, animated: true)
+            }
+        }
+        if continent == "França" {
+            print("DO NOTHING")
+        }
     }
 }

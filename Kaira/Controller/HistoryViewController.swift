@@ -11,6 +11,7 @@ class HistoryViewController: UIViewController {
         return view
     }()
     var currentPageIndex: Int = 0
+    var customDelegate: DataDelegate?
     var onFinishButtonPressed: (() -> Void)?
 
     init(historyPages: [HistoryPageModel], onFinishButtonPressed:(() -> Void)?) {
@@ -54,7 +55,9 @@ class HistoryViewController: UIViewController {
             }
 
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
-            navigationController?.pushViewController(nextViewController, animated: true)
+            nextViewController.modalPresentationStyle = .fullScreen
+            present(nextViewController, animated: true)
+//            navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 }
