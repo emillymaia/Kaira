@@ -38,6 +38,7 @@ class HistoryView: UIView {
     }
 
     @objc private func pressButton() {
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
         didPressButton?()
     }
 }

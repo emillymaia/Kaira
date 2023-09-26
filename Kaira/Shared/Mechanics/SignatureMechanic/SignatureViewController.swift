@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class FindImageViewController: UIViewController {
+class SignatureViewController: UIViewController {
     var skView: SKView!
     var customDelegate: DataDelegate?
     var gamePhaseModel: GamePhaseModel?
@@ -9,8 +9,8 @@ class FindImageViewController: UIViewController {
     var historyViewController: HistoryViewController?
     var onFinishButtonPressed: (() -> Void)?
 
-    private lazy var historyGameScene: FindImageScene = {
-        let scene = FindImageScene(size: skView.bounds.size)
+    private lazy var historyGameScene: SignatureScene = {
+        let scene = SignatureScene(size: skView.bounds.size)
         scene.didPressButton = { [weak self] in
             self?.handleButtonPress()
         }
@@ -19,6 +19,7 @@ class FindImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         print("Custom Delegate VC: \(String(describing: customDelegate))")
 
         skView = SKView(frame: view.frame)

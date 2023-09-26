@@ -27,6 +27,9 @@
 		ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroViewController.swift */; };
 		EE0609272AC1A71500BCC58C /* FindImageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609262AC1A71500BCC58C /* FindImageScene.swift */; };
 		EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609282AC1A73000BCC58C /* FindImageViewController.swift */; };
+		EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */; };
+		EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06092D2AC3123A00BCC58C /* SignatureScene.swift */; };
+		EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06092F2AC3124800BCC58C /* SignatureViewController.swift */; };
 		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
 		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
 		EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6D2A9F6FDF00CE30C8 /* ViewController.swift */; };
@@ -82,6 +85,9 @@
 		ABDFC8AE2AB4E50A00F19D1A /* Chapter1IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1IntroViewController.swift; sourceTree = "<group>"; };
 		EE0609262AC1A71500BCC58C /* FindImageScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageScene.swift; sourceTree = "<group>"; };
 		EE0609282AC1A73000BCC58C /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
+		EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewControllerExtensions.swift; path = Kaira/Shared/Mechanics/FindImageMechanic/MenuViewControllerExtensions.swift; sourceTree = SOURCE_ROOT; };
+		EE06092D2AC3123A00BCC58C /* SignatureScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureScene.swift; sourceTree = "<group>"; };
+		EE06092F2AC3124800BCC58C /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 		ABDFC89D2AB232A600F19D1A /* Mechanics */ = {
 			isa = PBXGroup;
 			children = (
+				EE06092C2AC3121200BCC58C /* SignatureMechanic */,
 				EE0609252AC1A6FA00BCC58C /* FindImageMechanic */,
 				ABDFC8802AA4F1C600F19D1A /* HiddenObjectMechanic */,
 			);
@@ -184,6 +191,15 @@
 				EE0609282AC1A73000BCC58C /* FindImageViewController.swift */,
 			);
 			path = FindImageMechanic;
+			sourceTree = "<group>";
+		};
+		EE06092C2AC3121200BCC58C /* SignatureMechanic */ = {
+			isa = PBXGroup;
+			children = (
+				EE06092D2AC3123A00BCC58C /* SignatureScene.swift */,
+				EE06092F2AC3124800BCC58C /* SignatureViewController.swift */,
+			);
+			path = SignatureMechanic;
 			sourceTree = "<group>";
 		};
 		EE182F5D2A9F6FDE00CE30C8 = {
@@ -278,6 +294,7 @@
 		EE182F9D2A9F74A300CE30C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -478,14 +495,17 @@
 				EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */,
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
+				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
 				EEC53F8D2ABB1F6D00B24261 /* GameConstants.swift in Sources */,
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
 				ABDFC8AF2AB4E50A00F19D1A /* Chapter1IntroViewController.swift in Sources */,
 				EEC53F7D2AB4A0C100B24261 /* TestflightInit.swift in Sources */,
 				EEC53F792AB4950300B24261 /* TestflightPrototype.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
+				EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */,
 				EE182F6E2A9F6FDF00CE30C8 /* ViewController.swift in Sources */,
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
+				EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */,
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,

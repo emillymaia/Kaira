@@ -52,12 +52,17 @@ class HistoryViewController: UIViewController {
 
             if historyPages[currentPageIndex].button == .finish {
                 onFinishButtonPressed?()
+                navigationController?.dismiss(animated: true)
+                return
+            }
+
+            if historyPages[currentPageIndex].button == .end {
+                onFinishButtonPressed?()
             }
 
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
             nextViewController.modalPresentationStyle = .fullScreen
-            present(nextViewController, animated: true)
-//            navigationController?.pushViewController(nextViewController, animated: true)
+            navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 }

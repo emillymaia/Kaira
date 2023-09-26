@@ -15,6 +15,8 @@ class FindImageScene: SKScene, SKPhysicsContactDelegate {
     var lastZPos = 1
 
     override func didMove(to view: SKView) {
+        scene?.backgroundColor = .white
+
         createBackground()
         setupBottomBar()
         winnerNode = setupWinner()
@@ -128,23 +130,23 @@ extension FindImageScene {
 
     func createBackground() {
 
-        let image = UIImage(named: gamePhaseModel!.background)
-        let scaledImage = image?.scalePreservingAspectRatio(
-            targetSize: CGSize(
-                width: (view?.frame.width)!*2,
-                height: (view?.frame.height)!*2
-            )
-        )
-
-        let backgroundTexture = SKTexture(image: scaledImage!)
-
-        for _ in 0 ... 1 {
-
-            let background = SKSpriteNode(texture: backgroundTexture)
-            background.name = "background"
-            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!)
-            background.zPosition = -10
-            addChild(background)
-        }
+//        let image = UIImage(named: gamePhaseModel!.background)
+//        let scaledImage = image?.scalePreservingAspectRatio(
+//            targetSize: CGSize(
+//                width: (view?.frame.width)!*2,
+//                height: (view?.frame.height)!*2
+//            )
+//        )
+//
+//        let backgroundTexture = SKTexture(image: scaledImage!)
+//
+//        for _ in 0 ... 1 {
+//
+//            let background = SKSpriteNode(texture: backgroundTexture)
+//            background.name = "background"
+//            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!)
+//            background.zPosition = -10
+//            addChild(background)
+//        }
     }
 }
