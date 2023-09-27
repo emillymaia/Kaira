@@ -20,7 +20,6 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
         scene?.backgroundColor = .white
         createBackground()
         setupBottomBar()
-        print("Custom Delegate SCN: \(String(describing: customDelegate))")
     }
 
 }

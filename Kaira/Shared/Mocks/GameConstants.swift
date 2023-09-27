@@ -1,24 +1,5 @@
 import Foundation
 
-let europa: [CountryModel] = [
-    CountryModel(name: "Inglaterra", background: "Fase1Selo")
-]
-
-let continents: [ContinentModel] = [
-    ContinentModel(name: "Europa", countries: europa)
-]
-
-let pagesChapter1IntroView: [HistoryPageModel] = [
-    HistoryPageModel(image: "OBJ1", text: textChapter1IntroView, button: .finish,
-                     nextViewController: Chapter1GameViewController())
-]
-
-let chapter1IntroView = HistoryViewController(historyPages: pagesChapter1IntroView) {
-    print("foi")
-}
-
-let textChapter1IntroView = "O que é isso? Onde estou? Eu me lembro desse lugar, mas algo está faltando! Preciso da sua ajuda para reconstruir essa memória"
-
 let text = "The city was a labyrinth of concrete and steel" +
 " place where people rushed from one place to another, never stopping to take a breath."
 
@@ -46,8 +27,6 @@ let onboardingPages: [HistoryPageModel] = [
     )
 ]
 
-// ---- First Part ----\\
-
 let mech1 = FindImageViewController()
 let mech2 = SignatureViewController()
 let mech3 = FindImageViewController()
@@ -73,14 +52,7 @@ let page2 = [
         text: text + "1",
         button: .finish
     )]
-//let page3 = [
-//    HistoryPageModel(
-//        image: "OnboardingPage3",
-//        text: text + "1",
-//        button: .finish
-//    )]
 
 let history0 = HistoryViewController(historyPages: page0, onFinishButtonPressed: nil)
 let history1 = HistoryViewController(historyPages: page1, onFinishButtonPressed: nil)
 let history2 = HistoryViewController(historyPages: page2, onFinishButtonPressed: nil)
-//let history3 = HistoryViewController(historyPages: page3, onFinishButtonPressed: nil)

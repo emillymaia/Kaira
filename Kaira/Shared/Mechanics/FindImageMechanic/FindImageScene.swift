@@ -16,11 +16,9 @@ class FindImageScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
-
         createBackground()
         setupBottomBar()
         winnerNode = setupWinner()
-        print("Custom Delegate SCN: \(String(describing: customDelegate))")
     }
 }
 
@@ -35,9 +33,12 @@ extension FindImageScene {
                 touchedNodes.first?.zPosition = CGFloat(lastZPos)
                 self.currentNode = touchedNodes.first
             }
-            if currentNode == winnerNode {
-                print("winner")
-                pressButton()
+            if let currentNode = currentNode {
+                if currentNode.name == winnerNode!.name {
+                    print("winner")
+                    self.currentNode = nil
+                    pressButton()
+                }
             }
         }
     }

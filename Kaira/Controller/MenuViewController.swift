@@ -18,7 +18,7 @@ final class MenuViewController: UIViewController {
 
 extension MenuViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard section < continents.count else {
+        guard section < continentModel.count else {
             return 0
         }
         return continentModel[section].countries.count

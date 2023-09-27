@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let viewController: UIViewController
+
         if UserDefaultsManager.shared.didUserReceivedOnboarding == true {
             viewController = MenuViewController()
         } else {
@@ -21,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         window?.rootViewController = UINavigationController(rootViewController: viewController)
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
     }
 

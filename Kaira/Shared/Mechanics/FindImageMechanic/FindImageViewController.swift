@@ -19,8 +19,7 @@ class FindImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Custom Delegate VC: \(String(describing: customDelegate))")
-
+        
         skView = SKView(frame: view.frame)
         skView.showsFPS = true
         skView.showsNodeCount = true
