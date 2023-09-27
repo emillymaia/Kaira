@@ -30,6 +30,7 @@ extension SignatureScene {
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)
+            print(touchedNodes.first?.name)
             if touchedNodes.first?.name == "done" {
                 print("winner")
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
@@ -63,10 +64,10 @@ extension SignatureScene {
     }
 
     func setupBottomBar() {
-        let bottomNode = SKSpriteNode(imageNamed: "objective-1")
+        let bottomNode = SKSpriteNode(imageNamed: "objective-2")
         bottomNode.size = CGSize(width: 355, height: 120)
         bottomNode.position = CGPoint(x: (view?.center.x)!, y: 120)
-        bottomNode.name = "done"
+        bottomNode.name = "background"
         bottomNode.zPosition = 1
 
         addChild(bottomNode)
@@ -93,22 +94,33 @@ extension SignatureScene {
             let background = SKSpriteNode(texture: backgroundTexture)
             background.name = "background"
             background.size = CGSize(
-                width: ((view?.frame.width)!*90.5/100),
-                height: ((view?.frame.height)!*56.05/100)
+                width: ((view?.frame.width)!*81.7/100),
+                height: ((view?.frame.height)!*59.8/100)
             )
-            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!+40)
+            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + 40)
             background.zPosition = -10
             addChild(background)
 
             canvasView.frame = CGRect(
                 x: ((view?.frame.width)! - background.frame.width)/2,
-                y: ((view?.frame.height)! - background.frame.height)/2,
+                y: (((view?.frame.height)! - background.frame.height)/2 - background.frame.height/14),
                 width: background.size.width,
-                height: background.size.height
+                height: background.size.height - background.size.height/7
             )
             canvasView.layer.zPosition = 10
             canvasView.isOpaque = false
             view!.addSubview(canvasView)
+
+            let doneButton = SKSpriteNode(imageNamed: "done-button")
+            doneButton.size = CGSize(width: 107, height: 50)
+            doneButton.position = CGPoint(
+                x: (view?.center.x)!,
+                y: ((view?.center.y)!) - background.size.height/3
+            )
+            doneButton.zPosition = 40
+            doneButton.name = "done"
+
+            addChild(doneButton)
         }
     }
 }

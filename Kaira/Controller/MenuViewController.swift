@@ -6,7 +6,7 @@ final class MenuViewController: UIViewController {
     let menuView = MenuView()
     var taPassandoDados = 0
     var continentModel: [ContinentModel] = [ContinentModel(name: "Europa", countries: [CountryModel(name: "Inglaterra", background: "Fase1Selo"), CountryModel(name: "França", background: "Fase1Selo")])]
-    var gamePhases: [GamePhaseModel] = [GamePhaseModel(countryName: "England", background: "background-test", assets: ["tic-1", "tic-2", "tic-3", "tic-4", "tic-5"]), GamePhaseModel(countryName: "England", background: "book-club", assets: [])]
+    var gamePhases: [GamePhaseModel] = [GamePhaseModel(countryName: "England", background: "background-test", assets: ["tic-1", "tic-2", "tic-3", "tic-4", "tic-5"]), GamePhaseModel(countryName: "England", background: "book-club1", assets: ["done-button"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
