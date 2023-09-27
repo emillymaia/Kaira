@@ -12,7 +12,7 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
     let canvasView: PKCanvasView = {
         let canvas = PKCanvasView()
         canvas.drawingPolicy = .anyInput
-        canvas.clearsContextBeforeDrawing = true
+        canvas.drawing = PKDrawing()
         return canvas
     }()
 
@@ -33,7 +33,6 @@ extension SignatureScene {
             let touchedNodes = self.nodes(at: location)
             if touchedNodes.first?.name == "done" {
                 print("winner")
-                canvasView.drawing = PKDrawing()
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 pressButton()
             }
@@ -42,6 +41,7 @@ extension SignatureScene {
 
     private func pressButton() {
         print("pressed")
+        clearDrawing()
         didPressButton?()
     }
 
@@ -50,7 +50,6 @@ extension SignatureScene {
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -59,6 +58,10 @@ extension SignatureScene {
 }
 
 extension SignatureScene {
+
+    func clearDrawing() {
+        self.canvasView.drawing = PKDrawing()
+    }
 
     func setupBottomBar() {
         let bottomNode = SKSpriteNode(imageNamed: "objective-1")
