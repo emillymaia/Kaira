@@ -45,20 +45,16 @@ extension SignatureScene {
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)
-            print(touchedNodes.first?.name)
             if touchedNodes.first?.name == "done" {
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 pressButton()
             }
 
-            if touchedNodes.first?.name == "pause" && !(lockScreenInteraction!) {
-                lockScreenInteraction = true
-                canvasView.drawingPolicy = .pencilOnly
-                canvasView.frame = CGRect(
-                    x: 1000,
-                    y: 1000)
-                addChild(customPopUp)
-            }
+//            if touchedNodes.first?.name == "pause" && !(lockScreenInteraction!) {
+//                lockScreenInteraction = true
+//                canvasView.drawingPolicy = .pencilOnly
+//                addChild(customPopUp)
+//            }
         }
     }
 
@@ -142,10 +138,6 @@ extension SignatureScene {
 
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
-        canvasView.frame = CGRect(
-            x: ((view?.frame.width)! - background.frame.width)/2,
-            y: (((view?.frame.height)! - background.frame.height)/2 - background.frame.height/14)
-        )
         canvasView.drawingPolicy = .anyInput
     }
 }

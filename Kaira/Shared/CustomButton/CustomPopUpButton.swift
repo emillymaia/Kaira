@@ -14,8 +14,10 @@ class CustomPopup: SKSpriteNode {
 
     private var isBackgroundSoundOn = true
 
-    var didClose: (() -> Void)?
+    var navController: UIViewController?
 
+    var didClose: (() -> Void)?
+    
     init() {
         let texture = SKTexture(imageNamed: "pause-background") // Substitua "backgroundPause" pelo nome da sua imagem de fundo
         super.init(texture: texture, color: .clear, size: texture.size())
@@ -78,9 +80,9 @@ class CustomPopup: SKSpriteNode {
                     backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
                 } else if node.name == "dismissButton" {
                     self.close()
-
+                } else if node.name == "backToMenuButton" {
+                    navController!.dismiss(animated: true)
                 }
-
             }
         }
     }

@@ -27,6 +27,8 @@ class FindImageScene: SKScene, SKPhysicsContactDelegate {
         return view
     }()
 
+    var navController = UIViewController()
+
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
         lockScreenInteraction = false
@@ -105,7 +107,7 @@ extension FindImageScene {
     }
 
     func setupSprites(assets: [String]) {
-        for index in 1 ... 20 {
+        for index in 1 ... 12 {
             let imageName = assets[Int.random(in: 0...assets.count-1)]
             let imageNode = SKSpriteNode(imageNamed: imageName)
             imageNode.size = CGSize(width: 100, height: 100)
@@ -151,6 +153,7 @@ extension FindImageScene {
         addChild(pauseButton!)
 
         customPopUp.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!)
+        customPopUp.navController = navController
         customPopUp.zPosition = 1000
     }
 
