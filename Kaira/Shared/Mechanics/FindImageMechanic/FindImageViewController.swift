@@ -19,7 +19,7 @@ class FindImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         skView = SKView(frame: view.frame)
         skView.showsFPS = true
         skView.showsNodeCount = true
@@ -32,8 +32,7 @@ class FindImageViewController: UIViewController {
     }
 
     private func handleButtonPress() {
-
         historyViewController!.navigationItem.setHidesBackButton(true, animated: false)
-        navigationController?.pushViewController(historyViewController!, animated: true)
+        navigationController?.pushViewController(historyViewController!, animated: false)
     }
 }

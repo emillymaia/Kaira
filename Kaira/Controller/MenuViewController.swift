@@ -4,9 +4,8 @@ import SpriteKit
 final class MenuViewController: UIViewController {
     
     let menuView = MenuView()
-    var taPassandoDados = 0
-    var continentModel: [ContinentModel] = [ContinentModel(name: "Europa", countries: [CountryModel(name: "Inglaterra", background: "Fase1Selo"), CountryModel(name: "França", background: "Fase1Selo")])]
-    var gamePhases: [GamePhaseModel] = [GamePhaseModel(countryName: "England", background: "background-test", assets: ["tic-1", "tic-2", "tic-3", "tic-4", "tic-5"]), GamePhaseModel(countryName: "England", background: "book-club1", assets: ["done-button"])]
+    var lastPressed = ""
+    var continentModel: [ContinentModel] = [ContinentModel(name: "Europa", countries: [CountryModel(name: "England", background: "england-selo"), CountryModel(name: "France", background: "locked-selo")])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +38,10 @@ extension MenuViewController: UICollectionViewDataSource {
 
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        historyPresentation(continent: continentModel[indexPath.section].countries[indexPath.row].name, stopPoint: 0)
+        if continentModel[indexPath.section].countries[indexPath.row].background != "locked-selo" {
+            self.lastPressed = continentModel[indexPath.section].countries[indexPath.row].name
+            historyPresentation(continent: continentModel[indexPath.section].countries[indexPath.row].name, stopPoint: 0)
+        }
     }
 }
 
@@ -74,12 +76,3 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 24, left: 39, bottom: 48, right: 39)
     }
 }
-
-extension MenuViewController: DataDelegate {
-    func didUpdateData(data: Int) {
-        if data == 2 {
-            self.dismiss(animated: true)
-        }
-    }
-}
-

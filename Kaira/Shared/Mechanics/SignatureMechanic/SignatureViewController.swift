@@ -34,6 +34,6 @@ class SignatureViewController: UIViewController {
     private func handleButtonPress() {
 
         historyViewController!.navigationItem.setHidesBackButton(true, animated: false)
-        navigationController?.pushViewController(historyViewController!, animated: true)
+        navigationController?.pushViewController(historyViewController!, animated: false)
     }
 }

@@ -25,6 +25,10 @@
 		EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */; };
 		EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06092D2AC3123A00BCC58C /* SignatureScene.swift */; };
 		EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06092F2AC3124800BCC58C /* SignatureViewController.swift */; };
+		EE0609332ACE0C5E00BCC58C /* EnglandPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */; };
+		EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */; };
+		EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */; };
+		EE06093A2ACEC4AF00BCC58C /* CustomPopUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609392ACEC4AF00BCC58C /* CustomPopUpButton.swift */; };
 		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
 		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
 		EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE182F722A9F6FE000CE30C8 /* Assets.xcassets */; };
@@ -34,7 +38,6 @@
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
 		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
-		EEC53F8D2ABB1F6D00B24261 /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F8C2ABB1F6D00B24261 /* GameConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,10 @@
 		EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewControllerExtensions.swift; path = Kaira/Shared/Mechanics/FindImageMechanic/MenuViewControllerExtensions.swift; sourceTree = SOURCE_ROOT; };
 		EE06092D2AC3123A00BCC58C /* SignatureScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureScene.swift; sourceTree = "<group>"; };
 		EE06092F2AC3124800BCC58C /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
+		EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglandPhaseStructure.swift; sourceTree = "<group>"; };
+		EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPhaseStructure.swift; sourceTree = "<group>"; };
+		EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrancePhaseStructure.swift; sourceTree = "<group>"; };
+		EE0609392ACEC4AF00BCC58C /* CustomPopUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpButton.swift; sourceTree = "<group>"; };
 		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +93,6 @@
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
-		EEC53F8C2ABB1F6D00B24261 /* GameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +123,10 @@
 		ABDFC8872AA6196E00F19D1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				EEC53F8B2ABB1F5D00B24261 /* Mocks */,
+				EE0609382ACEC4A100BCC58C /* CustomButton */,
+				EE0609312ACE0C4F00BCC58C /* Phases */,
 				EEC53F862ABB1D4000B24261 /* Protocols */,
 				EEC53F832ABB1B5500B24261 /* Enums */,
-				EEC53F772AB494F000B24261 /* Prototypes */,
 				ABDFC89D2AB232A600F19D1A /* Mechanics */,
 				ABDFC8962AAF439E00F19D1A /* Font */,
 			);
@@ -170,6 +176,24 @@
 				EE06092F2AC3124800BCC58C /* SignatureViewController.swift */,
 			);
 			path = SignatureMechanic;
+			sourceTree = "<group>";
+		};
+		EE0609312ACE0C4F00BCC58C /* Phases */ = {
+			isa = PBXGroup;
+			children = (
+				EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */,
+				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
+				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
+			);
+			path = Phases;
+			sourceTree = "<group>";
+		};
+		EE0609382ACEC4A100BCC58C /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				EE0609392ACEC4AF00BCC58C /* CustomPopUpButton.swift */,
+			);
+			path = CustomButton;
 			sourceTree = "<group>";
 		};
 		EE182F5D2A9F6FDE00CE30C8 = {
@@ -265,13 +289,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		EEC53F772AB494F000B24261 /* Prototypes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Prototypes;
-			sourceTree = "<group>";
-		};
 		EEC53F832ABB1B5500B24261 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,14 +303,6 @@
 				EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		EEC53F8B2ABB1F5D00B24261 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				EEC53F8C2ABB1F6D00B24261 /* GameConstants.swift */,
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,19 +465,22 @@
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
 				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
-				EEC53F8D2ABB1F6D00B24261 /* GameConstants.swift in Sources */,
+				EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */,
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
+				EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */,
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
 				EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */,
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
+				EE0609332ACE0C5E00BCC58C /* EnglandPhaseStructure.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,
 				EE0609272AC1A71500BCC58C /* FindImageScene.swift in Sources */,
 				ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */,
 				ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */,
 				ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */,
+				EE06093A2ACEC4AF00BCC58C /* CustomPopUpButton.swift in Sources */,
 				EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */,
 				ABDFC8A92AB47BAA00F19D1A /* HistoryViewController.swift in Sources */,
 			);

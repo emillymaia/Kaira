@@ -9,6 +9,19 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
 
     var didPressButton: (() -> Void)?
 
+    var lockScreenInteraction: Bool?
+
+    private var pauseButton: SKSpriteNode?
+
+    private lazy var customPopUp: CustomPopup = {
+        let view = CustomPopup()
+        view.size = CGSize(width: 250, height: 260)
+        view.didClose = { [weak self] in
+            self?.pauseScreenInteraction()
+        }
+        return view
+    }()
+
     let canvasView: PKCanvasView = {
         let canvas = PKCanvasView()
         canvas.drawingPolicy = .anyInput
@@ -18,8 +31,10 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
+        lockScreenInteraction = false
         createBackground()
         setupBottomBar()
+        setupButtons()
     }
 
 }
@@ -32,28 +47,24 @@ extension SignatureScene {
             let touchedNodes = self.nodes(at: location)
             print(touchedNodes.first?.name)
             if touchedNodes.first?.name == "done" {
-                print("winner")
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 pressButton()
+            }
+
+            if touchedNodes.first?.name == "pause" && !(lockScreenInteraction!) {
+                lockScreenInteraction = true
+                canvasView.drawingPolicy = .pencilOnly
+                canvasView.frame = CGRect(
+                    x: 1000,
+                    y: 1000)
+                addChild(customPopUp)
             }
         }
     }
 
     private func pressButton() {
-        print("pressed")
         clearDrawing()
         didPressButton?()
-    }
-
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-    }
-
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-
-    override func update(_ currentTime: TimeInterval) {
-
     }
 }
 
@@ -64,23 +75,13 @@ extension SignatureScene {
     }
 
     func setupBottomBar() {
-        let bottomNode = SKSpriteNode(imageNamed: "objective-2")
+        let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
         bottomNode.size = CGSize(width: 355, height: 120)
         bottomNode.position = CGPoint(x: (view?.center.x)!, y: 120)
         bottomNode.name = "background"
         bottomNode.zPosition = 1
 
         addChild(bottomNode)
-
-        let pauseButton = SKSpriteNode(imageNamed: "pause-button")
-        pauseButton.size = CGSize(width: 50, height: 50)
-        pauseButton.position = CGPoint(
-            x: (view?.frame.width)! - ((view?.frame.width)!)/8,
-            y: (view?.frame.height)! - (view?.frame.height)!/10
-        )
-        pauseButton.name = "background"
-
-        addChild(pauseButton)
     }
 
     func createBackground() {
@@ -111,7 +112,7 @@ extension SignatureScene {
             canvasView.isOpaque = false
             view!.addSubview(canvasView)
 
-            let doneButton = SKSpriteNode(imageNamed: "done-button")
+            let doneButton = SKSpriteNode(imageNamed: "game-done-button")
             doneButton.size = CGSize(width: 107, height: 50)
             doneButton.position = CGPoint(
                 x: (view?.center.x)!,
@@ -122,5 +123,29 @@ extension SignatureScene {
 
             addChild(doneButton)
         }
+    }
+
+    func setupButtons() {
+        pauseButton = SKSpriteNode(imageNamed: "pause-button")
+        pauseButton!.size = CGSize(width: 50, height: 50)
+        pauseButton?.position = CGPoint(
+            x: (view?.frame.width)! - ((view?.frame.width)!)/8,
+            y: (view?.frame.height)! - (view?.frame.height)!/10
+        )
+        pauseButton?.zPosition = 900
+        pauseButton?.name = "pause"
+        addChild(pauseButton!)
+
+        customPopUp.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!)
+        customPopUp.zPosition = 1000
+    }
+
+    private func pauseScreenInteraction() {
+        lockScreenInteraction = false
+        canvasView.frame = CGRect(
+            x: ((view?.frame.width)! - background.frame.width)/2,
+            y: (((view?.frame.height)! - background.frame.height)/2 - background.frame.height/14)
+        )
+        canvasView.drawingPolicy = .anyInput
     }
 }

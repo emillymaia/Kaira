@@ -1,6 +1,6 @@
 import Foundation
 
 struct CountryModel {
-    let name: String
-    let background: String
+    var name: String
+    var background: String
 }

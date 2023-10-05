@@ -1,6 +1,6 @@
 import Foundation
 
 struct ContinentModel {
-    let name: String
-    let countries: [CountryModel]
+    var name: String
+    var countries: [CountryModel]
 }

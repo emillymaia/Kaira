@@ -61,8 +61,7 @@ class HistoryViewController: UIViewController {
             }
 
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
-            nextViewController.modalPresentationStyle = .fullScreen
-            navigationController?.pushViewController(nextViewController, animated: true)
+            navigationController?.pushViewController(nextViewController, animated: false)
         }
     }
 }

@@ -3,28 +3,44 @@ extension MenuViewController {
 
     // GAME SETUP FUNCTIONS
     func historyPresentation(continent: String, stopPoint: Int) {
-        if continent == "Inglaterra" {
+        if continent == "England" {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-            preSetup()
-
-            if taPassandoDados == 0 {
-                let initialController = UINavigationController(rootViewController: history0)
-                initialController.navigationItem.setHidesBackButton(true, animated: false)
-                initialController.modalPresentationStyle = .fullScreen
-                present(initialController, animated: true)
-            }
+            preSetupEngland()
         }
-        if continent == "França" {
-            print("DO NOTHING")
+        if continent == "France" {
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+            preSetupFrance()
         }
     }
 
-    func preSetup() {
-        mech1.gamePhaseModel = gamePhases[0]
-        mech2.gamePhaseModel = gamePhases[1]
-        mech1.historyViewController = history1
-        mech2.historyViewController = history2
-        mech1.customDelegate = self
-        mech2.customDelegate = self
+    func preSetupEngland() {
+        let englandPhase = EnglandPhaseStructure(self)
+        let initialController = UINavigationController(rootViewController: englandPhase.historyVC[0])
+        initialController.navigationItem.setHidesBackButton(true, animated: false)
+        initialController.modalPresentationStyle = .fullScreen
+        present(initialController, animated: false)
+    }
+
+    func preSetupFrance() {
+        let francePhase = FrancePhaseStructure(self)
+        let initialController = UINavigationController(rootViewController: francePhase.historyVC[0])
+        initialController.navigationItem.setHidesBackButton(true, animated: false)
+        initialController.modalPresentationStyle = .fullScreen
+        present(initialController, animated: false)
+    }
+}
+
+extension MenuViewController: DataDelegate {
+    func didUpdateData(data: Int) {
+        if data == 1 {
+            if lastPressed == "England" {
+                self.continentModel[0].countries[data].background = "france-selo"
+                menuView.menuCollectionView.reloadData()
+            }
+
+            if lastPressed == "France" {
+                print("Finished Flow")
+            }
+        }
     }
 }

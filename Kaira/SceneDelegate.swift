@@ -17,9 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if UserDefaultsManager.shared.didUserReceivedOnboarding == true {
             viewController = MenuViewController()
         } else {
-            viewController = HistoryViewController(historyPages: onboardingPages) {
-                UserDefaultsManager.shared.didUserReceivedOnboarding = true
-            }
+            let intro = IntroPhaseStructure()
+            viewController = intro.historyVC[0]
         }
         window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.overrideUserInterfaceStyle = .light

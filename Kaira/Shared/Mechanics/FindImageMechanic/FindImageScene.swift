@@ -14,10 +14,24 @@ class FindImageScene: SKScene, SKPhysicsContactDelegate {
 
     var lastZPos = 1
 
+    var lockScreenInteraction: Bool?
+
+    private var pauseButton: SKSpriteNode?
+
+    private lazy var customPopUp: CustomPopup = {
+        let view = CustomPopup()
+        view.size = CGSize(width: 250, height: 260)
+        view.didClose = { [weak self] in
+            self?.pauseScreenInteraction()
+        }
+        return view
+    }()
+
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
-        createBackground()
+        lockScreenInteraction = false
         setupBottomBar()
+        setupButtons()
         winnerNode = setupWinner()
     }
 }
@@ -28,14 +42,20 @@ extension FindImageScene {
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)
-            if !(touchedNodes.first?.name == "background") {
+            if !(touchedNodes.first?.name == "background") &&
+                !(lockScreenInteraction!) && !(touchedNodes.first?.name == "pause") {
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 touchedNodes.first?.zPosition = CGFloat(lastZPos)
                 self.currentNode = touchedNodes.first
             }
+
+            if touchedNodes.first?.name == "pause" && !lockScreenInteraction! {
+                lockScreenInteraction = true
+                addChild(customPopUp)
+            }
+
             if let currentNode = currentNode {
                 if currentNode.name == winnerNode!.name {
-                    print("winner")
                     self.currentNode = nil
                     pressButton()
                 }
@@ -44,7 +64,9 @@ extension FindImageScene {
     }
 
     private func pressButton() {
-        print("pressed")
+        if gamePhaseModel?.countryName == "England" {
+            customDelegate?.didUpdateData(data: 1)
+        }
         didPressButton?()
     }
 
@@ -69,35 +91,21 @@ extension FindImageScene {
         }
         self.currentNode = nil
     }
-
-    override func update(_ currentTime: TimeInterval) {
-
-    }
 }
 
 extension FindImageScene {
 
     func setupBottomBar() {
-        let bottomNode = SKSpriteNode(imageNamed: "objective-1")
+        let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
         bottomNode.size = CGSize(width: 355, height: 120)
         bottomNode.position = CGPoint(x: (view?.center.x)!, y: 120)
         bottomNode.name = "background"
 
         addChild(bottomNode)
-
-        let pauseButton = SKSpriteNode(imageNamed: "pause-button")
-        pauseButton.size = CGSize(width: 50, height: 50)
-        pauseButton.position = CGPoint(
-            x: (view?.frame.width)! - ((view?.frame.width)!)/8,
-            y: (view?.frame.height)! - (view?.frame.height)!/10
-        )
-        pauseButton.name = "background"
-
-        addChild(pauseButton)
     }
 
     func setupSprites(assets: [String]) {
-        for index in 1 ... 5 {
+        for index in 1 ... 20 {
             let imageName = assets[Int.random(in: 0...assets.count-1)]
             let imageNode = SKSpriteNode(imageNamed: imageName)
             imageNode.size = CGSize(width: 100, height: 100)
@@ -112,10 +120,13 @@ extension FindImageScene {
     }
 
     func setupWinner() -> SKSpriteNode? {
-        let winnerImage = "tic-2"
-        let filteredImages = (gamePhaseModel?.assets.filter({ $0 != winnerImage }))!
+        let winnerImage = gamePhaseModel?.assets[1]
+        var filteredImages = gamePhaseModel?.assets
 
-        let winnerSprite = SKSpriteNode(imageNamed: winnerImage)
+        filteredImages?.removeFirst()
+        filteredImages?.removeFirst()
+
+        let winnerSprite = SKSpriteNode(imageNamed: winnerImage!)
         winnerSprite.size = CGSize(width: 100, height: 100)
         winnerSprite.position = CGPoint(x: Double.random(in: 49...343), y: Double.random(in: 200...650))
         winnerSprite.zPosition = -1
@@ -125,29 +136,25 @@ extension FindImageScene {
         winnerSprite.physicsBody?.isDynamic = false
         addChild(winnerSprite)
 
-        setupSprites(assets: filteredImages)
+        setupSprites(assets: filteredImages!)
         return winnerSprite
     }
 
-    func createBackground() {
+    func setupButtons() {
+        pauseButton = SKSpriteNode(imageNamed: "pause-button")
+        pauseButton!.size = CGSize(width: 50, height: 50)
+        pauseButton?.position = CGPoint(
+            x: (view?.frame.width)! - ((view?.frame.width)!)/8,
+            y: (view?.frame.height)! - (view?.frame.height)!/10
+        )
+        pauseButton?.name = "pause"
+        addChild(pauseButton!)
 
-//        let image = UIImage(named: gamePhaseModel!.background)
-//        let scaledImage = image?.scalePreservingAspectRatio(
-//            targetSize: CGSize(
-//                width: (view?.frame.width)!*2,
-//                height: (view?.frame.height)!*2
-//            )
-//        )
-//
-//        let backgroundTexture = SKTexture(image: scaledImage!)
-//
-//        for _ in 0 ... 1 {
-//
-//            let background = SKSpriteNode(texture: backgroundTexture)
-//            background.name = "background"
-//            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!)
-//            background.zPosition = -10
-//            addChild(background)
-//        }
+        customPopUp.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!)
+        customPopUp.zPosition = 1000
+    }
+
+    private func pauseScreenInteraction() {
+        lockScreenInteraction = false
     }
 }
