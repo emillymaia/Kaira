@@ -71,16 +71,20 @@ class CustomPopup: SKSpriteNode {
 
             for node in nodesAtLocation {
                 if node.name == "soundEffectButton" {
+                    UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     isSoundEffectOn.toggle()
                     let textureName = isSoundEffectOn ? "SoundOn" : "SoundOff"
                     soundEffectButton.texture = SKTexture(imageNamed: textureName)
                 } else if node.name == "backgroundSoundButton" {
+                    UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     isBackgroundSoundOn.toggle()
                     let textureName = isBackgroundSoundOn ? "MusicOn" : "MusicOff"
                     backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
                 } else if node.name == "dismissButton" {
+                    UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     self.close()
                 } else if node.name == "backToMenuButton" {
+                    UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     navController!.dismiss(animated: true)
                 }
             }
