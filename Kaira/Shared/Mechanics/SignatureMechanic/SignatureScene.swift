@@ -53,6 +53,7 @@ extension SignatureScene {
             }
 
             if touchedNodes.first?.name == "pause" && !(lockScreenInteraction!) {
+                UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 lockScreenInteraction = true
                 canvasView.drawingPolicy = .pencilOnly
                 canvasView.layer.position = CGPoint(x: 1000, y: 1000)
@@ -128,8 +129,8 @@ extension SignatureScene {
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
         pauseButton!.size = CGSize(width: 50, height: 50)
         pauseButton?.position = CGPoint(
-            x: (view?.frame.width)! - ((view?.frame.width)!)/8,
-            y: (view?.frame.height)! - (view?.frame.height)!/10
+            x: (view?.frame.width)! - ((view?.frame.width)!)/5,
+            y: (view?.frame.height)! - (view?.frame.height)!/7.5
         )
         pauseButton?.zPosition = 900
         pauseButton?.name = "pause"
