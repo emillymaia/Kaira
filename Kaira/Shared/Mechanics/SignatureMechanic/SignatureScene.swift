@@ -29,6 +29,8 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
         return canvas
     }()
 
+    var navController = UIViewController()
+
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
         lockScreenInteraction = false
@@ -50,11 +52,12 @@ extension SignatureScene {
                 pressButton()
             }
 
-//            if touchedNodes.first?.name == "pause" && !(lockScreenInteraction!) {
-//                lockScreenInteraction = true
-//                canvasView.drawingPolicy = .pencilOnly
-//                addChild(customPopUp)
-//            }
+            if touchedNodes.first?.name == "pause" && !(lockScreenInteraction!) {
+                lockScreenInteraction = true
+                canvasView.drawingPolicy = .pencilOnly
+                canvasView.layer.position = CGPoint(x: 1000, y: 1000)
+                addChild(customPopUp)
+            }
         }
     }
 
@@ -133,11 +136,18 @@ extension SignatureScene {
         addChild(pauseButton!)
 
         customPopUp.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!)
+        customPopUp.navController = navController
         customPopUp.zPosition = 1000
     }
 
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
         canvasView.drawingPolicy = .anyInput
+        let wid = (view?.frame.width)!
+        let hei = (view?.frame.height)!
+        let widCalc = wid - (wid*81.7/100)/2
+        let heiCalc = hei - (hei*59.8/100)/2 - (hei*59.8/100)/14
+        canvasView.layer.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! - (view?.frame.height)!/12)
+
     }
 }

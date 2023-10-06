@@ -58,11 +58,16 @@ struct FrancePhaseStructure {
             HistoryPageModel(
                 image: "france-4",
                 text: texts[3],
+                button: .next
+            ),
+            HistoryPageModel(
+                image: "france-5",
+                text: texts[4],
                 button: .next,
                 nextViewController: franceFindGame
             ),
             HistoryPageModel(
-                image: "france-5",
+                image: "france-6",
                 text: texts[4],
                 button: .finish
             )
@@ -70,8 +75,8 @@ struct FrancePhaseStructure {
 
         self.historyVC = [
             HistoryViewController(historyPages: [self.historyPages[0], self.historyPages[1], self.historyPages[2]], onFinishButtonPressed: nil),
-            HistoryViewController(historyPages: [self.historyPages[3]], onFinishButtonPressed: nil),
-            HistoryViewController(historyPages: [self.historyPages[4]]) {
+            HistoryViewController(historyPages: [self.historyPages[3], self.historyPages[4]], onFinishButtonPressed: nil),
+            HistoryViewController(historyPages: [self.historyPages[5]]) {
                     customDelegate.didUpdateData(data: 1)
             }
         ]

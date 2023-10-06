@@ -27,6 +27,7 @@ class SignatureViewController: UIViewController {
 
         historyGameScene.gamePhaseModel = gamePhaseModel
         historyGameScene.customDelegate = customDelegate
+        historyGameScene.navController = self
 
         skView.presentScene(historyGameScene)
     }
