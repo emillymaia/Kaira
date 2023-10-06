@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */; };
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
 		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedStampView.swift; sourceTree = "<group>"; };
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
 		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
@@ -268,6 +270,7 @@
 				ABDFC8882AA61D2200F19D1A /* MenuView.swift */,
 				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
 				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
+				AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */,
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
 				EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */,
+				AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */,
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
