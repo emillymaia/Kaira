@@ -55,10 +55,17 @@ extension HistoryView {
             text.leadingAnchor.constraint(equalTo: image.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: image.trailingAnchor),
 
-            button.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 8),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 313),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -23)
+//            button.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 8),
+//            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 313),
+//            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+//            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -23)
+            
+            button.topAnchor.constraint(equalTo: topAnchor, constant: 700),
+//            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 103),
+//            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -102),
+            button.centerXAnchor.constraint(equalTo: centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: centerYAnchor),
+            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70)
         ])
     }
 

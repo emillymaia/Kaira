@@ -37,15 +37,15 @@ class HistoryViewController: UIViewController {
 extension HistoryViewController {
     private func updatePage() {
         let page = historyPages[currentPageIndex]
-        historyView.image.image = UIImage(named: page.image)
-        historyView.text.text = page.text
+        setImageAndText()
+
         if page.button == .finish {
-            historyView.button.setImage(UIImage(named: "Start"), for: .normal)
+            historyView.button.setImage(UIImage(named: "playButton"), for: .normal)
         } else {
-            historyView.button.setImage(UIImage(named: "NextPage"), for: .normal)
+            historyView.button.setImage(UIImage(named: "next"), for: .normal)
         }
     }
-    
+
     private func handleButtonPress() {
         if currentPageIndex < historyPages.count - 1 {
             currentPageIndex += 1
@@ -55,8 +55,8 @@ extension HistoryViewController {
 
             if historyPages[currentPageIndex].button == .finish {
                 onFinishButtonPressed?()
-                navigationController?.dismiss(animated: true)
-                return
+//                navigationController?.dismiss(animated: true)
+//                return
             }
 
             if historyPages[currentPageIndex].button == .end {
@@ -66,5 +66,32 @@ extension HistoryViewController {
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
             navigationController?.pushViewController(nextViewController, animated: false)
         }
+    }
+}
+
+extension HistoryViewController {
+    func setImageAndText() {
+        let page = historyPages[currentPageIndex]
+        let newImage = UIImage(named: page.image)
+//        historyView.text.text = page.text
+
+        UIView.transition(
+            with: historyView.image,
+            duration: 0.8,
+            options: .transitionCrossDissolve,
+            animations: {
+                self.historyView.image.image = newImage
+            },
+            completion: nil
+        )
+        UIView.transition(
+            with: historyView.text,
+            duration: 0.8,
+            options: .transitionCrossDissolve,
+            animations: {
+                self.historyView.text.text = page.text
+            },
+            completion: nil
+        )
     }
 }

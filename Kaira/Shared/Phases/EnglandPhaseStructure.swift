@@ -44,7 +44,7 @@ struct EnglandPhaseStructure {
             HistoryPageModel(
                 image: "england-2",
                 text: texts[1],
-                button: .next,
+                button: .finish,
                 nextViewController: englandFindGame
             ),
             HistoryPageModel(

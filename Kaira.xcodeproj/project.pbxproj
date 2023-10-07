@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */; };
 		AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */; };
+		AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */; };
+		AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */; };
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
 		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
@@ -62,6 +64,8 @@
 /* Begin PBXFileReference section */
 		AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedStampView.swift; sourceTree = "<group>"; };
 		AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedStampViewController.swift; sourceTree = "<group>"; };
+		AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAnimations.swift; sourceTree = "<group>"; };
+		AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAnimations.swift; sourceTree = "<group>"; };
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
 		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
@@ -233,6 +237,8 @@
 				EE182F9A2A9F747900CE30C8 /* Model */,
 				EE182F722A9F6FE000CE30C8 /* Assets.xcassets */,
 				EE182F772A9F6FE000CE30C8 /* Info.plist */,
+				AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */,
+				AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */,
 			);
 			path = Kaira;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 				AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */,
 				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
 				EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */,
+				AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */,
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
 				EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */,
 				AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */,
@@ -483,6 +490,7 @@
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
 				EE0609332ACE0C5E00BCC58C /* EnglandPhaseStructure.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
+				AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,
 				EE0609272AC1A71500BCC58C /* FindImageScene.swift in Sources */,
 				ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */,
