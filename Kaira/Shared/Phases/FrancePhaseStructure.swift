@@ -30,6 +30,9 @@ struct FrancePhaseStructure {
             "Lorem ipsum dolor sit amet",
         ]
 
+        let unlockunlockFranceStampLabel = "On my 14th birthday, Chloé gave me a letter with this stamp. This is one of my favorite stamps, because Chloé and I loved eating croissants after school. I remember it like it was yesterday..."
+
+        let unlockFranceStampView = UnlockedStampViewController(stampImage: "france-selo", label: unlockunlockFranceStampLabel, onFinishButtonPressed: nil)
         let franceSignGame = SignatureViewController()
         franceSignGame.gamePhaseModel = franceSignGamePhaseModel
         franceSignGame.customDelegate = customDelegate
@@ -69,7 +72,8 @@ struct FrancePhaseStructure {
             HistoryPageModel(
                 image: "france-6",
                 text: texts[4],
-                button: .finish
+                button: .next,
+                nextViewController: unlockFranceStampView
             )
         ]
 

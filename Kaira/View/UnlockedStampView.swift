@@ -29,6 +29,7 @@ class UnlockedStampView: UIView {
     var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "add-to-album"), for: .normal)
         button.clipsToBounds = true
         return button
     }()
@@ -53,7 +54,7 @@ class UnlockedStampView: UIView {
 extension UnlockedStampView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            stampImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 96),
+            stampImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             stampImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19),
             stampImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -19),
             stampImage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -307),
@@ -62,10 +63,12 @@ extension UnlockedStampView {
             text.leadingAnchor.constraint(equalTo: stampImage.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: stampImage.trailingAnchor),
 
-            button.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 8),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 313),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -23)
+            button.topAnchor.constraint(equalTo: topAnchor, constant: 700),
+            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 103),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -102),
+            button.centerXAnchor.constraint(equalTo: centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: centerYAnchor),
+            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70)
         ])
     }
 

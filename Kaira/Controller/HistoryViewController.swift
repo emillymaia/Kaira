@@ -32,7 +32,9 @@ class HistoryViewController: UIViewController {
         view = historyView
         view.backgroundColor = .white
     }
+}
 
+extension HistoryViewController {
     private func updatePage() {
         let page = historyPages[currentPageIndex]
         historyView.image.image = UIImage(named: page.image)
@@ -43,6 +45,7 @@ class HistoryViewController: UIViewController {
             historyView.button.setImage(UIImage(named: "NextPage"), for: .normal)
         }
     }
+    
     private func handleButtonPress() {
         if currentPageIndex < historyPages.count - 1 {
             currentPageIndex += 1

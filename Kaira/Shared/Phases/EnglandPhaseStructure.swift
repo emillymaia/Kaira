@@ -28,6 +28,9 @@ struct EnglandPhaseStructure {
             "Anyway, I need to get out of this situation, but it brings back so many good memories. I can still remember and see myself playing in the park with my mother."
         ]
 
+        let unlockunlockEnglandStampLabel = "Wow, I remember I won and sent a letter to my grandmother, I remember the breeze, the taste of my childhood."
+
+        let unlockEnglandStampView = UnlockedStampViewController(stampImage: "england-selo", label: unlockunlockEnglandStampLabel, onFinishButtonPressed: nil)
         let englandFindGame = FindImageViewController()
         englandFindGame.gamePhaseModel = englandGamePhaseModel
         englandFindGame.customDelegate = customDelegate
@@ -52,7 +55,8 @@ struct EnglandPhaseStructure {
             HistoryPageModel(
                 image: "england-4",
                 text: texts[3],
-                button: .finish
+                button: .next,
+                nextViewController: unlockEnglandStampView
             ),
         ]
 
