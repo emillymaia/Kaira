@@ -13,7 +13,7 @@ class HistoryView: UIView {
     var text: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = UIFont(name: "Pally-Regular", size: 17)
+        title.font = UIFont(name: "Pally-Bold", size: 17)
         title.textAlignment = .center
         title.numberOfLines = 0
         return title

@@ -20,7 +20,7 @@ class UnlockedStampView: UIView {
     var text: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = UIFont(name: "Pally-Regular", size: 17)
+        title.font = UIFont(name: "Pally-Bold", size: 17)
         title.textAlignment = .center
         title.numberOfLines = 0
         return title
@@ -63,15 +63,14 @@ extension UnlockedStampView {
             text.leadingAnchor.constraint(equalTo: stampImage.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: stampImage.trailingAnchor),
 
-            button.topAnchor.constraint(equalTo: topAnchor, constant: 700),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 103),
+            button.topAnchor.constraint(equalTo: topAnchor, constant: 680),
+            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 102),
             button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -102),
             button.centerXAnchor.constraint(equalTo: centerXAnchor),
             button.centerYAnchor.constraint(equalTo: centerYAnchor),
             button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70)
         ])
     }
-
     func addSubviews() {
         addSubview(stampImage)
         addSubview(text)
