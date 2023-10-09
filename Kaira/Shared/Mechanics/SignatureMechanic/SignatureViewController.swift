@@ -21,8 +21,8 @@ class SignatureViewController: UIViewController {
         super.viewDidLoad()
 
         skView = SKView(frame: view.frame)
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        skView.showsFPS = false
+        skView.showsNodeCount = false
         view.addSubview(skView)
 
         historyGameScene.gamePhaseModel = gamePhaseModel

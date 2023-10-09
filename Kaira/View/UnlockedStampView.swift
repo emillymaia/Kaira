@@ -63,9 +63,9 @@ extension UnlockedStampView {
             text.leadingAnchor.constraint(equalTo: stampImage.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: stampImage.trailingAnchor),
 
-            button.topAnchor.constraint(equalTo: topAnchor, constant: 680),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 102),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -102),
+            button.topAnchor.constraint(equalTo: topAnchor, constant: 690),
+            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 100),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100),
             button.centerXAnchor.constraint(equalTo: centerXAnchor),
             button.centerYAnchor.constraint(equalTo: centerYAnchor),
             button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70)
