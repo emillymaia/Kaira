@@ -1,6 +1,6 @@
 import Foundation
 
-struct CountryModel {
+struct CountryModel: Codable {
     var name: String
     var background: String
 }

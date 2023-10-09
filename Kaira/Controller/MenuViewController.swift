@@ -28,6 +28,7 @@ final class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadInfo()
         view = menuView
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.dataSource = self

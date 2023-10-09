@@ -38,10 +38,12 @@ extension MenuViewController: DataDelegate {
             if lastPressed == "England" {
                 self.continentModel[0].countries[data].background = "france-selo"
                 menuView.menuCollectionView.reloadData()
+                saveInfo()
             }
 
             if lastPressed == "France" {
                 print("Finished Flow")
+                saveInfo()
             }
         }
     }
@@ -54,5 +56,37 @@ extension UINavigationController {
         transition.type = CATransitionType.fade
         view.layer.add(transition, forKey: nil)
         pushViewController(viewController, animated: false)
+    }
+}
+
+extension MenuViewController {
+    func loadInfo() {
+        if let data = UserDefaults.standard.data(forKey: "continents") {
+            do {
+                // Create JSON Decoder
+                let decoder = JSONDecoder()
+
+                // Decode Note
+                let notes = try decoder.decode([ContinentModel].self, from: data)
+                continentModel = notes
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
+    }
+
+    func saveInfo() {
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(continentModel)
+            // Write/Set Data
+            UserDefaults.standard.set(data, forKey: "continents")
+
+        } catch {
+            print("Unable to Encode Array of Notes (\(error))")
+        }
     }
 }
