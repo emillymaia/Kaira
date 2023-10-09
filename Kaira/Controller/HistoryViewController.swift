@@ -40,9 +40,9 @@ extension HistoryViewController {
         setImageAndText()
 
         if page.button == .finish {
-            historyView.button.setImage(UIImage(named: "playButton"), for: .normal)
+            historyView.button.setImage(UIImage(named: "Start"), for: .normal)
         } else {
-            historyView.button.setImage(UIImage(named: "next"), for: .normal)
+            historyView.button.setImage(UIImage(named: "NextPage"), for: .normal)
         }
     }
 
@@ -50,6 +50,8 @@ extension HistoryViewController {
         if currentPageIndex < historyPages.count - 1 {
             currentPageIndex += 1
             updatePage()
+            historyView.button.animateClick()
+
         } else {
             let nextViewController = historyPages[currentPageIndex].nextViewController ?? UIViewController()
 

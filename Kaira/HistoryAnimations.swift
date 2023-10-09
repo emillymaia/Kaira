@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIButton {
-    private func animateClick() {
+    func animateClick() {
         let initialScale: CGFloat = 0.8
 
         UIView.animate(withDuration: 0.1, animations: {
