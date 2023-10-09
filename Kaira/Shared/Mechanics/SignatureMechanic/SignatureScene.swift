@@ -129,8 +129,8 @@ extension SignatureScene {
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
         pauseButton!.size = CGSize(width: 50, height: 50)
         pauseButton?.position = CGPoint(
-            x: (view?.frame.width)! - ((view?.frame.width)!)/5,
-            y: (view?.frame.height)! - (view?.frame.height)!/7.5
+            x: (view?.frame.width)! - ((view?.frame.width)!)/6,
+            y: (view?.frame.height)! - (view?.frame.height)!/8
         )
         pauseButton?.zPosition = 900
         pauseButton?.name = "pause"

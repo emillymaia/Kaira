@@ -50,13 +50,13 @@ class CustomPopup: SKSpriteNode {
         backToMenuButton = SKSpriteNode(imageNamed: "BackToMenuButton")
         backToMenuButton.position = CGPoint(x: 0, y: -popupSize.height / 2 + 40)
         backToMenuButton.name = "backToMenuButton"
-        backToMenuButton.size = CGSize(width: 150, height: 50)
+        backToMenuButton.size = CGSize(width: 195, height: 50)
         self.addChild(backToMenuButton)
 
         dismissButton = SKSpriteNode(imageNamed: "ContinueButton")
         dismissButton.position = CGPoint(x: 0, y: -popupSize.height / 2 + 100)
         dismissButton.name = "dismissButton"
-        dismissButton.size = CGSize(width: 150, height: 50)
+        dismissButton.size = CGSize(width: 145, height: 50)
         self.addChild(dismissButton)
     }
 

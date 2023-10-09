@@ -66,7 +66,8 @@ extension HistoryViewController {
             }
 
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
-            navigationController?.pushViewController(nextViewController, animated: false)
+            self.navigationController?.fadeTo(nextViewController)
+//            navigationController?.pushViewController(nextViewController, animated: false)
         }
     }
 }

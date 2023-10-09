@@ -17,16 +17,18 @@ extension MenuViewController {
         let englandPhase = EnglandPhaseStructure(self)
         let initialController = UINavigationController(rootViewController: englandPhase.historyVC[0])
         initialController.navigationItem.setHidesBackButton(true, animated: false)
-        initialController.modalPresentationStyle = .fullScreen
-        present(initialController, animated: false)
+        initialController.modalPresentationStyle = .overFullScreen
+        initialController.modalTransitionStyle = .crossDissolve
+        present(initialController, animated: true)
     }
 
     func preSetupFrance() {
         let francePhase = FrancePhaseStructure(self)
         let initialController = UINavigationController(rootViewController: francePhase.historyVC[0])
         initialController.navigationItem.setHidesBackButton(true, animated: false)
-        initialController.modalPresentationStyle = .fullScreen
-        present(initialController, animated: false)
+        initialController.modalPresentationStyle = .overFullScreen
+        initialController.modalTransitionStyle = .crossDissolve
+        present(initialController, animated: true)
     }
 }
 
@@ -42,5 +44,15 @@ extension MenuViewController: DataDelegate {
                 print("Finished Flow")
             }
         }
+    }
+}
+
+extension UINavigationController {
+    func fadeTo(_ viewController: UIViewController) {
+        let transition: CATransition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType.fade
+        view.layer.add(transition, forKey: nil)
+        pushViewController(viewController, animated: false)
     }
 }

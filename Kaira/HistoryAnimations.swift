@@ -7,7 +7,6 @@ extension UIButton {
         UIView.animate(withDuration: 0.1, animations: {
             self.transform = CGAffineTransform(scaleX: initialScale, y: initialScale)
         }) { _ in
-
             UIView.animate(withDuration: 0.1, animations: {
                 self.transform = CGAffineTransform.identity
             })

@@ -147,8 +147,8 @@ extension FindImageScene {
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
         pauseButton!.size = CGSize(width: 50, height: 50)
         pauseButton?.position = CGPoint(
-            x: (view?.frame.width)! - ((view?.frame.width)!)/5,
-            y: (view?.frame.height)! - (view?.frame.height)!/7.5
+            x: (view?.frame.width)! - ((view?.frame.width)!)/6,
+            y: (view?.frame.height)! - (view?.frame.height)!/8
         )
         pauseButton?.name = "pause"
         addChild(pauseButton!)
@@ -160,5 +160,17 @@ extension FindImageScene {
 
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
+    }
+
+    func animateClick() {
+        let initialScale: CGFloat = 0.8
+
+        UIView.animate(withDuration: 0.1, animations: {
+            self.view?.transform = CGAffineTransform(scaleX: initialScale, y: initialScale)
+        }) { _ in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.view?.transform = CGAffineTransform.identity
+            })
+        }
     }
 }
