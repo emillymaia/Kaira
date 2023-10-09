@@ -23,11 +23,13 @@ struct FrancePhaseStructure {
         ])
 
         self.texts = [
-            "What, why am I here again? Anyway, I remember that this was my first time at school in France, my mother traveled a lot so it was common to live in new schools, and I loved it! I can even remember what will happen to me...",
-            "Nobody wants to be my friend? I don't know if it was a language barrier, but I remember going home sad because I wasn't part of the groups. I was so upset, we don't always fit in where we want.",
-            "How many posters... certainly some of them interest me, let me see...  How many posters... certainly some of them interest me, let me see... The book club! Yes! I loved it!",
-            "This was the first time I met Chloé, she was my best friend. In the book club she had the same tastes as me, I loved discussing novels with her. She was also from another city, which is why we got along so well.",
-            "Lorem ipsum dolor sit amet",
+            "And suddenly I'm on my first day of school in France??!?! I don't remember smiling like that. The things I experienced at that time... if I stopped here, I already know what comes next.",
+            "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent, how nice I was...I couldn't belong to any group. But these things happen, right?",
+            "In one of my attempts to find 'my place' in school, I remember making a decision that resulted in one of the best things I have today. Joining the book club!",
+            "When I signed up so apprehensively, I had no idea that it would lead me to meet Chloé. She also didn't have many friends there, and when she saw my insecurity, she understood what I was feeling.",
+            "Chloé is the best person I've ever met! Affectionate, sometimes annoying because she has like a hundred skills, talks really loudly, and always helps when someone is going through something... she doesn't know it, but she changed my life in so many ways.",
+            "She took me to see the snow. She spent Christmases with my family in France. She is the person who welcomed me when I needed someone most. Damn, I have the best friend in the world."
+            
         ]
 
         let unlockunlockFranceStampLabel = "On my 14th birthday, Chloé gave me a letter with this stamp. This is one of my favorite stamps, because Chloé and I loved eating croissants after school. I remember it like it was yesterday..."
@@ -71,7 +73,7 @@ struct FrancePhaseStructure {
             ),
             HistoryPageModel(
                 image: "france-6",
-                text: texts[4],
+                text: texts[5],
                 button: .next,
                 nextViewController: unlockFranceStampView
             )
