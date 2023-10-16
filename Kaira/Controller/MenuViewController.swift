@@ -83,6 +83,7 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
             }
             let continentName = continentModel[indexPath.section].name
             header.title.text = continentName
+            header.title.textAlignment = .center
             return header
         default:
             return UICollectionReusableView()
