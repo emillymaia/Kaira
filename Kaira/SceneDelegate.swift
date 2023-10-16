@@ -12,8 +12,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let viewController = ViewController()
-        window?.rootViewController = viewController
+        let viewController: UIViewController
+
+        if UserDefaultsManager.shared.didUserReceivedOnboarding == true {
+            viewController = MenuViewController()
+        } else {
+            let intro = IntroPhaseStructure()
+            viewController = intro.historyVC[0]
+        }
+        window?.rootViewController = UINavigationController(rootViewController: viewController)
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
     }
 
