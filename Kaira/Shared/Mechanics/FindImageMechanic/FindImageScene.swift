@@ -108,7 +108,7 @@ extension FindImageScene {
     }
 
     func setupSprites(assets: [String]) {
-        for index in 1 ... 12 {
+        for index in 1 ... 25 {
             let imageName = assets[Int.random(in: 0...assets.count-1)]
             let imageNode = SKSpriteNode(imageNamed: imageName)
             imageNode.size = CGSize(width: 100, height: 100)
