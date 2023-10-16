@@ -27,7 +27,7 @@ struct FrancePhaseStructure {
             "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent, how nice I was...I couldn't belong to any group. But these things happen, right?",
             "In one of my attempts to find 'my place' in school, I remember making a decision that resulted in one of the best things I have today. Joining the book club!",
             "When I signed up so apprehensively, I had no idea that it would lead me to meet Chloé. She also didn't have many friends there, and when she saw my insecurity, she understood what I was feeling.",
-            "Chloé is the best person I've ever met! Affectionate, sometimes annoying because she has like a hundred skills, talks really loudly, and always helps when someone is going through something... she doesn't know it, but she changed my life in so many ways.",
+            "Chloé is the best person I've ever met! Affectionate, very annoying because she has a hundred skills, speaks loudly and always helps when someone needs it... she doesn't know it, but she changed my life in many ways.",
             "She took me to see the snow. She spent Christmases with my family in France. She is the person who welcomed me when I needed someone most. Damn, I have the best friend in the world."
             
         ]

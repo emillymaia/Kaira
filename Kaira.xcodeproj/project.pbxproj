@@ -237,8 +237,6 @@
 				EE182F9A2A9F747900CE30C8 /* Model */,
 				EE182F722A9F6FE000CE30C8 /* Assets.xcassets */,
 				EE182F772A9F6FE000CE30C8 /* Info.plist */,
-				AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */,
-				AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */,
 			);
 			path = Kaira;
 			sourceTree = "<group>";
@@ -296,6 +294,8 @@
 		EE182F9D2A9F74A300CE30C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */,
+				AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */,
 				EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */,
 			);
 			path = Extension;

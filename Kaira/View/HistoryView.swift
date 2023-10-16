@@ -2,6 +2,19 @@ import UIKit
 
 class HistoryView: UIView {
     var didPressButton: (() -> Void)?
+    private let width = UIScreen.main.bounds.size.width
+    private let height = UIScreen.main.bounds.size.height
+
+    var skipButton: UIButton = {
+        let skipButton = UIButton()
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
+        skipButton.setTitle("Skip", for: .normal)
+        skipButton.titleLabel?.font = UIFont(name: "Pally-Regular", size: 22)
+        skipButton.setTitleColor(.black, for: .normal)
+        skipButton.titleLabel?.numberOfLines = 0
+        skipButton.clipsToBounds = true
+        return skipButton
+    }()
 
     var image: UIImageView = {
         let image = UIImageView()
@@ -13,7 +26,7 @@ class HistoryView: UIView {
     var text: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = UIFont(name: "Pally-Bold", size: 17)
+        title.font = UIFont(name: "Pally-Bold", size: 20)
         title.textAlignment = .center
         title.numberOfLines = 0
         return title
@@ -31,6 +44,12 @@ class HistoryView: UIView {
         addSubviews()
         setupConstraints()
         button.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
+
+        let atributoSublinhado: [NSAttributedString.Key : Any] = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+
+        let textoAtribuido = NSAttributedString(string: skipButton.currentTitle ?? "", attributes: atributoSublinhado)
+
+        skipButton.setAttributedTitle(textoAtribuido, for: .normal)
     }
 
     required init?(coder: NSCoder) {
@@ -46,24 +65,30 @@ class HistoryView: UIView {
 extension HistoryView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            image.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 96),
-            image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19),
-            image.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -19),
-            image.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -307),
+            skipButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: height * 0.03),
+            skipButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: width * 0.8),
+            skipButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(width * 0.08)),
+            skipButton.bottomAnchor.constraint(equalTo: image.topAnchor, constant: -(height * 0.03)),
 
-            text.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 24),
+            image.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: height * 0.1),
+            image.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIScreen.main.bounds.size.width * 0.04),
+            image.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(width * 0.04)),
+            image.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(height * 0.35)),
+
+            text.topAnchor.constraint(equalTo: image.bottomAnchor, constant: height * 0.02),
             text.leadingAnchor.constraint(equalTo: image.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: image.trailingAnchor),
 
-            button.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 8),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 313),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -23)
+            button.topAnchor.constraint(equalTo: image.bottomAnchor, constant: height * 0.2),
+            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: width * 0.7),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: width * 0.04),
+            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(height * 0.027))
         ])
     }
 
     func addSubviews() {
         addSubview(image)
+        addSubview(skipButton)
         addSubview(text)
         addSubview(button)
     }
