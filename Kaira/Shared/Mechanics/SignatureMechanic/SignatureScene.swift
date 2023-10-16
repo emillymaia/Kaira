@@ -126,8 +126,10 @@ extension SignatureScene {
     }
 
     func setupButtons() {
+        let viewWidth = (scene?.size.width)!
+
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
-        pauseButton!.size = CGSize(width: 50, height: 50)
+        pauseButton!.size = CGSize(width: viewWidth/7, height: viewWidth/7)
         pauseButton?.position = CGPoint(
             x: (view?.frame.width)! - ((view?.frame.width)!)/6,
             y: (view?.frame.height)! - (view?.frame.height)!/8
@@ -144,11 +146,9 @@ extension SignatureScene {
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
         canvasView.drawingPolicy = .anyInput
-        let wid = (view?.frame.width)!
-        let hei = (view?.frame.height)!
-        let widCalc = wid - (wid*81.7/100)/2
-        let heiCalc = hei - (hei*59.8/100)/2 - (hei*59.8/100)/14
-        canvasView.layer.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! - (view?.frame.height)!/12)
-
+        canvasView.layer.position = CGPoint(
+            x: (view?.center.x)!,
+            y: (view?.center.y)! - (view?.frame.height)!/12
+        )
     }
 }
