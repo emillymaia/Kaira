@@ -29,8 +29,13 @@ class FindImageScene: SKScene, SKPhysicsContactDelegate {
 
     var navController = UIViewController()
 
+    private var viewWidth: CGFloat = 0
+    private var viewHeight: CGFloat = 0
+
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
+        self.viewWidth = (scene?.size.width)!
+        self.viewHeight = (scene?.size.height)!
         lockScreenInteraction = false
         setupBottomBar()
         setupButtons()
@@ -74,8 +79,6 @@ extension FindImageScene {
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let viewWidth = (scene?.size.width)!
-        let viewHeight = (scene?.size.height)!
 
         if let touch = touches.first, let node = self.currentNode {
             let touchLocation = touch.location(in: self)
@@ -102,11 +105,8 @@ extension FindImageScene {
 
     func setupBottomBar() {
 
-        let viewWidth = (scene?.size.width)!
-        let viewHeight = (scene?.size.height)!
-
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: viewWidth-(viewWidth/5), height: viewHeight/7)
+        bottomNode.size = CGSize(width: viewWidth-(viewWidth/8), height: viewHeight/7)
         bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/10)
         bottomNode.name = "background"
 
@@ -114,9 +114,6 @@ extension FindImageScene {
     }
 
     func setupSprites(assets: [String]) {
-
-        let viewWidth = (scene?.size.width)!
-        let viewHeight = (scene?.size.height)!
 
         for index in 1 ... 29 {
             let imageName = assets[Int.random(in: 0...assets.count-1)]
@@ -133,9 +130,6 @@ extension FindImageScene {
     }
 
     func setupWinner() -> SKSpriteNode? {
-
-        let viewWidth = (scene?.size.width)!
-        let viewHeight = (scene?.size.height)!
 
         let winnerImage = gamePhaseModel?.assets[1]
         var filteredImages = gamePhaseModel?.assets
@@ -158,8 +152,6 @@ extension FindImageScene {
     }
 
     func setupButtons() {
-
-        let viewWidth = (scene?.size.width)!
 
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
         pauseButton!.size = CGSize(width: viewWidth/7, height: viewWidth/7)

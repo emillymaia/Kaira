@@ -31,8 +31,13 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
 
     var navController = UIViewController()
 
+    private var viewWidth: CGFloat = 0
+    private var viewHeight: CGFloat = 0
+
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
+        self.viewWidth = (scene?.size.width)!
+        self.viewHeight = (scene?.size.height)!
         lockScreenInteraction = false
         createBackground()
         setupBottomBar()
@@ -75,11 +80,11 @@ extension SignatureScene {
     }
 
     func setupBottomBar() {
+
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: 355, height: 120)
-        bottomNode.position = CGPoint(x: (view?.center.x)!, y: 120)
+        bottomNode.size = CGSize(width: viewWidth-(viewWidth/8), height: viewHeight/7)
+        bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/10)
         bottomNode.name = "background"
-        bottomNode.zPosition = 1
 
         addChild(bottomNode)
     }
@@ -126,7 +131,6 @@ extension SignatureScene {
     }
 
     func setupButtons() {
-        let viewWidth = (scene?.size.width)!
 
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
         pauseButton!.size = CGSize(width: viewWidth/7, height: viewWidth/7)
