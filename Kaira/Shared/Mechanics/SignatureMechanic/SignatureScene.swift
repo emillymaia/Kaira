@@ -31,8 +31,13 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
 
     var navController = UIViewController()
 
+    private var viewWidth: CGFloat = 0
+    private var viewHeight: CGFloat = 0
+
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
+        self.viewWidth = (scene?.size.width)!
+        self.viewHeight = (scene?.size.height)!
         lockScreenInteraction = false
         createBackground()
         setupBottomBar()
@@ -75,11 +80,11 @@ extension SignatureScene {
     }
 
     func setupBottomBar() {
+
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: 355, height: 120)
-        bottomNode.position = CGPoint(x: (view?.center.x)!, y: 120)
+        bottomNode.size = CGSize(width: viewWidth-(viewWidth/8), height: viewHeight/7)
+        bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/10)
         bottomNode.name = "background"
-        bottomNode.zPosition = 1
 
         addChild(bottomNode)
     }
@@ -126,8 +131,9 @@ extension SignatureScene {
     }
 
     func setupButtons() {
+
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
-        pauseButton!.size = CGSize(width: 50, height: 50)
+        pauseButton!.size = CGSize(width: viewWidth/7, height: viewWidth/7)
         pauseButton?.position = CGPoint(
             x: (view?.frame.width)! - ((view?.frame.width)!)/6,
             y: (view?.frame.height)! - (view?.frame.height)!/8
@@ -144,11 +150,9 @@ extension SignatureScene {
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
         canvasView.drawingPolicy = .anyInput
-        let wid = (view?.frame.width)!
-        let hei = (view?.frame.height)!
-        let widCalc = wid - (wid*81.7/100)/2
-        let heiCalc = hei - (hei*59.8/100)/2 - (hei*59.8/100)/14
-        canvasView.layer.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! - (view?.frame.height)!/12)
-
+        canvasView.layer.position = CGPoint(
+            x: (view?.center.x)!,
+            y: (view?.center.y)! - (view?.frame.height)!/12
+        )
     }
 }
