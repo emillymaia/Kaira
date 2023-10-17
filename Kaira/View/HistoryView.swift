@@ -2,6 +2,7 @@ import UIKit
 
 class HistoryView: UIView {
     var didPressButton: (() -> Void)?
+    var didPressSkipButton: (() -> Void)?
     private let width = UIScreen.main.bounds.size.width
     private let height = UIScreen.main.bounds.size.height
 
@@ -44,11 +45,10 @@ class HistoryView: UIView {
         addSubviews()
         setupConstraints()
         button.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonWasPressed), for: .touchUpInside)
 
         let atributoSublinhado: [NSAttributedString.Key : Any] = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
-
         let textoAtribuido = NSAttributedString(string: skipButton.currentTitle ?? "", attributes: atributoSublinhado)
-
         skipButton.setAttributedTitle(textoAtribuido, for: .normal)
     }
 
@@ -59,6 +59,10 @@ class HistoryView: UIView {
     @objc private func pressButton() {
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
         didPressButton?()
+    }
+
+    @objc private func skipButtonWasPressed() {
+        didPressSkipButton?()
     }
 }
 

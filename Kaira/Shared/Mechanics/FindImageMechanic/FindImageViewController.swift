@@ -34,6 +34,5 @@ class FindImageViewController: UIViewController {
     private func handleButtonPress() {
         historyViewController!.navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.fadeTo(historyViewController!)
-//        navigationController?.pushViewController(historyViewController!, animated: true)
     }
 }
