@@ -39,24 +39,28 @@ struct EnglandPhaseStructure {
             HistoryPageModel(
                 image: "england-1",
                 text: texts[0],
-                button: .next
+                button: .next,
+                skipViewController: englandFindGame
             ),
             HistoryPageModel(
                 image: "england-2",
                 text: texts[1],
                 button: .finish,
-                nextViewController: englandFindGame
+                nextViewController: englandFindGame,
+                skipViewController: englandFindGame
             ),
             HistoryPageModel(
                 image: "england-3",
                 text: texts[2],
-                button: .next
+                button: .next,
+                skipViewController: unlockEnglandStampView
             ),
             HistoryPageModel(
                 image: "england-4",
                 text: texts[3],
                 button: .next,
-                nextViewController: unlockEnglandStampView
+                nextViewController: unlockEnglandStampView,
+                skipViewController: unlockEnglandStampView
             ),
         ]
 

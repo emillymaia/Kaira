@@ -17,9 +17,9 @@ class CustomPopup: SKSpriteNode {
     var navController: UIViewController?
 
     var didClose: (() -> Void)?
-    
+
     init() {
-        let texture = SKTexture(imageNamed: "pause-background") // Substitua "backgroundPause" pelo nome da sua imagem de fundo
+        let texture = SKTexture(imageNamed: "pause-background")
         super.init(texture: texture, color: .clear, size: texture.size())
 
         self.zPosition = 1

@@ -9,6 +9,8 @@ import UIKit
 
 class UnlockedStampView: UIView {
     var didPressButton: (() -> Void)?
+    private let width = UIScreen.main.bounds.size.width
+    private let height = UIScreen.main.bounds.size.height
 
     var stampImage: UIImageView = {
         let image = UIImageView()
@@ -20,7 +22,7 @@ class UnlockedStampView: UIView {
     var text: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = UIFont(name: "Pally-Bold", size: 17)
+        title.font = UIFont(name: "Pally-Regular", size: 20)
         title.textAlignment = .center
         title.numberOfLines = 0
         return title
@@ -29,8 +31,14 @@ class UnlockedStampView: UIView {
     var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "add-to-album"), for: .normal)
-        button.clipsToBounds = true
+        button.setTitle("Add to album", for: .normal)
+        button.layer.cornerRadius = 15
+        button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        button.titleLabel?.font = UIFont(name: "Pally-Regular", size: 22)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.numberOfLines = 0
+        button.layer.borderWidth = 3
+        button.contentMode = .scaleAspectFit
         return button
     }()
 
@@ -54,21 +62,21 @@ class UnlockedStampView: UIView {
 extension UnlockedStampView {
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            stampImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            stampImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19),
-            stampImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -19),
-            stampImage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -307),
 
-            text.topAnchor.constraint(equalTo: stampImage.bottomAnchor, constant: 24),
+        stampImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: height * 0.01),
+        stampImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: width * 0.07),
+        stampImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(width * 0.05)),
+        stampImage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(height * 0.4)),
+
+            text.topAnchor.constraint(equalTo: stampImage.bottomAnchor),
             text.leadingAnchor.constraint(equalTo: stampImage.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: stampImage.trailingAnchor),
 
-            button.topAnchor.constraint(equalTo: topAnchor, constant: 690),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 100),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100),
-            button.centerXAnchor.constraint(equalTo: centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: centerYAnchor),
-            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70)
+            button.topAnchor.constraint(equalTo: text.bottomAnchor, constant: height * 0.05),
+            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: width * 0.25),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(width * 0.25)),
+            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(height * 0.09)),
+            button.heightAnchor.constraint(equalToConstant: height * 0.06)
         ])
     }
     func addSubviews() {

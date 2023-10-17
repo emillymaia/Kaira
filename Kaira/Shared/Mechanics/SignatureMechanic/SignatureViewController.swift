@@ -36,6 +36,5 @@ class SignatureViewController: UIViewController {
 
         historyViewController!.navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.fadeTo(historyViewController!)
-//        navigationController?.pushViewController(historyViewController!, animated: false)
     }
 }

@@ -24,10 +24,10 @@ struct FrancePhaseStructure {
 
         self.texts = [
             "And suddenly I'm on my first day of school in France??!?! I don't remember smiling like that. The things I experienced at that time... if I stopped here, I already know what comes next.",
-            "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent, how nice I was...I couldn't belong to any group. But these things happen, right?",
+            "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent or tried to be cool... I couldn't belong to any group. But these things happen, right?",
             "In one of my attempts to find 'my place' in school, I remember making a decision that resulted in one of the best things I have today. Joining the book club!",
             "When I signed up so apprehensively, I had no idea that it would lead me to meet Chloé. She also didn't have many friends there, and when she saw my insecurity, she understood what I was feeling.",
-            "Chloé is the best person I've ever met! Affectionate, sometimes annoying because she has like a hundred skills, talks really loudly, and always helps when someone is going through something... she doesn't know it, but she changed my life in so many ways.",
+            "Chloé is the best person I've ever met! So sweet, very annoying because she has a hundred skills and always helps when someone needs it... she doesn't know it, but she changed my life in so many ways.",
             "She took me to see the snow. She spent Christmases with my family in France. She is the person who welcomed me when I needed someone most. Damn, I have the best friend in the world."
             
         ]
@@ -47,35 +47,41 @@ struct FrancePhaseStructure {
             HistoryPageModel(
                 image: "france-1",
                 text: texts[0],
-                button: .next
+                button: .next,
+                skipViewController: franceSignGame
             ),
             HistoryPageModel(
                 image: "france-2",
                 text: texts[1],
-                button: .next
+                button: .next,
+                skipViewController: franceSignGame
             ),
             HistoryPageModel(
                 image: "france-3",
                 text: texts[2],
                 button: .next,
-                nextViewController: franceSignGame
+                nextViewController: franceSignGame,
+                skipViewController: franceSignGame
             ),
             HistoryPageModel(
                 image: "france-4",
                 text: texts[3],
-                button: .next
+                button: .next,
+                skipViewController: franceFindGame
             ),
             HistoryPageModel(
                 image: "france-5",
                 text: texts[4],
                 button: .next,
-                nextViewController: franceFindGame
+                nextViewController: franceFindGame,
+                skipViewController: franceFindGame
             ),
             HistoryPageModel(
                 image: "france-6",
                 text: texts[5],
                 button: .next,
-                nextViewController: unlockFranceStampView
+                nextViewController: unlockFranceStampView,
+                skipViewController: unlockFranceStampView
             )
         ]
 

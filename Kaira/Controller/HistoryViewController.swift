@@ -8,6 +8,10 @@ class HistoryViewController: UIViewController {
         view.didPressButton = { [weak self] in
             self?.handleButtonPress()
         }
+        view.didPressSkipButton = { [weak self] in
+            self?.handleSkipButtonPress()
+        }
+
         return view
     }()
     var currentPageIndex: Int = 0
@@ -18,7 +22,6 @@ class HistoryViewController: UIViewController {
         self.historyPages = historyPages
         self.onFinishButtonPressed = onFinishButtonPressed
         super.init(nibName: nil, bundle: nil)
-
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -51,23 +54,30 @@ extension HistoryViewController {
             currentPageIndex += 1
             updatePage()
             historyView.button.animateClick()
-
         } else {
             let nextViewController = historyPages[currentPageIndex].nextViewController ?? UIViewController()
-
             if historyPages[currentPageIndex].button == .finish {
                 onFinishButtonPressed?()
-//                navigationController?.dismiss(animated: true)
-//                return
             }
-
             if historyPages[currentPageIndex].button == .end {
                 onFinishButtonPressed?()
             }
-
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.fadeTo(nextViewController)
-//            navigationController?.pushViewController(nextViewController, animated: false)
+        }
+    }
+
+    private func handleSkipButtonPress() {
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        if UserDefaultsManager.shared.didUserReceivedOnboarding == false {
+            let viewController = MenuViewController()
+            viewController.navigationItem.setHidesBackButton(true, animated: false)
+            UserDefaultsManager.shared.didUserReceivedOnboarding = true
+            navigationController?.fadeTo(viewController)
+        } else {
+            let skipViewController = historyPages[currentPageIndex].skipViewController ?? UIViewController()
+            skipViewController.navigationItem.setHidesBackButton(true, animated: false)
+            self.navigationController?.fadeTo(skipViewController)
         }
     }
 }
@@ -76,7 +86,6 @@ extension HistoryViewController {
     func setImageAndText() {
         let page = historyPages[currentPageIndex]
         let newImage = UIImage(named: page.image)
-//        historyView.text.text = page.text
 
         UIView.transition(
             with: historyView.image,

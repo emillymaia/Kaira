@@ -161,7 +161,6 @@ extension FindImageScene {
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
     }
-
     func animateClick() {
         let initialScale: CGFloat = 0.8
 
