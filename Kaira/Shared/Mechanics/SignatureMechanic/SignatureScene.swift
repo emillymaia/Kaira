@@ -103,13 +103,13 @@ extension SignatureScene {
                 width: ((view?.frame.width)!*81.7/100),
                 height: ((view?.frame.height)!*59.8/100)
             )
-            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + 40)
+            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/40)
             background.zPosition = -10
             addChild(background)
 
             canvasView.frame = CGRect(
                 x: ((view?.frame.width)! - background.frame.width)/2,
-                y: (((view?.frame.height)! - background.frame.height)/2 - background.frame.height/14),
+                y: (((view?.frame.height)! - background.frame.height)/1.8 - background.frame.height/14),
                 width: background.size.width,
                 height: background.size.height - background.size.height/7
             )
@@ -118,10 +118,10 @@ extension SignatureScene {
             view!.addSubview(canvasView)
 
             let doneButton = SKSpriteNode(imageNamed: "game-done-button")
-            doneButton.size = CGSize(width: 107, height: 50)
+            doneButton.size = CGSize(width: viewWidth/3, height: viewHeight/15)
             doneButton.position = CGPoint(
                 x: (view?.center.x)!,
-                y: ((view?.center.y)!) - background.size.height/3
+                y: ((view?.center.y)!) - background.size.height/2.5
             )
             doneButton.zPosition = 40
             doneButton.name = "done"
