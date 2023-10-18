@@ -11,6 +11,9 @@
 		AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */; };
 		AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */; };
 		AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */; };
+		AB3C8F322AE0170A0057924D /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB3C8F2F2AE017090057924D /* backgroundSound.mp3 */; };
+		AB3C8F332AE0170A0057924D /* CheckEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */; };
+		AB3C8F342AE0170A0057924D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F312AE0170A0057924D /* SoundManager.swift */; };
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
 		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
@@ -66,6 +69,9 @@
 		AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedStampViewController.swift; sourceTree = "<group>"; };
 		AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAnimations.swift; sourceTree = "<group>"; };
 		AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAnimations.swift; sourceTree = "<group>"; };
+		AB3C8F2F2AE017090057924D /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
+		AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CheckEffect.mp3; sourceTree = "<group>"; };
+		AB3C8F312AE0170A0057924D /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
 		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
@@ -128,6 +134,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB3C8F352AE017250057924D /* SoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				AB3C8F2F2AE017090057924D /* backgroundSound.mp3 */,
+				AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */,
+				AB3C8F312AE0170A0057924D /* SoundManager.swift */,
+			);
+			path = SoundManager;
+			sourceTree = "<group>";
+		};
 		ABDFC8872AA6196E00F19D1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +252,7 @@
 				EE182F9B2A9F748100CE30C8 /* View */,
 				EE182F9A2A9F747900CE30C8 /* Model */,
 				EE182F722A9F6FE000CE30C8 /* Assets.xcassets */,
+				AB3C8F352AE017250057924D /* SoundManager */,
 				EE182F772A9F6FE000CE30C8 /* Info.plist */,
 			);
 			path = Kaira;
@@ -422,9 +439,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3C8F322AE0170A0057924D /* backgroundSound.mp3 in Resources */,
 				ABDFC89C2AAF447100F19D1A /* Pally-Regular.otf in Resources */,
 				ABDFC89B2AAF447100F19D1A /* Pally-Bold.otf in Resources */,
 				ABDFC89A2AAF447100F19D1A /* Pally-Medium.otf in Resources */,
+				AB3C8F332AE0170A0057924D /* CheckEffect.mp3 in Resources */,
 				EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +493,7 @@
 				ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */,
 				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */,
+				AB3C8F342AE0170A0057924D /* SoundManager.swift in Sources */,
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
 				AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */,

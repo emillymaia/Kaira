@@ -80,6 +80,11 @@ class CustomPopup: SKSpriteNode {
                     isBackgroundSoundOn.toggle()
                     let textureName = isBackgroundSoundOn ? "MusicOn" : "MusicOff"
                     backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
+                    if textureName == "MusicOn" {
+                        startMusic()
+                    } else {
+                        pauseMusic()
+                    }
                 } else if node.name == "dismissButton" {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     self.close()
@@ -94,5 +99,23 @@ class CustomPopup: SKSpriteNode {
     func close() {
         didClose?()
         self.removeFromParent()
+    }
+}
+
+extension CustomPopup {
+    func startMusic() {
+        let queue = DispatchQueue.global(qos: .background)
+
+        queue.async {
+            SoundManager.shared.playBackgroundMusic("backgroundSound")
+        }
+    }
+
+    func pauseMusic() {
+        let queue = DispatchQueue.global(qos: .background)
+
+        queue.async {
+            SoundManager.shared.stopBackgroundMusic()
+        }
     }
 }
