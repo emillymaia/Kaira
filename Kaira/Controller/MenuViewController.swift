@@ -11,17 +11,17 @@ final class MenuViewController: UIViewController {
             countries: [
                 CountryModel(name: "England", background: "england-selo"),
                 CountryModel(name: "France", background: "locked-selo"),
-                CountryModel(name: "Spain", background: "locked-selo"),
-                CountryModel(name: "Italy", background: "locked-selo")
+                CountryModel(name: "Spain", background: "coming-soon"),
+                CountryModel(name: "Italy", background: "coming-soon")
             ]
         ),
         ContinentModel(
             name: "Asia",
             countries: [
-                CountryModel(name: "Japan", background: "locked-selo"),
-                CountryModel(name: "China", background: "locked-selo"),
-                CountryModel(name: "South Korea", background: "locked-selo"),
-                CountryModel(name: "India", background: "locked-selo")
+                CountryModel(name: "Japan", background: "coming-soon"),
+                CountryModel(name: "China", background: "coming-soon"),
+                CountryModel(name: "South Korea", background: "coming-soon"),
+                CountryModel(name: "India", background: "coming-soon")
             ]
         ),
     ]
@@ -58,11 +58,20 @@ extension MenuViewController: UICollectionViewDataSource {
 
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if continentModel[indexPath.section].countries[indexPath.row].background != "locked-selo" {
-            self.lastPressed = continentModel[indexPath.section].countries[indexPath.row].name
-            historyPresentation(continent: continentModel[indexPath.section].countries[indexPath.row].name, stopPoint: 0)
-        } else {
+        let cell = continentModel[indexPath.section].countries[indexPath.row]
+        print("foiaaa")
+
+        if cell.background != "locked-selo" {
+            self.lastPressed = cell.name
+            historyPresentation(continent: cell.name, stopPoint: 0)
+        }
+
+        if cell.background == "coming-soon" {
             haptic()
+            if let comingSoonCell = collectionView.cellForItem(at: indexPath) {
+                comingSoonCell.shake()
+            }
+        } else {
             if let cell = collectionView.cellForItem(at: indexPath) {
                 cell.shake()
             }
