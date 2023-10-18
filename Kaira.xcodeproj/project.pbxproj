@@ -33,6 +33,8 @@
 		EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */; };
 		EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */; };
 		EE06093A2ACEC4AF00BCC58C /* CustomPopUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0609392ACEC4AF00BCC58C /* CustomPopUpButton.swift */; };
+		EE0F6CAA2AE002EA00792AE5 /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F6CA92AE002EA00792AE5 /* DragAndDropViewController.swift */; };
+		EE0F6CAC2AE002F600792AE5 /* DragAndDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F6CAB2AE002F600792AE5 /* DragAndDropScene.swift */; };
 		EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */; };
 		EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */; };
 		EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE182F722A9F6FE000CE30C8 /* Assets.xcassets */; };
@@ -42,6 +44,7 @@
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
 		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
+		EEDCA6472AE012B1008C0C29 /* TestPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA6462AE012B1008C0C29 /* TestPhaseStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,8 @@
 		EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPhaseStructure.swift; sourceTree = "<group>"; };
 		EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrancePhaseStructure.swift; sourceTree = "<group>"; };
 		EE0609392ACEC4AF00BCC58C /* CustomPopUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpButton.swift; sourceTree = "<group>"; };
+		EE0F6CA92AE002EA00792AE5 /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
+		EE0F6CAB2AE002F600792AE5 /* DragAndDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropScene.swift; sourceTree = "<group>"; };
 		EE182F662A9F6FDF00CE30C8 /* Kaira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F692A9F6FDF00CE30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE182F6B2A9F6FDF00CE30C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
+		EEDCA6462AE012B1008C0C29 /* TestPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPhaseStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 		ABDFC89D2AB232A600F19D1A /* Mechanics */ = {
 			isa = PBXGroup;
 			children = (
+				EE0F6CA82AE002C300792AE5 /* DragAndDropMechanic */,
 				EE06092C2AC3121200BCC58C /* SignatureMechanic */,
 				EE0609252AC1A6FA00BCC58C /* FindImageMechanic */,
 			);
@@ -192,6 +199,7 @@
 				EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */,
 				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
+				EEDCA6462AE012B1008C0C29 /* TestPhaseStructure.swift */,
 			);
 			path = Phases;
 			sourceTree = "<group>";
@@ -202,6 +210,15 @@
 				EE0609392ACEC4AF00BCC58C /* CustomPopUpButton.swift */,
 			);
 			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		EE0F6CA82AE002C300792AE5 /* DragAndDropMechanic */ = {
+			isa = PBXGroup;
+			children = (
+				EE0F6CA92AE002EA00792AE5 /* DragAndDropViewController.swift */,
+				EE0F6CAB2AE002F600792AE5 /* DragAndDropScene.swift */,
+			);
+			path = DragAndDropMechanic;
 			sourceTree = "<group>";
 		};
 		EE182F5D2A9F6FDE00CE30C8 = {
@@ -474,9 +491,11 @@
 				ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */,
 				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */,
+				EE0F6CAA2AE002EA00792AE5 /* DragAndDropViewController.swift in Sources */,
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
 				AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */,
+				EEDCA6472AE012B1008C0C29 /* TestPhaseStructure.swift in Sources */,
 				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
 				EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */,
 				AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */,
@@ -489,6 +508,7 @@
 				EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */,
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
 				EE0609332ACE0C5E00BCC58C /* EnglandPhaseStructure.swift in Sources */,
+				EE0F6CAC2AE002F600792AE5 /* DragAndDropScene.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
 				AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,

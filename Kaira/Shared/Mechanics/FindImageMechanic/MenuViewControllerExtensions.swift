@@ -14,7 +14,7 @@ extension MenuViewController {
     }
 
     func preSetupEngland() {
-        let englandPhase = EnglandPhaseStructure(self)
+        let englandPhase = TestPhaseStructure(self)
         let initialController = UINavigationController(rootViewController: englandPhase.historyVC[0])
         initialController.navigationItem.setHidesBackButton(true, animated: false)
         initialController.modalPresentationStyle = .overFullScreen

@@ -27,9 +27,11 @@ final class MenuView: UIView {
         collection.isScrollEnabled = true
         collection.alwaysBounceVertical = true
         collection.register(MenuCollectionCellView.self, forCellWithReuseIdentifier: "MenuCollectionCellView")
-        collection.register(MenuSectionHeaderView.self,
-                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                            withReuseIdentifier: MenuSectionHeaderView.identifier)
+        collection.register(
+            MenuSectionHeaderView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: MenuSectionHeaderView.identifier
+        )
         return collection
     }()
 
