@@ -15,9 +15,6 @@ class SoundManager: NSObject {
     private var effectSoundPlayer: AVAudioPlayer?
 
     private var backgroundVolume: Float = 0.7
-    
-    //Chamado:
-    //SoundManager.shared.playEffectSound("CheckEffect")
 
     private override init() {}
 
@@ -25,7 +22,7 @@ class SoundManager: NSObject {
         if let url = Bundle.main.url(forResource: filename, withExtension: "mp3") {
             do {
                 backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url)
-                backgroundMusicPlayer?.numberOfLoops = -1 
+                backgroundMusicPlayer?.numberOfLoops = -1
                 backgroundMusicPlayer?.prepareToPlay()
                 backgroundMusicPlayer?.play()
             } catch {
@@ -41,9 +38,8 @@ class SoundManager: NSObject {
     func playEffectSound(_ filename: String) {
         if let url = Bundle.main.url(forResource: filename, withExtension: "mp3") {
             do {
-                
+
                 backgroundVolume = backgroundMusicPlayer?.volume ?? 0.7
-                
                 backgroundMusicPlayer?.setVolume(0.3, fadeDuration: 1)
 
                 effectSoundPlayer = try AVAudioPlayer(contentsOf: url)

@@ -47,7 +47,9 @@ extension MenuViewController {
         let queue = DispatchQueue.global(qos: .background)
 
         queue.async {
-            SoundManager.shared.playBackgroundMusic("backgroundSound")
+            if UserDefaultsManager.shared.isBackgroundSoundOn {
+                SoundManager.shared.playBackgroundMusic("backgroundSound")
+            }
         }
     }
 }
