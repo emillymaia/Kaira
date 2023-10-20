@@ -32,6 +32,8 @@ final class MenuViewController: UIViewController {
         view = menuView
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.dataSource = self
+
+        startMusic()
     }
 }
 
@@ -59,7 +61,6 @@ extension MenuViewController: UICollectionViewDataSource {
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = continentModel[indexPath.section].countries[indexPath.row]
-        print("foiaaa")
 
         if cell.background != "locked-selo" {
             self.lastPressed = cell.name

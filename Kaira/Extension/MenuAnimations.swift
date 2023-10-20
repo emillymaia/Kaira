@@ -42,4 +42,14 @@ extension MenuViewController {
         feedbackGenerator.prepare()
         feedbackGenerator.impactOccurred()
     }
+
+    func startMusic() {
+        let queue = DispatchQueue.global(qos: .background)
+
+        queue.async {
+            if UserDefaultsManager.shared.isBackgroundSoundOn {
+                SoundManager.shared.playBackgroundMusic("backgroundSound")
+            }
+        }
+    }
 }
