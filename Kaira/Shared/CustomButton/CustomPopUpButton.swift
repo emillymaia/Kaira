@@ -123,10 +123,6 @@ class CustomPopup: SKSpriteNode {
 }
 
 extension CustomPopup {
-    func setupButtons() { }
-}
-
-extension CustomPopup {
     func startMusic() {
         SoundManager.shared.playBackgroundMusic("backgroundSound")
     }
