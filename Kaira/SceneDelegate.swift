@@ -15,7 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController: UIViewController
 
         if UserDefaultsManager.shared.didUserReceivedOnboarding == true {
-            viewController = MenuViewController()
+//            viewController = MenuViewController()
+            viewController = HomeScreenViewController()
         } else {
             let intro = IntroPhaseStructure()
             viewController = intro.historyVC[0]

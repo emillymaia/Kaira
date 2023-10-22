@@ -14,6 +14,8 @@
 		AB3C8F322AE0170A0057924D /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB3C8F2F2AE017090057924D /* backgroundSound.mp3 */; };
 		AB3C8F332AE0170A0057924D /* CheckEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */; };
 		AB3C8F342AE0170A0057924D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F312AE0170A0057924D /* SoundManager.swift */; };
+		AB3C8F372AE2AB700057924D /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F362AE2AB700057924D /* HomeScreenView.swift */; };
+		AB3C8F5B2AE5A55C0057924D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */; };
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
 		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
@@ -72,6 +74,8 @@
 		AB3C8F2F2AE017090057924D /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
 		AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CheckEffect.mp3; sourceTree = "<group>"; };
 		AB3C8F312AE0170A0057924D /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		AB3C8F362AE2AB700057924D /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
 		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
@@ -294,6 +298,7 @@
 				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
 				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
 				AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */,
+				AB3C8F362AE2AB700057924D /* HomeScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */,
 				ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */,
 				AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */,
+				AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
 				EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */,
 				AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */,
+				AB3C8F5B2AE5A55C0057924D /* HomeScreenViewController.swift in Sources */,
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
 				EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */,
 				AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */,
@@ -517,6 +524,7 @@
 				ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */,
 				ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */,
 				EE06093A2ACEC4AF00BCC58C /* CustomPopUpButton.swift in Sources */,
+				AB3C8F372AE2AB700057924D /* HomeScreenView.swift in Sources */,
 				EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */,
 				ABDFC8A92AB47BAA00F19D1A /* HistoryViewController.swift in Sources */,
 			);
