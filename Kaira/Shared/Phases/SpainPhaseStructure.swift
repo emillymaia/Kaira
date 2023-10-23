@@ -30,42 +30,49 @@ struct SpainPhaseStructure {
         ])
 
         self.texts = [
-            "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?",
-            "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!",
-            "It is clear! Now I remember. The Big Ben! I visited England with my mother for the first time that day. But how did opening that box get me here? Why is this happening?",
-            "Anyway, I need to get out of this situation, but it brings back so many good memories. I can still remember and see myself playing in the park with my mother."
+            "Okay, now back to 17?!?! At that time, my family decided to spend their holidays in Spain. We stayed in Barcelona for 3 months, and it was a time of great maturity for me.",
+            "In Barcelona, I decided to get a part-time job, to try to save some money. It was my first time doing a job interview, and I was really nervous. It gave me a strange feeling of butterflies in my stomach...but in a bad way.",
+            "Even though I felt insecure during the interview, I ended up being hired. I remember that, when I received the news, I was radiant, glowing with happiness. My first job was a big achievement for me...",
+            "The job I got was as an assistant in a bakery. Decorate cakes, put empanadas in the oven,  serve customers, organize shelves... Even though it was a lot of work, I loved everyday life at the bakery.",
+            "Getting my first job made me learn how to handle my money. Even though the salary wasn't that high, I started saving money for my next trips. Every time I put in a coin, I imagined myself traveling around..."
         ]
 
-        let unlockunlockSpainStampLabel = "Wow, I remember I won and sent a letter to my grandmother, I remember the breeze, the taste of my childhood."
+        let unlockunlockSpainStampLabel = "I bought this stamp at El Prat Airport, when I was leaving Barcelona. I loved Spain and everything it gave me. To this day, Barcelona is one of my favorite places in the whole world!"
 
-        let unlockSpainStampView = UnlockedStampViewController(stampImage: "england-selo", label: unlockunlockSpainStampLabel, onFinishButtonPressed: nil)
+        let unlockSpainStampView = UnlockedStampViewController(stampImage: "spain-selo", label: unlockunlockSpainStampLabel, onFinishButtonPressed: nil)
         let spainGame = DragAndDropViewController()
         spainGame.gamePhaseModel = spainGamePhaseModel
         spainGame.customDelegate = customDelegate
 
         self.historyPages = [
             HistoryPageModel(
-                image: "england-1",
+                image: "spain-1",
                 text: texts[0],
                 button: .next,
                 skipViewController: spainGame
             ),
             HistoryPageModel(
-                image: "england-2",
+                image: "spain-2",
                 text: texts[1],
-                button: .finish,
+                button: .next,
+                skipViewController: spainGame
+            ),
+            HistoryPageModel(
+                image: "spain-3",
+                text: texts[2],
+                button: .next,
+                skipViewController: spainGame
+            ),
+            HistoryPageModel(
+                image: "spain-4",
+                text: texts[3],
+                button: .next,
                 nextViewController: spainGame,
                 skipViewController: spainGame
             ),
             HistoryPageModel(
-                image: "england-3",
-                text: texts[2],
-                button: .next,
-                skipViewController: unlockSpainStampView
-            ),
-            HistoryPageModel(
-                image: "england-4",
-                text: texts[3],
+                image: "spain-5",
+                text: texts[4],
                 button: .next,
                 nextViewController: unlockSpainStampView,
                 skipViewController: unlockSpainStampView

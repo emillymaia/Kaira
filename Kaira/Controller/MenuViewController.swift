@@ -11,7 +11,7 @@ final class MenuViewController: UIViewController {
             countries: [
                 CountryModel(name: "England", background: "england-selo"),
                 CountryModel(name: "France", background: "locked-selo"),
-                CountryModel(name: "Spain", background: "coming-soon"),
+                CountryModel(name: "Spain", background: "locked-selo"),
                 CountryModel(name: "Italy", background: "coming-soon")
             ]
         ),
