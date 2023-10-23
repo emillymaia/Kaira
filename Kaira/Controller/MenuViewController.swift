@@ -28,10 +28,11 @@ final class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadInfo()
+         loadInfo()
         view = menuView
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.dataSource = self
+        view.backgroundColor = .white
 
         startMusic()
     }

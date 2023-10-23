@@ -22,7 +22,7 @@ final class HomeScreenView: UIView {
         button.setTitle("Play", for: .normal)
         button.layer.cornerRadius = 15
         button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        button.titleLabel?.font = UIFont(name: "Pally-Regular", size: 22)
+        button.titleLabel?.font = UIFont(name: "Pally-Medium", size: 22)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.numberOfLines = 0
         button.layer.borderWidth = 3
