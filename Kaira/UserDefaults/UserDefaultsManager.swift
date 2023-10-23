@@ -5,6 +5,7 @@ final class UserDefaultsManager {
 
     private let didUserReceivedOnboardingKey = "didUserReceivedOnboarding"
     private let isBackgroundSoundOnKey = "isBackgroundSoundOn"
+    private let isSoundOnKey = "isSoundOn"
 
     private init() {}
 
@@ -23,6 +24,15 @@ final class UserDefaultsManager {
         }
         set {
             return UserDefaults.standard.set(newValue, forKey: isBackgroundSoundOnKey)
+        }
+    }
+
+    var isSoundOn: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: isSoundOnKey)
+        }
+        set {
+            return UserDefaults.standard.set(newValue, forKey: isSoundOnKey)
         }
     }
 }

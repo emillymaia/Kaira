@@ -16,6 +16,9 @@
 		AB3C8F342AE0170A0057924D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F312AE0170A0057924D /* SoundManager.swift */; };
 		AB3C8F372AE2AB700057924D /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F362AE2AB700057924D /* HomeScreenView.swift */; };
 		AB3C8F5B2AE5A55C0057924D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */; };
+		AB3C8F5D2AE5B6900057924D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F5C2AE5B6900057924D /* SettingsView.swift */; };
+		AB3C8F5F2AE5FBCE0057924D /* FrameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */; };
+		AB3C8F622AE60A1C0057924D /* CustomSettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F612AE60A1C0057924D /* CustomSettingsViewCell.swift */; };
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
 		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
@@ -76,6 +79,9 @@
 		AB3C8F312AE0170A0057924D /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		AB3C8F362AE2AB700057924D /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		AB3C8F5C2AE5B6900057924D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConstants.swift; sourceTree = "<group>"; };
+		AB3C8F612AE60A1C0057924D /* CustomSettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsViewCell.swift; sourceTree = "<group>"; };
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
 		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
@@ -148,9 +154,20 @@
 			path = SoundManager;
 			sourceTree = "<group>";
 		};
+		AB3C8F602AE609560057924D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
+				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
+				AB3C8F612AE60A1C0057924D /* CustomSettingsViewCell.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		ABDFC8872AA6196E00F19D1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */,
 				EE0609382ACEC4A100BCC58C /* CustomButton */,
 				EE0609312ACE0C4F00BCC58C /* Phases */,
 				EEC53F862ABB1D4000B24261 /* Protocols */,
@@ -293,12 +310,12 @@
 		EE182F9B2A9F748100CE30C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB3C8F602AE609560057924D /* UIComponents */,
 				ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */,
 				ABDFC8882AA61D2200F19D1A /* MenuView.swift */,
-				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
-				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
 				AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */,
 				AB3C8F362AE2AB700057924D /* HomeScreenView.swift */,
+				AB3C8F5C2AE5B6900057924D /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -512,6 +529,7 @@
 				AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */,
+				AB3C8F622AE60A1C0057924D /* CustomSettingsViewCell.swift in Sources */,
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
 				EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */,
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
@@ -519,8 +537,10 @@
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
 				AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,
+				AB3C8F5F2AE5FBCE0057924D /* FrameConstants.swift in Sources */,
 				EE0609272AC1A71500BCC58C /* FindImageScene.swift in Sources */,
 				ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */,
+				AB3C8F5D2AE5B6900057924D /* SettingsView.swift in Sources */,
 				ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */,
 				ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */,
 				EE06093A2ACEC4AF00BCC58C /* CustomPopUpButton.swift in Sources */,
