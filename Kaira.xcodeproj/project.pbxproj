@@ -50,6 +50,9 @@
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
 		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
+		EEDCA6502AE6BEE2008C0C29 /* SpainPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */; };
+		EEDCA6532AE6BF0C008C0C29 /* DragAndDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */; };
+		EEDCA6552AE6BF39008C0C29 /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,9 @@
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
+		EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainPhaseStructure.swift; sourceTree = "<group>"; };
+		EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropScene.swift; sourceTree = "<group>"; };
+		EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,7 @@
 		ABDFC89D2AB232A600F19D1A /* Mechanics */ = {
 			isa = PBXGroup;
 			children = (
+				EEDCA6512AE6BEF9008C0C29 /* DragAndDropMechanic */,
 				EE06092C2AC3121200BCC58C /* SignatureMechanic */,
 				EE0609252AC1A6FA00BCC58C /* FindImageMechanic */,
 			);
@@ -229,6 +236,7 @@
 				EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */,
 				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
+				EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */,
 			);
 			path = Phases;
 			sourceTree = "<group>";
@@ -355,6 +363,15 @@
 				EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EEDCA6512AE6BEF9008C0C29 /* DragAndDropMechanic */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */,
+				EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */,
+			);
+			path = DragAndDropMechanic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,13 +550,16 @@
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
 				EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */,
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
+				EEDCA6502AE6BEE2008C0C29 /* SpainPhaseStructure.swift in Sources */,
 				EE0609332ACE0C5E00BCC58C /* EnglandPhaseStructure.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
 				AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,
+				EEDCA6532AE6BF0C008C0C29 /* DragAndDropScene.swift in Sources */,
 				AB3C8F5F2AE5FBCE0057924D /* FrameConstants.swift in Sources */,
 				EE0609272AC1A71500BCC58C /* FindImageScene.swift in Sources */,
 				ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */,
+				EEDCA6552AE6BF39008C0C29 /* DragAndDropViewController.swift in Sources */,
 				AB3C8F5D2AE5B6900057924D /* SettingsView.swift in Sources */,
 				ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */,
 				ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */,
