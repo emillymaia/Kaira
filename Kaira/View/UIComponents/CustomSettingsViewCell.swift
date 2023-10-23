@@ -31,6 +31,7 @@ final class CustomSettingsViewCell: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "button-selected"), for: .normal)
         button.contentMode = .scaleAspectFit
+        button.clipsToBounds = true
         return button
     }()
 
@@ -44,7 +45,7 @@ final class CustomSettingsViewCell: UIView {
         addSubviews()
         setupConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -74,13 +75,12 @@ extension CustomSettingsViewCell {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: topAnchor),
-            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FrameConstants.screenHeight * 0.07), // 59
-            title.trailingAnchor.constraint(equalTo: trailingAnchor),
+            title.leadingAnchor.constraint(equalTo: leadingAnchor),
             title.bottomAnchor.constraint(equalTo: bottomAnchor),
 
             button.topAnchor.constraint(equalTo: topAnchor),
-            button.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: FrameConstants.screenWidth * 0.43), // 171
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(FrameConstants.screenWidth * 0.15)), // 59
+            button.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 12),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor),
             button.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
