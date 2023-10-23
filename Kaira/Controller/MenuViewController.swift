@@ -68,14 +68,10 @@ extension MenuViewController: UICollectionViewDelegate {
             historyPresentation(continent: cell.name, stopPoint: 0)
         }
 
-        if cell.background == "coming-soon" {
+        if cell.background == "coming-soon" || cell.background == "locked-selo" {
             haptic()
             if let comingSoonCell = collectionView.cellForItem(at: indexPath) {
                 comingSoonCell.shake()
-            }
-        } else {
-            if let cell = collectionView.cellForItem(at: indexPath) {
-                cell.shake()
             }
         }
     }

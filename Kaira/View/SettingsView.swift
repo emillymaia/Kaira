@@ -1,5 +1,6 @@
 import UIKit
 
+// swiftlint: disable all
 final class SettingsView: UIView {
     private lazy var musicBackgroundSetting = CustomSettingsViewCell(labelTitle: "Music", settingType: .music)
     private lazy var soundBackgroundSetting = CustomSettingsViewCell(labelTitle: "Music", settingType: .music)

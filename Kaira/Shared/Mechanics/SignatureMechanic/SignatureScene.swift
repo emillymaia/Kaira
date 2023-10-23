@@ -82,8 +82,8 @@ extension SignatureScene {
     func setupBottomBar() {
 
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: viewWidth-(viewWidth/8), height: viewHeight/7)
-        bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/10)
+        bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
+        bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
         bottomNode.name = "background"
 
         addChild(bottomNode)
