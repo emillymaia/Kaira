@@ -1,25 +1,24 @@
 import SpriteKit
 
 class CustomPopup: SKSpriteNode {
-
     private var backToMenuButton: SKSpriteNode!
-
     private var soundEffectButton: SKSpriteNode!
-
     private var backgroundSoundButton: SKSpriteNode!
-
     private var dismissButton: SKSpriteNode!
-
     private var isSoundEffectOn = true
-
-    private var isBackgroundSoundOn = true
-
+    var isBackgroundSoundOn: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "isBackgroundSoundOn")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isBackgroundSoundOn")
+        }
+    }
     var navController: UIViewController?
-
     var didClose: (() -> Void)?
-    
+
     init() {
-        let texture = SKTexture(imageNamed: "pause-background") // Substitua "backgroundPause" pelo nome da sua imagem de fundo
+        let texture = SKTexture(imageNamed: "pause-background")
         super.init(texture: texture, color: .clear, size: texture.size())
 
         self.zPosition = 1
@@ -58,6 +57,15 @@ class CustomPopup: SKSpriteNode {
         dismissButton.name = "dismissButton"
         dismissButton.size = CGSize(width: 145, height: 50)
         self.addChild(dismissButton)
+
+        isSoundEffectOn = UserDefaults.standard.bool(forKey: "isSoundEffectOn")
+        isBackgroundSoundOn = UserDefaults.standard.bool(forKey: "isBackgroundSoundOn")
+
+        let soundEffectTextureName = isSoundEffectOn ? "SoundOn" : "SoundOff"
+        soundEffectButton.texture = SKTexture(imageNamed: soundEffectTextureName)
+
+        let backgroundSoundTextureName = isBackgroundSoundOn ? "MusicOn" : "MusicOff"
+        backgroundSoundButton.texture = SKTexture(imageNamed: backgroundSoundTextureName)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -75,11 +83,21 @@ class CustomPopup: SKSpriteNode {
                     isSoundEffectOn.toggle()
                     let textureName = isSoundEffectOn ? "SoundOn" : "SoundOff"
                     soundEffectButton.texture = SKTexture(imageNamed: textureName)
+
+                    UserDefaults.standard.set(isSoundEffectOn, forKey: "isSoundEffectOn")
                 } else if node.name == "backgroundSoundButton" {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     isBackgroundSoundOn.toggle()
                     let textureName = isBackgroundSoundOn ? "MusicOn" : "MusicOff"
                     backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
+
+                    UserDefaultsManager.shared.isBackgroundSoundOn = isBackgroundSoundOn
+
+                    if isBackgroundSoundOn {
+                        startMusic()
+                    } else {
+                        pauseMusic()
+                    }
                 } else if node.name == "dismissButton" {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     self.close()
@@ -94,5 +112,15 @@ class CustomPopup: SKSpriteNode {
     func close() {
         didClose?()
         self.removeFromParent()
+    }
+}
+
+extension CustomPopup {
+    func startMusic() {
+        SoundManager.shared.playBackgroundMusic("backgroundSound")
+    }
+
+    func pauseMusic() {
+        SoundManager.shared.stopBackgroundMusic()
     }
 }

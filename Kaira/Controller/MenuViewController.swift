@@ -4,6 +4,7 @@ import SpriteKit
 final class MenuViewController: UIViewController {
     
     let menuView = MenuView()
+    var progress = 1
     var lastPressed = ""
     var continentModel: [ContinentModel] = [
         ContinentModel(
@@ -12,16 +13,16 @@ final class MenuViewController: UIViewController {
                 CountryModel(name: "England", background: "england-selo"),
                 CountryModel(name: "France", background: "locked-selo"),
                 CountryModel(name: "Spain", background: "locked-selo"),
-                CountryModel(name: "Italy", background: "locked-selo")
+                CountryModel(name: "Italy", background: "coming-soon")
             ]
         ),
         ContinentModel(
             name: "Asia",
             countries: [
-                CountryModel(name: "Japan", background: "locked-selo"),
-                CountryModel(name: "China", background: "locked-selo"),
-                CountryModel(name: "South Korea", background: "locked-selo"),
-                CountryModel(name: "India", background: "locked-selo")
+                CountryModel(name: "Japan", background: "coming-soon"),
+                CountryModel(name: "China", background: "coming-soon"),
+                CountryModel(name: "South Korea", background: "coming-soon"),
+                CountryModel(name: "India", background: "coming-soon")
             ]
         ),
     ]
@@ -32,6 +33,8 @@ final class MenuViewController: UIViewController {
         view = menuView
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.dataSource = self
+        view.backgroundColor = .white
+//        startMusic()
     }
 }
 
@@ -58,13 +61,17 @@ extension MenuViewController: UICollectionViewDataSource {
 
 extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if continentModel[indexPath.section].countries[indexPath.row].background != "locked-selo" {
-            self.lastPressed = continentModel[indexPath.section].countries[indexPath.row].name
-            historyPresentation(continent: continentModel[indexPath.section].countries[indexPath.row].name, stopPoint: 0)
-        } else {
+        let cell = continentModel[indexPath.section].countries[indexPath.row]
+
+        if cell.background != "locked-selo" {
+            self.lastPressed = cell.name
+            historyPresentation(continent: cell.name, stopPoint: 0)
+        }
+
+        if cell.background == "coming-soon" || cell.background == "locked-selo" {
             haptic()
-            if let cell = collectionView.cellForItem(at: indexPath) {
-                cell.shake()
+            if let comingSoonCell = collectionView.cellForItem(at: indexPath) {
+                comingSoonCell.shake()
             }
         }
     }
@@ -83,6 +90,7 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
             }
             let continentName = continentModel[indexPath.section].name
             header.title.text = continentName
+            header.title.textAlignment = .center
             return header
         default:
             return UICollectionReusableView()

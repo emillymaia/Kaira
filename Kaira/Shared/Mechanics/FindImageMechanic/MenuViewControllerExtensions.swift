@@ -11,6 +11,10 @@ extension MenuViewController {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupFrance()
         }
+        if continent == "Spain" {
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+            preSetupSpain()
+        }
     }
 
     func preSetupEngland() {
@@ -30,6 +34,14 @@ extension MenuViewController {
         initialController.modalTransitionStyle = .crossDissolve
         present(initialController, animated: true)
     }
+    func preSetupSpain() {
+        let spainPhase = SpainPhaseStructure(self)
+        let initialController = UINavigationController(rootViewController: spainPhase.historyVC[0])
+        initialController.navigationItem.setHidesBackButton(true, animated: false)
+        initialController.modalPresentationStyle = .overFullScreen
+        initialController.modalTransitionStyle = .crossDissolve
+        present(initialController, animated: true)
+    }
 }
 
 extension MenuViewController: DataDelegate {
@@ -38,12 +50,14 @@ extension MenuViewController: DataDelegate {
             if lastPressed == "England" {
                 self.continentModel[0].countries[data].background = "france-selo"
                 menuView.menuCollectionView.reloadData()
-                saveInfo()
+                self.progress = data+1
+                saveInfo(self.progress)
             }
-
             if lastPressed == "France" {
-                print("Finished Flow")
-                saveInfo()
+                self.continentModel[0].countries[data+1].background = "spain-selo"
+                menuView.menuCollectionView.reloadData()
+                self.progress = data+2
+                saveInfo(self.progress)
             }
         }
     }
@@ -61,32 +75,123 @@ extension UINavigationController {
 
 extension MenuViewController {
     func loadInfo() {
-        if let data = UserDefaults.standard.data(forKey: "continents") {
-            do {
-                // Create JSON Decoder
-                let decoder = JSONDecoder()
+        let data = UserDefaults.standard.integer(forKey: "progress")
+        print(data)
+        self.progress = data
+        continentModel = setupFirst(self.progress)
 
-                // Decode Note
-                let notes = try decoder.decode([ContinentModel].self, from: data)
-                continentModel = notes
-            } catch {
-                print("Unable to Decode Notes (\(error))")
-            }
+//        if let data = UserDefaults.standard.integer(forKey: "progress") {
+//            do {
+//                // Create JSON Decoder
+//                let decoder = JSONDecoder()
+//                // Decode Note
+//                let notes = try decoder.decode([ContinentModel].self, from: data)
+//                continentModel = notes
+//            } catch {
+//                print("Unable to Decode Notes (\(error))")
+//            }
+//        }
+    }
+
+    func saveInfo(_ value: Int) {
+        UserDefaults.standard.set(value, forKey: "progress")
+//        do {
+//            // Create JSON Encoder
+//            let encoder = JSONEncoder()
+//
+//            // Encode Note
+//            let data = try encoder.encode(continentModel)
+//            // Write/Set Data
+//            UserDefaults.standard.set(data, forKey: "progress")
+//
+//        } catch {
+//            print("Unable to Encode Array of Notes (\(error))")
+//        }
+    }
+}
+
+
+extension MenuViewController {
+
+    public func setupFirst(_ value: Int) -> [ContinentModel] {
+        switch value {
+        case 1:
+            return england()
+        case 2:
+            return france()
+        case 3:
+            return spain()
+        default:
+            return england()
         }
     }
 
-    func saveInfo() {
-        do {
-            // Create JSON Encoder
-            let encoder = JSONEncoder()
+    func england() -> [ContinentModel] {
+        [
+            ContinentModel(
+                name: "Europe",
+                countries: [
+                    CountryModel(name: "England", background: "england-selo"),
+                    CountryModel(name: "France", background: "locked-selo"),
+                    CountryModel(name: "Spain", background: "locked-selo"),
+                    CountryModel(name: "Italy", background: "coming-soon")
+                ]
+            ),
+            ContinentModel(
+                name: "Asia",
+                countries: [
+                    CountryModel(name: "Japan", background: "coming-soon"),
+                    CountryModel(name: "China", background: "coming-soon"),
+                    CountryModel(name: "South Korea", background: "coming-soon"),
+                    CountryModel(name: "India", background: "coming-soon")
+                ]
+            )
+        ]
+    }
 
-            // Encode Note
-            let data = try encoder.encode(continentModel)
-            // Write/Set Data
-            UserDefaults.standard.set(data, forKey: "continents")
+    func france() -> [ContinentModel] {
+        [
+            ContinentModel(
+                name: "Europe",
+                countries: [
+                    CountryModel(name: "England", background: "england-selo"),
+                    CountryModel(name: "France", background: "france-selo"),
+                    CountryModel(name: "Spain", background: "locked-selo"),
+                    CountryModel(name: "Italy", background: "coming-soon")
+                ]
+            ),
+            ContinentModel(
+                name: "Asia",
+                countries: [
+                    CountryModel(name: "Japan", background: "coming-soon"),
+                    CountryModel(name: "China", background: "coming-soon"),
+                    CountryModel(name: "South Korea", background: "coming-soon"),
+                    CountryModel(name: "India", background: "coming-soon")
+                ]
+            )
+        ]
+    }
 
-        } catch {
-            print("Unable to Encode Array of Notes (\(error))")
-        }
+    func spain() -> [ContinentModel] {
+        [
+            ContinentModel(
+                name: "Europe",
+                countries: [
+                    CountryModel(name: "England", background: "england-selo"),
+                    CountryModel(name: "France", background: "france-selo"),
+                    CountryModel(name: "Spain", background: "spain-selo"),
+                    CountryModel(name: "Italy", background: "coming-soon")
+                ]
+            ),
+            ContinentModel(
+                name: "Asia",
+                countries: [
+                    CountryModel(name: "Japan", background: "coming-soon"),
+                    CountryModel(name: "China", background: "coming-soon"),
+                    CountryModel(name: "South Korea", background: "coming-soon"),
+                    CountryModel(name: "India", background: "coming-soon")
+                ]
+            )
+        ]
     }
 }

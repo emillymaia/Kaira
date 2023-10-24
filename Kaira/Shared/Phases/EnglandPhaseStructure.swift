@@ -22,7 +22,7 @@ struct EnglandPhaseStructure {
         ])
         
         self.texts = [
-            "Wait... Where I am? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?",
+            "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?",
             "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!",
             "It is clear! Now I remember. The Big Ben! I visited England with my mother for the first time that day. But how did opening that box get me here? Why is this happening?",
             "Anyway, I need to get out of this situation, but it brings back so many good memories. I can still remember and see myself playing in the park with my mother."
@@ -39,24 +39,28 @@ struct EnglandPhaseStructure {
             HistoryPageModel(
                 image: "england-1",
                 text: texts[0],
-                button: .next
+                button: .next,
+                skipViewController: englandFindGame
             ),
             HistoryPageModel(
                 image: "england-2",
                 text: texts[1],
                 button: .finish,
-                nextViewController: englandFindGame
+                nextViewController: englandFindGame,
+                skipViewController: englandFindGame
             ),
             HistoryPageModel(
                 image: "england-3",
                 text: texts[2],
-                button: .next
+                button: .next,
+                skipViewController: unlockEnglandStampView
             ),
             HistoryPageModel(
                 image: "england-4",
                 text: texts[3],
                 button: .next,
-                nextViewController: unlockEnglandStampView
+                nextViewController: unlockEnglandStampView,
+                skipViewController: unlockEnglandStampView
             ),
         ]
 

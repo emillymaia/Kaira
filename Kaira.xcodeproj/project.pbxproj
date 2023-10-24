@@ -11,6 +11,15 @@
 		AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */; };
 		AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */; };
 		AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */; };
+		AB3C8F332AE0170A0057924D /* CheckEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */; };
+		AB3C8F342AE0170A0057924D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F312AE0170A0057924D /* SoundManager.swift */; };
+		AB3C8F372AE2AB700057924D /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F362AE2AB700057924D /* HomeScreenView.swift */; };
+		AB3C8F5B2AE5A55C0057924D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */; };
+		AB3C8F5D2AE5B6900057924D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F5C2AE5B6900057924D /* SettingsView.swift */; };
+		AB3C8F5F2AE5FBCE0057924D /* FrameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */; };
+		AB3C8F622AE60A1C0057924D /* CustomSettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F612AE60A1C0057924D /* CustomSettingsViewCell.swift */; };
+		AB3C8F642AE6EF860057924D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F632AE6EF860057924D /* SettingsViewController.swift */; };
+		AB3C8F6C2AE8074B0057924D /* backgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB3C8F6B2AE8074B0057924D /* backgroundSound.mp3 */; };
 		ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC8882AA61D2200F19D1A /* MenuView.swift */; };
 		ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */; };
 		ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFC88C2AA7620000F19D1A /* CountryModel.swift */; };
@@ -42,6 +51,9 @@
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
 		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
+		EEDCA6502AE6BEE2008C0C29 /* SpainPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */; };
+		EEDCA6532AE6BF0C008C0C29 /* DragAndDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */; };
+		EEDCA6552AE6BF39008C0C29 /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +78,15 @@
 		AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedStampViewController.swift; sourceTree = "<group>"; };
 		AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAnimations.swift; sourceTree = "<group>"; };
 		AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAnimations.swift; sourceTree = "<group>"; };
+		AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CheckEffect.mp3; sourceTree = "<group>"; };
+		AB3C8F312AE0170A0057924D /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		AB3C8F362AE2AB700057924D /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		AB3C8F5C2AE5B6900057924D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConstants.swift; sourceTree = "<group>"; };
+		AB3C8F612AE60A1C0057924D /* CustomSettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsViewCell.swift; sourceTree = "<group>"; };
+		AB3C8F632AE6EF860057924D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AB3C8F6B2AE8074B0057924D /* backgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundSound.mp3; sourceTree = "<group>"; };
 		ABDFC8882AA61D2200F19D1A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		ABDFC88A2AA7618000F19D1A /* ContinentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentModel.swift; path = Kaira/ContinentModel.swift; sourceTree = SOURCE_ROOT; };
 		ABDFC88C2AA7620000F19D1A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = Kaira/CountryModel.swift; sourceTree = SOURCE_ROOT; };
@@ -101,6 +122,9 @@
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
+		EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainPhaseStructure.swift; sourceTree = "<group>"; };
+		EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropScene.swift; sourceTree = "<group>"; };
+		EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +152,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB3C8F352AE017250057924D /* SoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				AB3C8F6B2AE8074B0057924D /* backgroundSound.mp3 */,
+				AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */,
+				AB3C8F312AE0170A0057924D /* SoundManager.swift */,
+			);
+			path = SoundManager;
+			sourceTree = "<group>";
+		};
+		AB3C8F602AE609560057924D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
+				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
+				AB3C8F612AE60A1C0057924D /* CustomSettingsViewCell.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		ABDFC8872AA6196E00F19D1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */,
 				EE0609382ACEC4A100BCC58C /* CustomButton */,
 				EE0609312ACE0C4F00BCC58C /* Phases */,
 				EEC53F862ABB1D4000B24261 /* Protocols */,
@@ -154,6 +199,7 @@
 		ABDFC89D2AB232A600F19D1A /* Mechanics */ = {
 			isa = PBXGroup;
 			children = (
+				EEDCA6512AE6BEF9008C0C29 /* DragAndDropMechanic */,
 				EE06092C2AC3121200BCC58C /* SignatureMechanic */,
 				EE0609252AC1A6FA00BCC58C /* FindImageMechanic */,
 			);
@@ -192,6 +238,7 @@
 				EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */,
 				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
+				EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */,
 			);
 			path = Phases;
 			sourceTree = "<group>";
@@ -236,9 +283,8 @@
 				EE182F9B2A9F748100CE30C8 /* View */,
 				EE182F9A2A9F747900CE30C8 /* Model */,
 				EE182F722A9F6FE000CE30C8 /* Assets.xcassets */,
+				AB3C8F352AE017250057924D /* SoundManager */,
 				EE182F772A9F6FE000CE30C8 /* Info.plist */,
-				AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */,
-				AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */,
 			);
 			path = Kaira;
 			sourceTree = "<group>";
@@ -274,11 +320,12 @@
 		EE182F9B2A9F748100CE30C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB3C8F602AE609560057924D /* UIComponents */,
 				ABDFC8A62AB47B4600F19D1A /* HistoryView.swift */,
 				ABDFC8882AA61D2200F19D1A /* MenuView.swift */,
-				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
-				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
 				AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */,
+				AB3C8F362AE2AB700057924D /* HomeScreenView.swift */,
+				AB3C8F5C2AE5B6900057924D /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +336,8 @@
 				ABDFC8A82AB47BAA00F19D1A /* HistoryViewController.swift */,
 				ABDFC8902AAB65DC00F19D1A /* MenuViewController.swift */,
 				AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */,
+				AB3C8F5A2AE5A55C0057924D /* HomeScreenViewController.swift */,
+				AB3C8F632AE6EF860057924D /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,6 +345,8 @@
 		EE182F9D2A9F74A300CE30C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AB3C8F2D2AD1CC970057924D /* HistoryAnimations.swift */,
+				AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */,
 				EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */,
 			);
 			path = Extension;
@@ -315,6 +366,15 @@
 				EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EEDCA6512AE6BEF9008C0C29 /* DragAndDropMechanic */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */,
+				EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */,
+			);
+			path = DragAndDropMechanic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +485,8 @@
 				ABDFC89C2AAF447100F19D1A /* Pally-Regular.otf in Resources */,
 				ABDFC89B2AAF447100F19D1A /* Pally-Bold.otf in Resources */,
 				ABDFC89A2AAF447100F19D1A /* Pally-Medium.otf in Resources */,
+				AB3C8F6C2AE8074B0057924D /* backgroundSound.mp3 in Resources */,
+				AB3C8F332AE0170A0057924D /* CheckEffect.mp3 in Resources */,
 				EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,29 +536,39 @@
 				ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */,
 				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */,
+				AB3C8F342AE0170A0057924D /* SoundManager.swift in Sources */,
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
+				AB3C8F642AE6EF860057924D /* SettingsViewController.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
 				AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */,
 				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
 				EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */,
 				AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */,
+				AB3C8F5B2AE5A55C0057924D /* HomeScreenViewController.swift in Sources */,
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
 				EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */,
 				AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */,
+				AB3C8F622AE60A1C0057924D /* CustomSettingsViewCell.swift in Sources */,
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
 				EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */,
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
+				EEDCA6502AE6BEE2008C0C29 /* SpainPhaseStructure.swift in Sources */,
 				EE0609332ACE0C5E00BCC58C /* EnglandPhaseStructure.swift in Sources */,
 				EE182F6A2A9F6FDF00CE30C8 /* AppDelegate.swift in Sources */,
 				AB3C8F2E2AD1CC970057924D /* HistoryAnimations.swift in Sources */,
 				ABDFC8892AA61D2200F19D1A /* MenuView.swift in Sources */,
+				EEDCA6532AE6BF0C008C0C29 /* DragAndDropScene.swift in Sources */,
+				AB3C8F5F2AE5FBCE0057924D /* FrameConstants.swift in Sources */,
 				EE0609272AC1A71500BCC58C /* FindImageScene.swift in Sources */,
 				ABDFC8A72AB47B4600F19D1A /* HistoryView.swift in Sources */,
+				EEDCA6552AE6BF39008C0C29 /* DragAndDropViewController.swift in Sources */,
+				AB3C8F5D2AE5B6900057924D /* SettingsView.swift in Sources */,
 				ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */,
 				ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */,
 				EE06093A2ACEC4AF00BCC58C /* CustomPopUpButton.swift in Sources */,
+				AB3C8F372AE2AB700057924D /* HomeScreenView.swift in Sources */,
 				EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */,
 				ABDFC8A92AB47BAA00F19D1A /* HistoryViewController.swift in Sources */,
 			);
@@ -656,7 +728,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7F3CTHW22L;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaira/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -669,7 +741,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.Kaira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -688,7 +760,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7F3CTHW22L;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaira/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -701,7 +773,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = FinalChallengeApp.Kaira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

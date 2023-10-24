@@ -5,4 +5,5 @@ struct HistoryPageModel {
     let text: String
     let button: ButtonType
     var nextViewController: UIViewController?
+    var skipViewController: UIViewController?
 }

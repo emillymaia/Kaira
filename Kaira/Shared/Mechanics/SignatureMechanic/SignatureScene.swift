@@ -31,8 +31,13 @@ class SignatureScene: SKScene, SKPhysicsContactDelegate {
 
     var navController = UIViewController()
 
+    private var viewWidth: CGFloat = 0
+    private var viewHeight: CGFloat = 0
+
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
+        self.viewWidth = (scene?.size.width)!
+        self.viewHeight = (scene?.size.height)!
         lockScreenInteraction = false
         createBackground()
         setupBottomBar()
@@ -75,11 +80,16 @@ extension SignatureScene {
     }
 
     func setupBottomBar() {
+
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: 355, height: 120)
-        bottomNode.position = CGPoint(x: (view?.center.x)!, y: 120)
+        if viewHeight < 700 {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/8)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        } else {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        }
         bottomNode.name = "background"
-        bottomNode.zPosition = 1
 
         addChild(bottomNode)
     }
@@ -94,17 +104,27 @@ extension SignatureScene {
 
             let background = SKSpriteNode(texture: backgroundTexture)
             background.name = "background"
-            background.size = CGSize(
-                width: ((view?.frame.width)!*81.7/100),
-                height: ((view?.frame.height)!*59.8/100)
-            )
-            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + 40)
+
+            if viewHeight < 700 {
+                background.size = CGSize(
+                    width: ((view?.frame.width)!*0.79),
+                    height: ((view?.frame.height)!*0.62)
+                )
+                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/53)
+            } else {
+                background.size = CGSize(
+                    width: ((view?.frame.width)!*0.81),
+                    height: ((view?.frame.height)!*0.59)
+                )
+                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/40)
+            }
+
             background.zPosition = -10
             addChild(background)
 
             canvasView.frame = CGRect(
                 x: ((view?.frame.width)! - background.frame.width)/2,
-                y: (((view?.frame.height)! - background.frame.height)/2 - background.frame.height/14),
+                y: (((view?.frame.height)! - background.frame.height)/1.8 - background.frame.height/14),
                 width: background.size.width,
                 height: background.size.height - background.size.height/7
             )
@@ -113,11 +133,20 @@ extension SignatureScene {
             view!.addSubview(canvasView)
 
             let doneButton = SKSpriteNode(imageNamed: "game-done-button")
-            doneButton.size = CGSize(width: 107, height: 50)
-            doneButton.position = CGPoint(
-                x: (view?.center.x)!,
-                y: ((view?.center.y)!) - background.size.height/3
-            )
+
+            if viewHeight < 700 {
+                doneButton.size = CGSize(width: viewWidth/3.5, height: viewHeight/13)
+                doneButton.position = CGPoint(
+                    x: (view?.center.x)!,
+                    y: ((view?.center.y)!) - background.size.height/2.5
+                )
+            } else {
+                doneButton.size = CGSize(width: viewWidth/3, height: viewHeight/15)
+                doneButton.position = CGPoint(
+                    x: (view?.center.x)!,
+                    y: ((view?.center.y)!) - background.size.height/2.5
+                )
+            }
             doneButton.zPosition = 40
             doneButton.name = "done"
 
@@ -126,8 +155,9 @@ extension SignatureScene {
     }
 
     func setupButtons() {
+
         pauseButton = SKSpriteNode(imageNamed: "pause-button")
-        pauseButton!.size = CGSize(width: 50, height: 50)
+        pauseButton!.size = CGSize(width: viewWidth/7, height: viewWidth/7)
         pauseButton?.position = CGPoint(
             x: (view?.frame.width)! - ((view?.frame.width)!)/6,
             y: (view?.frame.height)! - (view?.frame.height)!/8
@@ -144,11 +174,9 @@ extension SignatureScene {
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
         canvasView.drawingPolicy = .anyInput
-        let wid = (view?.frame.width)!
-        let hei = (view?.frame.height)!
-        let widCalc = wid - (wid*81.7/100)/2
-        let heiCalc = hei - (hei*59.8/100)/2 - (hei*59.8/100)/14
-        canvasView.layer.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! - (view?.frame.height)!/12)
-
+        canvasView.layer.position = CGPoint(
+            x: (view?.center.x)!,
+            y: (view?.center.y)! - (view?.frame.height)!/12
+        )
     }
 }

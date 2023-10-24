@@ -8,6 +8,10 @@ class HistoryViewController: UIViewController {
         view.didPressButton = { [weak self] in
             self?.handleButtonPress()
         }
+        view.didPressSkipButton = { [weak self] in
+            self?.handleSkipButtonPress()
+        }
+
         return view
     }()
     var currentPageIndex: Int = 0
@@ -18,7 +22,6 @@ class HistoryViewController: UIViewController {
         self.historyPages = historyPages
         self.onFinishButtonPressed = onFinishButtonPressed
         super.init(nibName: nil, bundle: nil)
-
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -40,9 +43,11 @@ extension HistoryViewController {
         setImageAndText()
 
         if page.button == .finish {
-            historyView.button.setImage(UIImage(named: "Start"), for: .normal)
+            let image = resizeImage(image: UIImage(named: "Start")!, targetSize: CGSize(width: 64, height: 64))
+            historyView.button.setImage(image, for: .normal)
         } else {
-            historyView.button.setImage(UIImage(named: "NextPage"), for: .normal)
+            let image = resizeImage(image: UIImage(named: "NextPage")!, targetSize: CGSize(width: 64, height: 64))
+            historyView.button.setImage(image, for: .normal)
         }
     }
 
@@ -51,23 +56,30 @@ extension HistoryViewController {
             currentPageIndex += 1
             updatePage()
             historyView.button.animateClick()
-
         } else {
             let nextViewController = historyPages[currentPageIndex].nextViewController ?? UIViewController()
-
             if historyPages[currentPageIndex].button == .finish {
                 onFinishButtonPressed?()
-//                navigationController?.dismiss(animated: true)
-//                return
             }
-
             if historyPages[currentPageIndex].button == .end {
                 onFinishButtonPressed?()
             }
-
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.fadeTo(nextViewController)
-//            navigationController?.pushViewController(nextViewController, animated: false)
+        }
+    }
+
+    private func handleSkipButtonPress() {
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        if UserDefaultsManager.shared.didUserReceivedOnboarding == false {
+            let viewController = HomeScreenViewController()
+            viewController.navigationItem.setHidesBackButton(true, animated: false)
+            UserDefaultsManager.shared.didUserReceivedOnboarding = true
+            navigationController?.fadeTo(viewController)
+        } else {
+            let skipViewController = historyPages[currentPageIndex].skipViewController ?? UIViewController()
+            skipViewController.navigationItem.setHidesBackButton(true, animated: false)
+            self.navigationController?.fadeTo(skipViewController)
         }
     }
 }
@@ -76,7 +88,6 @@ extension HistoryViewController {
     func setImageAndText() {
         let page = historyPages[currentPageIndex]
         let newImage = UIImage(named: page.image)
-//        historyView.text.text = page.text
 
         UIView.transition(
             with: historyView.image,
@@ -96,5 +107,31 @@ extension HistoryViewController {
             },
             completion: nil
         )
+    }
+    
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+        }
+
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
     }
 }
