@@ -15,6 +15,9 @@ class DragAndDropScene: SKScene, SKPhysicsContactDelegate {
 
     var lastZPos = 1
 
+    var  XposArray: [CGFloat] = []
+    var  YposArray: [CGFloat] = []
+
     private var pauseButton: SKSpriteNode?
 
     var backgroundList: [String] = []
@@ -35,9 +38,10 @@ class DragAndDropScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         scene?.backgroundColor = .white
-        self.viewWidth = (scene?.size.width)!
-        self.viewHeight = (scene?.size.height)!
+        viewWidth = (scene?.frame.width)!
+        viewHeight = (scene?.frame.height)!
         lockScreenInteraction = false
+        setupPositionals()
         setupBottomBar()
         setupButtons()
         setupSprites(assets: gamePhaseModel!.assets)
@@ -71,7 +75,6 @@ extension DragAndDropScene {
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-
         if let touch = touches.first, let node = self.currentNode {
             let touchLocation = touch.location(in: self)
             node.position = touchLocation
@@ -117,8 +120,13 @@ extension DragAndDropScene {
 
     func setupBottomBar() {
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
-        bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        if viewHeight < 700 {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/8)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        } else {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        }
         bottomNode.name = "setup"
         addChild(bottomNode)
     }
@@ -144,18 +152,6 @@ extension DragAndDropScene {
         var filteredAssets = assets
         filteredAssets.removeFirst()
 
-        let positionArrayX = [
-            139, 247, 89, 197, 304,
-            127, 266, 89, 197, 304,
-            89, 197, 304
-        ]
-
-        let positionArrayY = [
-            650, 650, 550, 550, 550,
-            400, 400, 300, 300, 300,
-            200, 200, 200
-        ]
-
         var iteratorX = 0
         var iteratorY = 0
         for image in filteredAssets {
@@ -167,7 +163,7 @@ extension DragAndDropScene {
             let background = SKSpriteNode(texture: backgroundTexture)
             background.name = image
             background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
-            background.position = CGPoint(x: positionArrayX[iteratorX], y: positionArrayY[iteratorY])
+            background.position = CGPoint(x: self.XposArray[iteratorX], y: self.YposArray[iteratorY])
             background.zPosition = -10
             addChild(background)
 
@@ -204,5 +200,31 @@ extension DragAndDropScene {
             return true
         }
         return false
+    }
+
+    func setupPositionals() {
+        let Xpos1 = viewWidth*0.33 //33%
+        let Xpos2 = viewWidth*0.66 // 66% --
+        let Xpos3 = viewWidth*0.25 // 25% --
+        let Xpos4 = viewWidth*0.5 // 50% --
+        let Xpos5 = viewWidth*0.75 // 75% --
+
+        let Ypos1 = viewHeight*0.75 // 75%
+        let Ypos2 = viewHeight*0.65 // 65%
+        let Ypos3 = viewHeight*0.5 // 50% --
+        let Ypos4 = viewHeight*0.4 // 40% --
+        let Ypos5 = viewHeight*0.3 // 30% --
+
+        self.XposArray = [
+            Xpos1, Xpos2, Xpos3, Xpos4, Xpos5,
+            Xpos1, Xpos2, Xpos3, Xpos4, Xpos5,
+            Xpos3, Xpos4, Xpos5,
+        ]
+
+        self.YposArray = [
+            Ypos1, Ypos1, Ypos2, Ypos2, Ypos2,
+            Ypos3, Ypos3, Ypos4, Ypos4, Ypos4,
+            Ypos5, Ypos5, Ypos5
+        ]
     }
 }

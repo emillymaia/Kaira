@@ -104,8 +104,14 @@ extension FindImageScene {
     func setupBottomBar() {
 
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
-        bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+
+        if viewHeight < 700 {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/8)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        } else {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        }
         bottomNode.name = "background"
 
         addChild(bottomNode)

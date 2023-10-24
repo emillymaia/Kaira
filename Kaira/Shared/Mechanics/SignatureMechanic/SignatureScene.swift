@@ -82,8 +82,13 @@ extension SignatureScene {
     func setupBottomBar() {
 
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
-        bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
-        bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        if viewHeight < 700 {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/8)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        } else {
+            bottomNode.size = CGSize(width: viewWidth-(viewWidth/4), height: viewHeight/10)
+            bottomNode.position = CGPoint(x: (view?.center.x)!, y: viewHeight/8)
+        }
         bottomNode.name = "background"
 
         addChild(bottomNode)
@@ -99,11 +104,21 @@ extension SignatureScene {
 
             let background = SKSpriteNode(texture: backgroundTexture)
             background.name = "background"
-            background.size = CGSize(
-                width: ((view?.frame.width)!*81.7/100),
-                height: ((view?.frame.height)!*59.8/100)
-            )
-            background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/40)
+
+            if viewHeight < 700 {
+                background.size = CGSize(
+                    width: ((view?.frame.width)!*0.79),
+                    height: ((view?.frame.height)!*0.62)
+                )
+                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/53)
+            } else {
+                background.size = CGSize(
+                    width: ((view?.frame.width)!*0.81),
+                    height: ((view?.frame.height)!*0.59)
+                )
+                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/40)
+            }
+
             background.zPosition = -10
             addChild(background)
 
@@ -118,11 +133,20 @@ extension SignatureScene {
             view!.addSubview(canvasView)
 
             let doneButton = SKSpriteNode(imageNamed: "game-done-button")
-            doneButton.size = CGSize(width: viewWidth/3, height: viewHeight/15)
-            doneButton.position = CGPoint(
-                x: (view?.center.x)!,
-                y: ((view?.center.y)!) - background.size.height/2.5
-            )
+
+            if viewHeight < 700 {
+                doneButton.size = CGSize(width: viewWidth/3.5, height: viewHeight/13)
+                doneButton.position = CGPoint(
+                    x: (view?.center.x)!,
+                    y: ((view?.center.y)!) - background.size.height/2.5
+                )
+            } else {
+                doneButton.size = CGSize(width: viewWidth/3, height: viewHeight/15)
+                doneButton.position = CGPoint(
+                    x: (view?.center.x)!,
+                    y: ((view?.center.y)!) - background.size.height/2.5
+                )
+            }
             doneButton.zPosition = 40
             doneButton.name = "done"
 
