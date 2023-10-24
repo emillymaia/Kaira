@@ -38,7 +38,8 @@ final class SettingsViewController: UIViewController {
     }
 
     private func handlePrivacyButtonPressed() {
-        let alert = UIAlertController(title: "Redirecionamento", message: "Você será redirecionado para o Safari. Deseja continuar?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Redirecionamento",
+                                      message: "Você será redirecionado para o Safari. Deseja continuar?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Abrir", style: .default, handler: { _ in
             if let url = URL(string: "https://github.com/emillymaia/Kaira/blob/main/privacy.md") {
@@ -51,7 +52,8 @@ final class SettingsViewController: UIViewController {
     }
 
     private func handleRateUsButtonPressed() {
-        let alert = UIAlertController(title: "Redirecionamento", message: "Você será redirecionado para o Safari. Deseja continuar?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Redirecionamento",
+                                      message: "Você será redirecionado para o Safari. Deseja continuar?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Abrir", style: .default, handler: { _ in
             if let url = URL(string: "https://forms.gle/xCj7jcndbaiy1VJF7") {
@@ -63,4 +65,3 @@ final class SettingsViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
-
