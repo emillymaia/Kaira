@@ -145,7 +145,7 @@ extension MenuViewController {
                     CountryModel(name: "South Korea", background: "coming-soon"),
                     CountryModel(name: "India", background: "coming-soon")
                 ]
-            ),
+            )
         ]
     }
 
@@ -168,7 +168,7 @@ extension MenuViewController {
                     CountryModel(name: "South Korea", background: "coming-soon"),
                     CountryModel(name: "India", background: "coming-soon")
                 ]
-            ),
+            )
         ]
     }
 
@@ -191,7 +191,7 @@ extension MenuViewController {
                     CountryModel(name: "South Korea", background: "coming-soon"),
                     CountryModel(name: "India", background: "coming-soon")
                 ]
-            ),
+            )
         ]
     }
 }

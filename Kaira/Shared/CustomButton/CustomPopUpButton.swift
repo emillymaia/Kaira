@@ -91,7 +91,7 @@ class CustomPopup: SKSpriteNode {
                     let textureName = isBackgroundSoundOn ? "MusicOn" : "MusicOff"
                     backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
 
-                    UserDefaults.standard.set(isBackgroundSoundOn, forKey: "isBackgroundSoundOn")
+                    UserDefaultsManager.shared.isBackgroundSoundOn = isBackgroundSoundOn
 
                     if isBackgroundSoundOn {
                         startMusic()
