@@ -14,6 +14,7 @@ class DragAndDropScene: SKScene, SKPhysicsContactDelegate {
     var currentNode: SKNode?
 
     var lastZPos = 1
+    var lastXYpos: [CGFloat] = []
 
     var  XposArray: [CGFloat] = []
     var  YposArray: [CGFloat] = []
@@ -64,6 +65,9 @@ extension DragAndDropScene {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     touchedNodes.first?.zPosition = CGFloat(lastZPos)
                     self.currentNode = touchedNodes.first
+                if let node = currentNode {
+                    self.lastXYpos = [node.position.x, node.position.y]
+                }
             }
 
             if touchedNodes.first?.name == "pause" && !lockScreenInteraction! {
@@ -86,21 +90,32 @@ extension DragAndDropScene {
             lastZPos += 1
 
             // rever dps
-            for item in backgroundList {
-                scene?.enumerateChildNodes(withName: item, using: { node, _ in
-                    let intersectPositionX: Bool =
-                    (self.currentNode?.position.x)! >= (node.frame.minX) &&
-                    (self.currentNode?.position.x)! <= (node.frame.maxX) ?
-                    true : false
-                    let intersectPositionY: Bool =
-                    (self.currentNode?.position.y)! >= (node.frame.minY) &&
-                    (self.currentNode?.position.y)! <= (node.frame.maxY) ?
-                    true : false
 
-                    if intersectPositionX && intersectPositionY {
-                        self.currentNode?.position = CGPoint(x: (node.position.x), y: (node.position.y))
-                    }
-                })
+            if let touch = touches.first, let _ = self.currentNode {
+                let touchLocation = touch.location(in: self)
+                let touchedNodes = self.nodes(at: touchLocation)
+                for item in backgroundList {
+                    scene?.enumerateChildNodes(withName: item, using: { node, _ in
+                        let intersectPositionX: Bool =
+                        (self.currentNode?.position.x)! >= (node.frame.minX) &&
+                        (self.currentNode?.position.x)! <= (node.frame.maxX) ?
+                        true : false
+                        let intersectPositionY: Bool =
+                        (self.currentNode?.position.y)! >= (node.frame.minY) &&
+                        (self.currentNode?.position.y)! <= (node.frame.maxY) ?
+                        true : false
+
+                        if touchedNodes.count <= 2 {
+                            if intersectPositionX && intersectPositionY {
+                                self.currentNode?.position = CGPoint(x: (node.position.x), y: (node.position.y))
+                            }
+                        } else {
+                            if !(self.lastXYpos.isEmpty) {
+                                self.currentNode?.position = CGPoint(x: self.lastXYpos[0], y: self.lastXYpos[1])
+                            }
+                        }
+                    })
+                }
             }
         }
         self.currentNode = nil
