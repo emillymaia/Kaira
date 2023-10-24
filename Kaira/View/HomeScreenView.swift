@@ -86,7 +86,6 @@ extension HomeScreenView {
             kairaImage.topAnchor.constraint(equalTo: title.bottomAnchor, constant: height * 0.04),
             kairaImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: width * 0.021),
             kairaImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: width * 0.2),
-            kairaImage.widthAnchor.constraint(equalToConstant: 310),
             kairaImage.heightAnchor.constraint(equalToConstant: 533)
         ])
     }
