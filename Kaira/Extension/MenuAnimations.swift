@@ -43,8 +43,20 @@ extension MenuViewController {
         feedbackGenerator.impactOccurred()
     }
 
+//    func startMusic() {
+//        let queue = DispatchQueue.global(qos: .background)     
+//        print(UserDefaultsManager.shared.isBackgroundSoundOn)
+//        queue.async {
+//            if UserDefaultsManager.shared.isBackgroundSoundOn {
+//                SoundManager.shared.playBackgroundMusic("backgroundSound")
+//            }
+//        }
+//    }
+}
+
+extension HomeScreenViewController {
     func startMusic() {
-        let queue = DispatchQueue.global(qos: .background)     
+        let queue = DispatchQueue.global(qos: .background)
         print(UserDefaultsManager.shared.isBackgroundSoundOn)
         queue.async {
             if UserDefaultsManager.shared.isBackgroundSoundOn {

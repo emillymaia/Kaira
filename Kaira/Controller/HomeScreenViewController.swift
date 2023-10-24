@@ -18,6 +18,7 @@ final class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         view = homeScreenView
         view.backgroundColor = .white
+        startMusic()
     }
 
     private func handlePlayButtonPressed() {
