@@ -41,6 +41,8 @@ extension UnlockedStampViewController {
 
     private func handleButtonPress() {
         onFinishButtonPressed?()
+        // verificar chamadas de didUpdateData
+        customDelegate?.didUpdateData(data: 1)
         navigationController?.dismiss(animated: true)
     }
 }

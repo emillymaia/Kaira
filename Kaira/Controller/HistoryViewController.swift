@@ -44,6 +44,7 @@ extension HistoryViewController {
 
         if page.button == .finish {
             historyView.button.setImage(UIImage(named: "Start"), for: .normal)
+            customDelegate!.didUpdateData(data: 1)
         } else {
             historyView.button.setImage(UIImage(named: "NextPage"), for: .normal)
         }

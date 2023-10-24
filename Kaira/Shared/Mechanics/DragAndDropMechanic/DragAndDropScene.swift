@@ -108,6 +108,7 @@ extension DragAndDropScene {
     }
 
     private func pressButton() {
+        customDelegate?.didUpdateData(data: 1)
         didPressButton?()
     }
 }

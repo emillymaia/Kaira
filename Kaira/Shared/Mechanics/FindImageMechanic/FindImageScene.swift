@@ -72,9 +72,7 @@ extension FindImageScene {
     }
 
     private func pressButton() {
-        if gamePhaseModel?.countryName == "England" {
-            customDelegate?.didUpdateData(data: 1)
-        }
+        customDelegate?.didUpdateData(data: 1)
         didPressButton?()
     }
 

@@ -80,8 +80,8 @@ struct SpainPhaseStructure {
         ]
 
         self.historyVC = [
-            HistoryViewController(historyPages: [self.historyPages[0], self.historyPages[1]], onFinishButtonPressed: nil),
-            HistoryViewController(historyPages: [self.historyPages[2], self.historyPages[3]]) {
+            HistoryViewController(historyPages: [self.historyPages[0], self.historyPages[1], self.historyPages[2], self.historyPages[3]], onFinishButtonPressed: nil),
+            HistoryViewController(historyPages: [self.historyPages[4]]) {
                     print("Updater Called")
                     customDelegate.didUpdateData(data: 1)
             }

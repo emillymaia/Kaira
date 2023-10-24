@@ -4,6 +4,7 @@ import SpriteKit
 final class MenuViewController: UIViewController {
     
     let menuView = MenuView()
+    var progress = 1
     var lastPressed = ""
     var continentModel: [ContinentModel] = [
         ContinentModel(
@@ -28,12 +29,11 @@ final class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         loadInfo()
+        loadInfo()
         view = menuView
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.dataSource = self
         view.backgroundColor = .white
-
         startMusic()
     }
 }
