@@ -16,10 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if UserDefaultsManager.shared.didUserReceivedOnboarding == true {
             viewController = HomeScreenViewController()
-//            viewController = SettingsViewController()
         } else {
             let intro = IntroPhaseStructure()
             viewController = intro.historyVC[0]
+            UserDefaultsManager.shared.isBackgroundSoundOn = true
         }
         window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.overrideUserInterfaceStyle = .light

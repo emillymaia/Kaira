@@ -7,7 +7,9 @@ final class UserDefaultsManager {
     private let isBackgroundSoundOnKey = "isBackgroundSoundOn"
     private let isSoundOnKey = "isSoundOn"
 
-    private init() {}
+    private init() {
+     
+    }
 
     var didUserReceivedOnboarding: Bool {
         get {
