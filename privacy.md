@@ -1,37 +1,50 @@
-KAIRA - PRIVACY POLICY
+**Política de Privacidade do Aplicativo Kaira**
 
-This application is maintained and operated by Emilly Maia, Helena Oliveira, Mateus Calisto, Mateus Alves
-We do not collect personal data belonging to those using our application, we only use a feature that provides audible descriptions of the content on the screen. When using it, we act as controller of the content that is available on the screen, for this reason we are not subject to the provisions of Federal Law n. 13,709/2018 (General Personal Data Protection Law - LGPD).
+Bem-vindo ao aplicativo Kaira! Esta Política de Privacidade descreve como coletamos, usamos e compartilhamos informações quando você utiliza o nosso aplicativo Kaira, desenvolvido pela Kaira (doravante referido como "nós" ou "nosso"). Esta política se aplica exclusivamente ao nosso aplicativo disponível na plataforma iOS. Ao utilizar o aplicativo Kaira, você concorda com as práticas de privacidade descritas neste documento.
 
-We take care to clarify the use of the audiovisual resource that helps our application and, therefore, we provide this privacy policy, which contains important information about:
-- Who should use our app
-- What resources we use and what we do with them;
-- How to contact us.
+**1. Informações que Coletamos**
 
-1. Who should use our app
-Kaira is an application designed for those who want to take care of their pet's life in a more active way, providing a more practical and pleasant way of remembering important activities for their pet. The app offers the possibility to create a virtual avatar of your pet and through it monitor the important activities of your routine related to hygiene and leisure time. Featuring cross-platform synchronization and a companion app for WatchOS, the main purpose of the application is to provide a cross-platform tool that helps you take better care of your pet at all times.
+O aplicativo Kaira coleta informações mínimas, não sensíveis e não identificáveis pessoalmente, que incluem:
 
-2. What resources we use and what we do with them
-The application has visual and interactive resources, featuring an avatar in pixel art and an interface created from arts from authorial production. In addition, the app has cross-platform support, being present on both iOS and WatchOS devices.
+- **Dados do Dispositivo:** Podemos coletar informações sobre o seu dispositivo, como modelo, sistema operacional e identificadores exclusivos de dispositivo.
 
-3. Personal data expressly provided by the user
-We collect the following personal data that our users expressly provide to us when using our application:
--Name of the user's pets
+- **Informações de Uso:** Podemos coletar informações sobre como você interage com o aplicativo, incluindo quais quebra-cabeças você resolveu e as pontuações obtidas, mas essas informações não são vinculadas a identificadores pessoais.
 
-The collection of this data takes place at the following times:
--During the first use of the application, for the creation and configuration of your pet's virtual avatar
+**2. Uso das Informações Coletadas**
 
-The data provided by our users is collected for the following purposes:
--Create a personalized experience, where the user can follow their pet in an immersive way in a virtual environment
+Utilizamos as informações coletadas para melhorar o desempenho e a funcionalidade do aplicativo Kaira. Isso inclui:
 
-4. Changes to this policy
-This version of this privacy policy was last updated on: 09/10/23
+- Aprimorar a experiência do usuário.
 
-We reserve the right to modify these rules at any time, especially to adapt them to any changes made to our application, either by making new features available, or by deleting or modifying those that already exist.
+- Analisar o desempenho e a popularidade dos quebra-cabeças.
 
-Whenever there is a change, our users will be notified about the change.
+- Diagnosticar problemas técnicos.
 
-5. How to contact us
-To clarify any doubts about this Privacy Policy or the resources we use, please contact our Personal Data Protection Officer, through the channel mentioned below:
+**3. Compartilhamento de Informações**
 
-Email: mateus.bruno.calisto@gmail.com
+Não compartilhamos informações pessoalmente identificáveis com terceiros. No entanto, podemos compartilhar informações não identificáveis pessoalmente com prestadores de serviços de análise e publicidade para melhorar o aplicativo.
+
+**4. Cookies e Tecnologias Semelhantes**
+
+O aplicativo Kaira não utiliza cookies ou tecnologias semelhantes para coletar informações.
+
+**5. Segurança**
+
+Implementamos medidas de segurança para proteger as informações que coletamos contra perda, uso não autorizado, acesso, divulgação, alteração e destruição.
+
+**6. Contato**
+
+Se você tiver dúvidas sobre esta Política de Privacidade ou sobre o uso de suas informações no aplicativo Kaira, entre em contato conosco:
+
+Emilly Maia (Responsável pelo aplicativo)
+E-mail: kaira.stamps@gmail.com
+
+**7. Alterações na Política de Privacidade**
+
+Reservamo-nos o direito de fazer alterações nesta Política de Privacidade. Qualquer alteração será publicada nesta página, e a data de vigência será atualizada. É sua responsabilidade verificar periodicamente esta política para estar ciente de eventuais alterações.
+
+Ao utilizar o aplicativo Kaira, você concorda com esta Política de Privacidade. Se você não concorda com esta política, por favor, não utilize o aplicativo Kaira.
+
+**Última Atualização:** 24/10/2023
+
+Agradecemos por usar o aplicativo Kaira!
