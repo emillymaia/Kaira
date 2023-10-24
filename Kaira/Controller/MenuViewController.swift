@@ -34,7 +34,7 @@ final class MenuViewController: UIViewController {
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.dataSource = self
         view.backgroundColor = .white
-        startMusic()
+//        startMusic()
     }
 }
 
