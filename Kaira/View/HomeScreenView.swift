@@ -33,7 +33,8 @@ final class HomeScreenView: UIView {
     private let kairaImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "icon-kaira")
+        image.image = UIImage(named: "icon-kaira 1")
+//        image.sizeThatFits(CGSize(width: 310, height: 533))
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -84,7 +85,9 @@ extension HomeScreenView {
 
             kairaImage.topAnchor.constraint(equalTo: title.bottomAnchor, constant: height * 0.04),
             kairaImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: width * 0.021),
-            kairaImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: width * 0.2)
+            kairaImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: width * 0.2),
+            kairaImage.widthAnchor.constraint(equalToConstant: 310),
+            kairaImage.heightAnchor.constraint(equalToConstant: 533)
         ])
     }
 

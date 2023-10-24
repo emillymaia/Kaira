@@ -36,7 +36,7 @@ class HistoryView: UIView {
     var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.clipsToBounds = true
+        button.contentMode = .scaleAspectFit
         return button
     }()
 
@@ -86,7 +86,9 @@ extension HistoryView {
             button.topAnchor.constraint(equalTo: image.bottomAnchor, constant: height * 0.2),
             button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: width * 0.7),
             button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: width * 0.04),
-            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(height * 0.027))
+            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(height * 0.027)),
+            button.widthAnchor.constraint(equalToConstant: 64),
+            button.heightAnchor.constraint(equalToConstant: 64)
         ])
     }
 
