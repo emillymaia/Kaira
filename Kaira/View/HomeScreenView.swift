@@ -58,7 +58,11 @@ final class HomeScreenView: UIView {
         playButton.addTarget(self, action: #selector(playButtonWasPressed), for: .touchUpInside)
         feedbackLink.addTarget(self, action: #selector(feedbackButtonWasPressed), for: .touchUpInside)
 
-        let atributoSublinhado: [NSAttributedString.Key : Any] = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+        let atributoSublinhado: [
+            NSAttributedString.Key: Any
+        ] = [
+            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
         let textoAtribuido = NSAttributedString(string: feedbackLink.currentTitle ?? "", attributes: atributoSublinhado)
         feedbackLink.setAttributedTitle(textoAtribuido, for: .normal)
     }

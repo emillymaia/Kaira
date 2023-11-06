@@ -80,14 +80,7 @@ extension FindImageScene {
 
         if let touch = touches.first, let node = self.currentNode {
             let touchLocation = touch.location(in: self)
-//            if !(
-//                touchLocation.x < viewWidth/10
-//                || touchLocation.x > viewWidth-(viewWidth/10)
-//                || touchLocation.y < viewHeight/5
-//                || touchLocation.y > viewHeight-(viewHeight/5)
-//            ) {
-                    node.position = touchLocation
-//            }
+                node.position = touchLocation
         }
     }
 
@@ -177,12 +170,19 @@ extension FindImageScene {
     func animateClick() {
         let initialScale: CGFloat = 0.8
 
-        UIView.animate(withDuration: 0.1, animations: {
-            self.view?.transform = CGAffineTransform(scaleX: initialScale, y: initialScale)
-        }) { _ in
-            UIView.animate(withDuration: 0.1, animations: {
-                self.view?.transform = CGAffineTransform.identity
-            })
-        }
+        UIView.animate(
+            withDuration: 0.1,
+            animations: {
+                self.view?.transform = CGAffineTransform(
+                    scaleX: initialScale,
+                    y: initialScale
+                )
+            },
+            completion: { _ in
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.view?.transform = CGAffineTransform.identity
+                })
+            }
+        )
     }
 }

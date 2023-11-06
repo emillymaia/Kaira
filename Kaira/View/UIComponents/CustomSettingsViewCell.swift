@@ -60,9 +60,9 @@ extension CustomSettingsViewCell {
             button.setImage(UIImage(named: backgroundImage), for: .normal)
             UserDefaults.standard.set(isBackgroundSoundOn, forKey: "isBackgroundSoundOn")
         case .sounds:
-            print("sounds")
+             print("sounds")
         case .vibration:
-            print("vibration")
+             print("vibration")
         }
     }
 

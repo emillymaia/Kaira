@@ -1,4 +1,4 @@
-struct FrancePhaseStructure {
+struct FrancePhaseStructure: PhaseStructure {
     // swiftlint: disable all
 
     let name = "France"
@@ -11,15 +11,15 @@ struct FrancePhaseStructure {
 
     init(_ customDelegate: DataDelegate) {
         let franceSignGamePhaseModel = GamePhaseModel(countryName: "France", background: "france-game-2-background", assets: [
-            "france-game-2-objective"
+            "\(name.lowercased())-game-2-objective"
         ])
 
         let franceFindGamePhaseModel = GamePhaseModel(countryName: "France", background: "", assets: [
-            "france-game-objective",
-            "france-game-winner",
-            "france-game-image-1",
-            "france-game-image-2",
-            "france-game-image-3",
+            "\(name.lowercased())-game-objective",
+            "\(name.lowercased())-game-winner",
+            "\(name.lowercased())-game-image-1",
+            "\(name.lowercased())-game-image-2",
+            "\(name.lowercased())-game-image-3",
         ])
 
         self.texts = [
@@ -90,7 +90,6 @@ struct FrancePhaseStructure {
             HistoryViewController(historyPages: [self.historyPages[3], self.historyPages[4]], onFinishButtonPressed: nil),
             HistoryViewController(historyPages: [self.historyPages[5]]) {
                     customDelegate.didUpdateData(data: 2)
-                    print("hue")
             }
         ]
 

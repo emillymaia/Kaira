@@ -1,16 +1,24 @@
 import UIKit
 
 extension UIButton {
+
     func animateClick() {
         let initialScale: CGFloat = 0.8
 
-        UIView.animate(withDuration: 0.1, animations: {
-            self.transform = CGAffineTransform(scaleX: initialScale, y: initialScale)
-        }) { _ in
-            UIView.animate(withDuration: 0.1, animations: {
-                self.transform = CGAffineTransform.identity
-            })
-        }
+        UIView.animate(
+            withDuration: 0.1,
+            animations: {
+                self.transform = CGAffineTransform(
+                    scaleX: initialScale,
+                    y: initialScale
+                )
+            },
+            completion: { _ in
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.transform = CGAffineTransform.identity
+                })
+            }
+        )
     }
 }
 
@@ -31,7 +39,7 @@ extension UILabel {
                 }
 
                 if index == label.count - 1 {
-                    print("animou")
+                    // configurar dps.
                 }
             }
         }

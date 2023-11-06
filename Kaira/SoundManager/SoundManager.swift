@@ -1,10 +1,3 @@
-//
-//  SoundManager.swift
-//  Kaira
-//
-//  Created by Mateus Calisto on 11/09/23.
-//
-
 import Foundation
 import AVFoundation
 

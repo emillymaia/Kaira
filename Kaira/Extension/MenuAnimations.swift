@@ -14,13 +14,20 @@ extension MenuCollectionCellView {
     func animateClick() {
         let initialScale: CGFloat = 0.9
 
-        UIView.animate(withDuration: 0.1, animations: {
-            self.transform = CGAffineTransform(scaleX: initialScale, y: initialScale)
-        }) { _ in
-            UIView.animate(withDuration: 0.1) {
-                self.transform = .identity
+        UIView.animate(
+            withDuration: 0.1,
+            animations: {
+                self.transform = CGAffineTransform(
+                    scaleX: initialScale,
+                    y: initialScale
+                )
+            },
+            completion: { _ in
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.transform = CGAffineTransform.identity
+                })
             }
-        }
+        )
     }
 }
 
@@ -42,10 +49,8 @@ extension MenuViewController {
         feedbackGenerator.prepare()
         feedbackGenerator.impactOccurred()
     }
-
     func startMusic() {
-        let queue = DispatchQueue.global(qos: .background)     
-        print(UserDefaultsManager.shared.isBackgroundSoundOn)
+        let queue = DispatchQueue.global(qos: .background)
         queue.async {
             if UserDefaultsManager.shared.isBackgroundSoundOn {
                 SoundManager.shared.playBackgroundMusic("backgroundSound")

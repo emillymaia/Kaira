@@ -47,7 +47,11 @@ class HistoryView: UIView {
         button.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(skipButtonWasPressed), for: .touchUpInside)
 
-        let atributoSublinhado: [NSAttributedString.Key : Any] = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+        let atributoSublinhado: [
+            NSAttributedString.Key: Any
+        ] = [
+            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
         let textoAtribuido = NSAttributedString(string: skipButton.currentTitle ?? "", attributes: atributoSublinhado)
         skipButton.setAttributedTitle(textoAtribuido, for: .normal)
     }
