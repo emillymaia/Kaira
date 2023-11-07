@@ -79,31 +79,60 @@ class CustomPopup: SKSpriteNode {
 
             for node in nodesAtLocation {
                 if node.name == "soundEffectButton" {
+                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    isSoundEffectOn.toggle()
-                    let textureName = isSoundEffectOn ? "SoundOn" : "SoundOff"
-                    soundEffectButton.texture = SKTexture(imageNamed: textureName)
-
-                    UserDefaults.standard.set(isSoundEffectOn, forKey: "isSoundEffectOn")
+                    let fAction = SKAction.scale(by: 1.5, duration: 0.1)
+                    let sAction = SKAction.scale(by: 0.66, duration: 0.1)
+                    let sequence = SKAction.sequence([fAction, sAction])
+                    node.run(sequence)
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+                        self.isSoundEffectOn.toggle()
+                        let textureName = self.isSoundEffectOn ? "SoundOn" : "SoundOff"
+                        self.soundEffectButton.texture = SKTexture(imageNamed: textureName)
+                        UserDefaults.standard.set(self.isSoundEffectOn, forKey: "isSoundEffectOn")
+                    }
                 } else if node.name == "backgroundSoundButton" {
+                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    isBackgroundSoundOn.toggle()
-                    let textureName = isBackgroundSoundOn ? "MusicOn" : "MusicOff"
-                    backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
+                    let fAction = SKAction.scale(by: 1.5, duration: 0.1)
+                    let sAction = SKAction.scale(by: 0.66, duration: 0.1)
+                    let sequence = SKAction.sequence([fAction, sAction])
+                    node.run(sequence)
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+                        self.isBackgroundSoundOn.toggle()
+                        let textureName = self.isBackgroundSoundOn ? "MusicOn" : "MusicOff"
+                        self.backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
 
-                    UserDefaultsManager.shared.isBackgroundSoundOn = isBackgroundSoundOn
+                        UserDefaultsManager.shared.isBackgroundSoundOn = self.isBackgroundSoundOn
 
-                    if isBackgroundSoundOn {
-                        startMusic()
-                    } else {
-                        pauseMusic()
+                        if self.isBackgroundSoundOn {
+                            self.startMusic()
+                        } else {
+                            self.pauseMusic()
+                        }
                     }
                 } else if node.name == "dismissButton" {
+
+                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    self.close()
+                    let fAction = SKAction.scale(by: 1.5, duration: 0.1)
+                    let sAction = SKAction.scale(by: 0.66, duration: 0.1)
+                    let sequence = SKAction.sequence([fAction, sAction])
+                    node.run(sequence)
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.22) {
+                        self.close()
+                    }
                 } else if node.name == "backToMenuButton" {
+
+                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    navController!.dismiss(animated: true)
+                    let fAction = SKAction.scale(by: 1.2, duration: 0.1)
+                    let sAction = SKAction.scale(by: 0.83, duration: 0.1)
+                    let sequence = SKAction.sequence([fAction, sAction])
+                    node.run(sequence)
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.22) {
+                        self.navController!.dismiss(animated: true)
+                    }
                 }
             }
         }

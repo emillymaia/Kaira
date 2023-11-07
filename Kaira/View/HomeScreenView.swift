@@ -104,10 +104,20 @@ extension HomeScreenView {
 
 extension HomeScreenView {
     @objc private func playButtonWasPressed() {
-        didPressPlayButton?()
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+
+        playButton.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressPlayButton?()
+        }
     }
 
     @objc private func feedbackButtonWasPressed() {
-        didPressFeedbackButton?()
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+
+        feedbackLink.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressFeedbackButton?()
+        }
     }
 }

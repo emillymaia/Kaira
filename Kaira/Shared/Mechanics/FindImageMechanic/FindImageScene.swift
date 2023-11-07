@@ -58,8 +58,15 @@ extension FindImageScene {
 
             if touchedNodes.first?.name == "pause" && !lockScreenInteraction! {
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                lockScreenInteraction = true
-                addChild(customPopUp)
+                // MARCAR PARA LEMBRAR DPS
+                let fAction = SKAction.scale(by: 1.5, duration: 0.1)
+                let sAction = SKAction.scale(by: 0.66, duration: 0.1)
+                let sequence = SKAction.sequence([fAction, sAction])
+                touchedNodes.first?.run(sequence)
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+                    self.lockScreenInteraction = true
+                    self.addChild(self.customPopUp)
+                }
             }
 
             if let currentNode = currentNode {
@@ -167,20 +174,23 @@ extension FindImageScene {
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
     }
-    func animateClick() {
+}
+
+extension SKNode {
+    func animateClick(_ location: CGPoint) {
         let initialScale: CGFloat = 0.8
 
         UIView.animate(
             withDuration: 0.1,
             animations: {
-                self.view?.transform = CGAffineTransform(
+                self.nodes(at: location).first?.scene?.view?.transform = CGAffineTransform(
                     scaleX: initialScale,
                     y: initialScale
                 )
             },
             completion: { _ in
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.view?.transform = CGAffineTransform.identity
+                    self.nodes(at: location).first?.scene?.view?.transform = CGAffineTransform.identity
                 })
             }
         )

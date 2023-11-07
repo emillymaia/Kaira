@@ -59,15 +59,15 @@ extension HistoryViewController {
             SoundManager.shared.stopBackgroundMusic()
             currentPageIndex += 1
             updatePage()
-            historyView.button.animateClick()
         } else {
-            let nextViewController = historyPages[currentPageIndex].nextViewController ?? UIViewController()
+            let nextViewController = self.historyPages[self.currentPageIndex].nextViewController
+            ?? UIViewController()
             SoundManager.shared.stopBackgroundMusic()
-            if historyPages[currentPageIndex].button == .finish {
-                onFinishButtonPressed?()
+            if self.historyPages[self.currentPageIndex].button == .finish {
+                self.onFinishButtonPressed?()
             }
-            if historyPages[currentPageIndex].button == .end {
-                onFinishButtonPressed?()
+            if self.historyPages[self.currentPageIndex].button == .end {
+                self.onFinishButtonPressed?()
             }
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.fadeTo(nextViewController)

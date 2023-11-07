@@ -62,11 +62,18 @@ class HistoryView: UIView {
 
     @objc private func pressButton() {
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-        didPressButton?()
+        button.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressButton?()
+        }
     }
 
     @objc private func skipButtonWasPressed() {
-        didPressSkipButton?()
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        skipButton.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressSkipButton?()
+        }
     }
 }
 
