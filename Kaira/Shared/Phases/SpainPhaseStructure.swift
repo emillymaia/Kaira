@@ -66,7 +66,7 @@ struct SpainPhaseStructure: PhaseStructure {
             HistoryPageModel(
                 image: "spain-4",
                 text: texts[3],
-                button: .next,
+                button: .finish,
                 nextViewController: spainGame,
                 skipViewController: spainGame
             ),

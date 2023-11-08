@@ -59,7 +59,7 @@ struct FrancePhaseStructure: PhaseStructure {
             HistoryPageModel(
                 image: "france-3",
                 text: texts[2],
-                button: .next,
+                button: .finish,
                 nextViewController: franceSignGame,
                 skipViewController: franceSignGame
             ),
@@ -72,7 +72,7 @@ struct FrancePhaseStructure: PhaseStructure {
             HistoryPageModel(
                 image: "france-5",
                 text: texts[4],
-                button: .next,
+                button: .finish,
                 nextViewController: franceFindGame,
                 skipViewController: franceFindGame
             ),

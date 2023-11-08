@@ -52,6 +52,8 @@ class UnlockedStampView: UIView {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
             self.didPressButton?()
         }
+        button.backgroundColor = .black
+        button.setTitleColor(.white, for: .normal)
     }
 }
 

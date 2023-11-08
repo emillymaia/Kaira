@@ -178,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */,
-				EE0609382ACEC4A100BCC58C /* CustomButton */,
 				EE0609312ACE0C4F00BCC58C /* Phases */,
 				EEC53F862ABB1D4000B24261 /* Protocols */,
 				EEC53F832ABB1B5500B24261 /* Enums */,
@@ -237,6 +236,7 @@
 		EE0609312ACE0C4F00BCC58C /* Phases */ = {
 			isa = PBXGroup;
 			children = (
+				EE0609382ACEC4A100BCC58C /* CustomButton */,
 				EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */,
 				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,

@@ -110,6 +110,8 @@ extension HomeScreenView {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
             self.didPressPlayButton?()
         }
+        playButton.backgroundColor = .black
+        playButton.setTitleColor(.white, for: .normal)
     }
 
     @objc private func feedbackButtonWasPressed() {
