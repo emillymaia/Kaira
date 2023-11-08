@@ -1,4 +1,4 @@
-struct EnglandPhaseStructure {
+struct EnglandPhaseStructure: PhaseStructure {
     // swiftlint: disable all
 
     let name = "England"
@@ -12,7 +12,7 @@ struct EnglandPhaseStructure {
     var customDelegate: DataDelegate?
 
     init(_ customDelegate: DataDelegate) {
-        let englandGamePhaseModel = GamePhaseModel(countryName: "England", background: "", assets: [
+        let englandGamePhaseModel = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
             "england-game-objective",
             "england-game-winner",
             "england-game-image-1",
@@ -21,7 +21,7 @@ struct EnglandPhaseStructure {
             "england-game-image-4",
         ])
         
-        self.texts = [
+        self.texts = [ // passa pra um doc.
             "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?",
             "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!",
             "It is clear! Now I remember. The Big Ben! I visited England with my mother for the first time that day. But how did opening that box get me here? Why is this happening?",
@@ -67,7 +67,6 @@ struct EnglandPhaseStructure {
         self.historyVC = [
             HistoryViewController(historyPages: [self.historyPages[0], self.historyPages[1]], onFinishButtonPressed: nil),
             HistoryViewController(historyPages: [self.historyPages[2], self.historyPages[3]]) {
-                    print("Updater Called")
                     customDelegate.didUpdateData(data: 1)
             }
         ]

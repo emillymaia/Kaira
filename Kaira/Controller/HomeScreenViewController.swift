@@ -27,7 +27,11 @@ final class HomeScreenViewController: UIViewController {
     }
 
     private func handleFeedbackButtonPressed() {
-        let alert = UIAlertController(title: "Redirecionamento", message: "Você será redirecionado para o Safari. Deseja continuar?", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Redirecionamento",
+            message: "Você será redirecionado para o Safari. Deseja continuar?",
+            preferredStyle: .alert
+        )
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Abrir", style: .default, handler: { _ in
             if let url = URL(string: "https://forms.gle/xCj7jcndbaiy1VJF7") {

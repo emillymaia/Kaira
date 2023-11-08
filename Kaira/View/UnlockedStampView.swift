@@ -48,7 +48,12 @@ class UnlockedStampView: UIView {
 
     @objc private func pressButton() {
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-        didPressButton?()
+        button.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressButton?()
+        }
+        button.backgroundColor = .black
+        button.setTitleColor(.white, for: .normal)
     }
 }
 

@@ -72,8 +72,15 @@ extension DragAndDropScene {
 
             if touchedNodes.first?.name == "pause" && !lockScreenInteraction! {
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                lockScreenInteraction = true
-                addChild(customPopUp)
+                // MARCAR PARA LEMBRAR DPS
+                let fAction = SKAction.scale(by: 1.5, duration: 0.1)
+                let sAction = SKAction.scale(by: 0.66, duration: 0.1)
+                let sequence = SKAction.sequence([fAction, sAction])
+                touchedNodes.first?.run(sequence)
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+                    self.lockScreenInteraction = true
+                    self.addChild(self.customPopUp)
+                }
             }
         }
     }

@@ -63,15 +63,19 @@ extension MenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = continentModel[indexPath.section].countries[indexPath.row]
 
-        if cell.background != "locked-selo" {
-            self.lastPressed = cell.name
-            historyPresentation(continent: cell.name, stopPoint: 0)
-        }
-
         if cell.background == "coming-soon" || cell.background == "locked-selo" {
             haptic()
             if let comingSoonCell = collectionView.cellForItem(at: indexPath) {
                 comingSoonCell.shake()
+            }
+        } else {
+            self.lastPressed = cell.name
+            if let selectedCell = collectionView.cellForItem(at: indexPath) {
+                UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                selectedCell.animateClick()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
+                self.historyPresentation(continent: cell.name, stopPoint: 0)
             }
         }
     }

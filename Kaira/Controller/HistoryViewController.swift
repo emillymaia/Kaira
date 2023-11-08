@@ -41,6 +41,9 @@ extension HistoryViewController {
     private func updatePage() {
         let page = historyPages[currentPageIndex]
         setImageAndText()
+        if let sound = page.audio {
+            setSound(sound)
+        }
 
         if page.button == .finish {
             let image = resizeImage(image: UIImage(named: "Start")!, targetSize: CGSize(width: 64, height: 64))
@@ -53,16 +56,18 @@ extension HistoryViewController {
 
     private func handleButtonPress() {
         if currentPageIndex < historyPages.count - 1 {
+            SoundManager.shared.stopBackgroundMusic()
             currentPageIndex += 1
             updatePage()
-            historyView.button.animateClick()
         } else {
-            let nextViewController = historyPages[currentPageIndex].nextViewController ?? UIViewController()
-            if historyPages[currentPageIndex].button == .finish {
-                onFinishButtonPressed?()
+            let nextViewController = self.historyPages[self.currentPageIndex].nextViewController
+            ?? UIViewController()
+            SoundManager.shared.stopBackgroundMusic()
+            if self.historyPages[self.currentPageIndex].button == .finish {
+                self.onFinishButtonPressed?()
             }
-            if historyPages[currentPageIndex].button == .end {
-                onFinishButtonPressed?()
+            if self.historyPages[self.currentPageIndex].button == .end {
+                self.onFinishButtonPressed?()
             }
             nextViewController.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.fadeTo(nextViewController)
@@ -108,7 +113,11 @@ extension HistoryViewController {
             completion: nil
         )
     }
-    
+
+    func setSound(_ sound: String) {
+        SoundManager.shared.playBackgroundMusic(sound)
+    }
+
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
         let size = image.size
 
@@ -117,10 +126,16 @@ extension HistoryViewController {
 
         // Figure out what our orientation is, and use that to form the rectangle
         var newSize: CGSize
-        if(widthRatio > heightRatio) {
-            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        if widthRatio > heightRatio {
+            newSize = CGSize(
+                width: size.width * heightRatio,
+                height: size.height * heightRatio
+            )
         } else {
-            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+            newSize = CGSize(
+                width: size.width * widthRatio,
+                height: size.height * widthRatio
+            )
         }
 
         // This is the rect that we've calculated out and this is what is actually used below

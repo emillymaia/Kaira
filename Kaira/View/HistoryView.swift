@@ -47,7 +47,11 @@ class HistoryView: UIView {
         button.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(skipButtonWasPressed), for: .touchUpInside)
 
-        let atributoSublinhado: [NSAttributedString.Key : Any] = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+        let atributoSublinhado: [
+            NSAttributedString.Key: Any
+        ] = [
+            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
         let textoAtribuido = NSAttributedString(string: skipButton.currentTitle ?? "", attributes: atributoSublinhado)
         skipButton.setAttributedTitle(textoAtribuido, for: .normal)
     }
@@ -58,11 +62,18 @@ class HistoryView: UIView {
 
     @objc private func pressButton() {
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-        didPressButton?()
+        button.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressButton?()
+        }
     }
 
     @objc private func skipButtonWasPressed() {
-        didPressSkipButton?()
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        skipButton.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressSkipButton?()
+        }
     }
 }
 

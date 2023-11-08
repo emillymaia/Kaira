@@ -58,7 +58,11 @@ final class HomeScreenView: UIView {
         playButton.addTarget(self, action: #selector(playButtonWasPressed), for: .touchUpInside)
         feedbackLink.addTarget(self, action: #selector(feedbackButtonWasPressed), for: .touchUpInside)
 
-        let atributoSublinhado: [NSAttributedString.Key : Any] = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+        let atributoSublinhado: [
+            NSAttributedString.Key: Any
+        ] = [
+            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
         let textoAtribuido = NSAttributedString(string: feedbackLink.currentTitle ?? "", attributes: atributoSublinhado)
         feedbackLink.setAttributedTitle(textoAtribuido, for: .normal)
     }
@@ -100,10 +104,22 @@ extension HomeScreenView {
 
 extension HomeScreenView {
     @objc private func playButtonWasPressed() {
-        didPressPlayButton?()
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+
+        playButton.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressPlayButton?()
+        }
+        playButton.backgroundColor = .black
+        playButton.setTitleColor(.white, for: .normal)
     }
 
     @objc private func feedbackButtonWasPressed() {
-        didPressFeedbackButton?()
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+
+        feedbackLink.animateClick()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.13) {
+            self.didPressFeedbackButton?()
+        }
     }
 }

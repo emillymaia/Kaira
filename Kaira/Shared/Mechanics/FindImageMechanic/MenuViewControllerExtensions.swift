@@ -1,7 +1,6 @@
 import UIKit
 extension MenuViewController {
 
-    // GAME SETUP FUNCTIONS
     func historyPresentation(continent: String, stopPoint: Int) {
         if continent == "England" {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
@@ -17,30 +16,24 @@ extension MenuViewController {
         }
     }
 
-    func preSetupEngland() {
-        let englandPhase = EnglandPhaseStructure(self)
-        let initialController = UINavigationController(rootViewController: englandPhase.historyVC[0])
+    func preSetup<T: PhaseStructure>(_ phase: T.Type) {
+        let phase = T.init(self)
+        let initialController = UINavigationController(rootViewController: phase.historyVC[0])
         initialController.navigationItem.setHidesBackButton(true, animated: false)
         initialController.modalPresentationStyle = .overFullScreen
         initialController.modalTransitionStyle = .crossDissolve
         present(initialController, animated: true)
     }
 
+    func preSetupEngland() {
+        preSetup(EnglandPhaseStructure.self)
+    }
+
     func preSetupFrance() {
-        let francePhase = FrancePhaseStructure(self)
-        let initialController = UINavigationController(rootViewController: francePhase.historyVC[0])
-        initialController.navigationItem.setHidesBackButton(true, animated: false)
-        initialController.modalPresentationStyle = .overFullScreen
-        initialController.modalTransitionStyle = .crossDissolve
-        present(initialController, animated: true)
+        preSetup(FrancePhaseStructure.self)
     }
     func preSetupSpain() {
-        let spainPhase = SpainPhaseStructure(self)
-        let initialController = UINavigationController(rootViewController: spainPhase.historyVC[0])
-        initialController.navigationItem.setHidesBackButton(true, animated: false)
-        initialController.modalPresentationStyle = .overFullScreen
-        initialController.modalTransitionStyle = .crossDissolve
-        present(initialController, animated: true)
+        preSetup(SpainPhaseStructure.self)
     }
 }
 
@@ -50,14 +43,18 @@ extension MenuViewController: DataDelegate {
             if lastPressed == "England" {
                 self.continentModel[0].countries[data].background = "france-selo"
                 menuView.menuCollectionView.reloadData()
-                self.progress = data+1
-                saveInfo(self.progress)
+                if self.progress < data+1 {
+                    self.progress = data+1
+                    saveInfo(self.progress)
+                }
             }
             if lastPressed == "France" {
                 self.continentModel[0].countries[data+1].background = "spain-selo"
                 menuView.menuCollectionView.reloadData()
-                self.progress = data+2
-                saveInfo(self.progress)
+                if self.progress < data+2 {
+                    self.progress = data+2
+                    saveInfo(self.progress)
+                }
             }
         }
     }
@@ -76,40 +73,14 @@ extension UINavigationController {
 extension MenuViewController {
     func loadInfo() {
         let data = UserDefaults.standard.integer(forKey: "progress")
-        print(data)
         self.progress = data
         continentModel = setupFirst(self.progress)
-
-//        if let data = UserDefaults.standard.integer(forKey: "progress") {
-//            do {
-//                // Create JSON Decoder
-//                let decoder = JSONDecoder()
-//                // Decode Note
-//                let notes = try decoder.decode([ContinentModel].self, from: data)
-//                continentModel = notes
-//            } catch {
-//                print("Unable to Decode Notes (\(error))")
-//            }
-//        }
     }
 
     func saveInfo(_ value: Int) {
         UserDefaults.standard.set(value, forKey: "progress")
-//        do {
-//            // Create JSON Encoder
-//            let encoder = JSONEncoder()
-//
-//            // Encode Note
-//            let data = try encoder.encode(continentModel)
-//            // Write/Set Data
-//            UserDefaults.standard.set(data, forKey: "progress")
-//
-//        } catch {
-//            print("Unable to Encode Array of Notes (\(error))")
-//        }
     }
 }
-
 
 extension MenuViewController {
 

@@ -48,6 +48,7 @@
 		EE182F812A9F6FE000CE30C8 /* KairaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F802A9F6FE000CE30C8 /* KairaTests.swift */; };
 		EE182F8B2A9F6FE000CE30C8 /* KairaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */; };
 		EE182F8D2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */; };
+		EE77BA912AF27E52009AB571 /* PhaseStructureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BA902AF27E52009AB571 /* PhaseStructureProtocol.swift */; };
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
 		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
@@ -119,6 +120,7 @@
 		EE182F862A9F6FE000CE30C8 /* KairaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KairaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITests.swift; sourceTree = "<group>"; };
 		EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE77BA902AF27E52009AB571 /* PhaseStructureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseStructureProtocol.swift; sourceTree = "<group>"; };
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
@@ -176,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				AB3C8F5E2AE5FBCD0057924D /* FrameConstants.swift */,
-				EE0609382ACEC4A100BCC58C /* CustomButton */,
 				EE0609312ACE0C4F00BCC58C /* Phases */,
 				EEC53F862ABB1D4000B24261 /* Protocols */,
 				EEC53F832ABB1B5500B24261 /* Enums */,
@@ -235,6 +236,7 @@
 		EE0609312ACE0C4F00BCC58C /* Phases */ = {
 			isa = PBXGroup;
 			children = (
+				EE0609382ACEC4A100BCC58C /* CustomButton */,
 				EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */,
 				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
@@ -364,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */,
+				EE77BA902AF27E52009AB571 /* PhaseStructureProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				AB3C8F5D2AE5B6900057924D /* SettingsView.swift in Sources */,
 				ABDFC8A22AB241B400F19D1A /* UserDefaultsManager.swift in Sources */,
 				ABDFC8A42AB2456000F19D1A /* HistoryModel.swift in Sources */,
+				EE77BA912AF27E52009AB571 /* PhaseStructureProtocol.swift in Sources */,
 				EE06093A2ACEC4AF00BCC58C /* CustomPopUpButton.swift in Sources */,
 				AB3C8F372AE2AB700057924D /* HomeScreenView.swift in Sources */,
 				EE182F6C2A9F6FDF00CE30C8 /* SceneDelegate.swift in Sources */,
