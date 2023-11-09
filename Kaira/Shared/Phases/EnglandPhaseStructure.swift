@@ -22,13 +22,13 @@ struct EnglandPhaseStructure: PhaseStructure {
         ])
         
         self.texts = [ // passa pra um doc.
-            "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?",
-            "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!",
-            "It is clear! Now I remember. The Big Ben! I visited England with my mother for the first time that day. But how did opening that box get me here? Why is this happening?",
-            "Anyway, I need to get out of this situation, but it brings back so many good memories. I can still remember and see myself playing in the park with my mother."
+            String(localized: "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?"),
+            String(localized: "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!"),
+            String(localized: "It is clear! Now I remember. The Big Ben! I visited England with my mother for the first time that day. But how did opening that box get me here? Why is this happening?"),
+            String(localized: "Anyway, I need to get out of this situation, but it brings back so many good memories. I can still remember and see myself playing in the park with my mother.")
         ]
 
-        let unlockunlockEnglandStampLabel = "Wow, I remember I won and sent a letter to my grandmother, I remember the breeze, the taste of my childhood."
+        let unlockunlockEnglandStampLabel = String(localized: "Wow, I remember I won and sent a letter to my grandmother, I remember the breeze, the taste of my childhood.")
 
         let unlockEnglandStampView = UnlockedStampViewController(stampImage: "england-selo", label: unlockunlockEnglandStampLabel, onFinishButtonPressed: nil)
         let englandFindGame = FindImageViewController()

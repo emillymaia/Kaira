@@ -23,16 +23,16 @@ struct FrancePhaseStructure: PhaseStructure {
         ])
 
         self.texts = [
-            "And suddenly I'm on my first day of school in France??!?! I don't remember smiling like that. The things I experienced at that time... if I stopped here, I already know what comes next.",
-            "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent or tried to be cool... I couldn't belong to any group. But these things happen, right?",
-            "In one of my attempts to find 'my place' in school, I remember making a decision that resulted in one of the best things I have today. Joining the book club!",
-            "When I signed up so apprehensively, I had no idea that it would lead me to meet Chloé. She also didn't have many friends there, and when she saw how insecure I was, she understood what I was feeling.",
-            "Chloé is the best person I've ever met! So sweet, very annoying because she has a hundred skills and always helps when someone needs it... she doesn't know it, but she changed my life in so many ways.",
-            "She took me to see the snow. She spent Christmases with my family in France. She is the person who welcomed me when I needed someone the most. Damn, I have the best friend in the world."
+            String(localized: "And suddenly I'm on my first day of school in France??!?! I don't remember smiling like that. The things I experienced at that time... if I stopped here, I already know what comes next."),
+            String(localized: "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent or tried to be cool... I couldn't belong to any group. But these things happen, right?"),
+            String(localized: "In one of my attempts to find 'my place' in school, I remember making a decision that resulted in one of the best things I have today. Joining the book club!"),
+            String(localized: "When I signed up so apprehensively, I had no idea that it would lead me to meet Chloé. She also didn't have many friends there, and when she saw how insecure I was, she understood what I was feeling."),
+            String(localized: "Chloé is the best person I've ever met! So sweet, very annoying because she has a hundred skills and always helps when someone needs it... she doesn't know it, but she changed my life in so many ways."),
+            String(localized: "She took me to see the snow. She spent Christmases with my family in France. She is the person who welcomed me when I needed someone the most. Damn, I have the best friend in the world.")
             
         ]
 
-        let unlockunlockFranceStampLabel = "On my 14th birthday, Chloé gave me a letter with this stamp. This is one of my favorite stamps, because Chloé and I loved eating croissants after school. I remember it like it was yesterday..."
+        let unlockunlockFranceStampLabel = String(localized:"On my 14th birthday, Chloé gave me a letter with this stamp. This is one of my favorite stamps, because Chloé and I loved eating croissants after school. I remember it like it was yesterday...")
 
         let unlockFranceStampView = UnlockedStampViewController(stampImage: "france-selo", label: unlockunlockFranceStampLabel, onFinishButtonPressed: nil)
         let franceSignGame = SignatureViewController()

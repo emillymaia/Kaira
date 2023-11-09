@@ -1,0 +1,202 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "And suddenly I'm on my first day of school in France??!?! I don't remember smiling like that. The things I experienced at that time... if I stopped here, I already know what comes next." : {
+
+    },
+    "Anyway, I need to get out of this situation, but it brings back so many good memories. I can still remember and see myself playing in the park with my mother." : {
+
+    },
+    "Chloé is the best person I've ever met! So sweet, very annoying because she has a hundred skills and always helps when someone needs it... she doesn't know it, but she changed my life in so many ways." : {
+
+    },
+    "England" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "England"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglaterra"
+          }
+        }
+      }
+    },
+    "Even though I felt insecure during the interview, I ended up being hired. I remember that, when I received the news, I was radiant, glowing with happiness. My first job was a big achievement for me..." : {
+
+    },
+    "Getting my first job made me learn how to handle my money. Even though the salary wasn't that high, I started saving money for my next trips. Every time I put in a coin, I imagined myself traveling around..." : {
+
+    },
+    "I bought this stamp at El Prat Airport, when I was leaving Barcelona. I loved Spain and everything it gave me. To this day, Barcelona is one of my favorite places in the whole world!" : {
+
+    },
+    "In Barcelona, I decided to get a part-time job, to try to save some money. It was my first time doing a job interview, and I was really nervous. It gave me a strange feeling of butterflies in my stomach...but in a bad way." : {
+
+    },
+    "In one of my attempts to find 'my place' in school, I remember making a decision that resulted in one of the best things I have today. Joining the book club!" : {
+
+    },
+    "IntroHistoryTextLocalized1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hi there, let's see where I start... my name is Kaira! So... I'd love to share more about my work, my daily routine (which is quite tiring), my hobbies... but I'm in the middle of a home move!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oi você aí! Hm, vejamos por onde eu começo... meu nome é Kaira! Eu até conversaria um pouco sobre meu trabalho, meus passatempos, minha rotina (um tédio, diga-se de passagem)... mas eu tô no meio de uma mudança!"
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like many things in my life right now, the basement is a mess. The boxes seem to multiply every time I look. But wait...is that really what I'm thinking???"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nao sei se ta"
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My stamps! Oh God... how I loved that. How could I forget they exist?! Finally something happy in the middle of this mess…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Será que tá?"
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oh, I've been looking for this letter for ages and it was right here! And that stamp?! The day I got it... Looking at it like this, I almost feel like I'm…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "to testando se ta entrando os textos"
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "THEEEEEREEEE!!!!!!!!! WHAAAAAT IS HAPPENNNNNING?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O porao ta doida0"
+          }
+        }
+      }
+    },
+    "It is clear! Now I remember. The Big Ben! I visited England with my mother for the first time that day. But how did opening that box get me here? Why is this happening?" : {
+
+    },
+    "Oh, I've been looking for this letter for ages and it was right here! And that stamp?! The day I got it... Looking at it like this, I almost feel like I'm..." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oh, I've been looking for this letter for ages and it was right here! And that stamp?! The day I got it... Looking at it like this, I almost feel like I'm..."
+          }
+        }
+      }
+    },
+    "Okay, now back to 17?!?! At that time, my family decided to spend their holidays in Spain. We stayed in Barcelona for 3 months, and it was a time of great maturity for me." : {
+
+    },
+    "On my 14th birthday, Chloé gave me a letter with this stamp. This is one of my favorite stamps, because Chloé and I loved eating croissants after school. I remember it like it was yesterday..." : {
+
+    },
+    "She took me to see the snow. She spent Christmases with my family in France. She is the person who welcomed me when I needed someone the most. Damn, I have the best friend in the world." : {
+
+    },
+    "Skip" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pular"
+          }
+        }
+      }
+    },
+    "Spain" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spain"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espanha"
+          }
+        }
+      }
+    },
+    "The job I got was as an assistant in a bakery. Decorate cakes, put empanadas in the oven,  serve customers, organize shelves... Even though it was a lot of work, I loved everyday life at the bakery." : {
+
+    },
+    "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!" : {
+
+    },
+    "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?" : {
+
+    },
+    "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent or tried to be cool... I couldn't belong to any group. But these things happen, right?" : {
+
+    },
+    "When I signed up so apprehensively, I had no idea that it would lead me to meet Chloé. She also didn't have many friends there, and when she saw how insecure I was, she understood what I was feeling." : {
+
+    },
+    "Wow, I remember I won and sent a letter to my grandmother, I remember the breeze, the taste of my childhood." : {
+
+    }
+  },
+  "version" : "1.0"
+}
