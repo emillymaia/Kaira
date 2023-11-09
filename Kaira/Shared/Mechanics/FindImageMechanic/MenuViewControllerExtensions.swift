@@ -26,7 +26,7 @@ extension MenuViewController {
     }
 
     func preSetupEngland() {
-        preSetup(TestPhaseStructure.self)
+        preSetup(EnglandPhaseStructure.self)
     }
 
     func preSetupFrance() {
