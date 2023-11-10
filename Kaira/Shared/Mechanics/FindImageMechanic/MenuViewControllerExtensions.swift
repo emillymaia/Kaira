@@ -2,15 +2,15 @@ import UIKit
 extension MenuViewController {
 
     func historyPresentation(continent: String, stopPoint: Int) {
-        if continent == "England" {
+        if continent == String(localized: "England") {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupEngland()
         }
-        if continent == "France" {
+        if continent == String(localized: "France") {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupFrance()
         }
-        if continent == "Spain" {
+        if continent == String(localized: "Spain") {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupSpain()
         }
@@ -40,7 +40,7 @@ extension MenuViewController {
 extension MenuViewController: DataDelegate {
     func didUpdateData(data: Int) {
         if data == 1 {
-            if lastPressed == "England" {
+            if lastPressed == String(localized: "England") {
                 self.continentModel[0].countries[data].background = "france-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+1 {
@@ -48,7 +48,7 @@ extension MenuViewController: DataDelegate {
                     saveInfo(self.progress)
                 }
             }
-            if lastPressed == "France" {
+            if lastPressed == String(localized: "France") {
                 self.continentModel[0].countries[data+1].background = "spain-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+2 {
@@ -100,21 +100,21 @@ extension MenuViewController {
     func england() -> [ContinentModel] {
         [
             ContinentModel(
-                name: "Europe",
+                name: String(localized: "Europe"),
                 countries: [
-                    CountryModel(name: "England", background: "england-selo"),
-                    CountryModel(name: "France", background: "locked-selo"),
-                    CountryModel(name: "Spain", background: "locked-selo"),
-                    CountryModel(name: "Italy", background: "coming-soon")
+                    CountryModel(name: String(localized: "England"), background: "england-selo"),
+                    CountryModel(name: String(localized: "France"), background: "locked-selo"),
+                    CountryModel(name: String(localized: "Spain"), background: "locked-selo"),
+                    CountryModel(name: String(localized: "Italy"), background: "coming-soon")
                 ]
             ),
             ContinentModel(
-                name: "Asia",
+                name: String(localized: "Asia"),
                 countries: [
-                    CountryModel(name: "Japan", background: "coming-soon"),
-                    CountryModel(name: "China", background: "coming-soon"),
-                    CountryModel(name: "South Korea", background: "coming-soon"),
-                    CountryModel(name: "India", background: "coming-soon")
+                    CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "China"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
         ]
@@ -123,21 +123,21 @@ extension MenuViewController {
     func france() -> [ContinentModel] {
         [
             ContinentModel(
-                name: "Europe",
+                name: String(localized: "Europe"),
                 countries: [
-                    CountryModel(name: "England", background: "england-selo"),
-                    CountryModel(name: "France", background: "france-selo"),
-                    CountryModel(name: "Spain", background: "locked-selo"),
-                    CountryModel(name: "Italy", background: "coming-soon")
+                    CountryModel(name: String(localized: "England"), background: "england-selo"),
+                    CountryModel(name: String(localized: "France"), background: "france-selo"),
+                    CountryModel(name: String(localized: "Spain"), background: "locked-selo"),
+                    CountryModel(name: String(localized: "Italy"), background: "coming-soon")
                 ]
             ),
             ContinentModel(
-                name: "Asia",
+                name: String(localized: "Asia"),
                 countries: [
-                    CountryModel(name: "Japan", background: "coming-soon"),
-                    CountryModel(name: "China", background: "coming-soon"),
-                    CountryModel(name: "South Korea", background: "coming-soon"),
-                    CountryModel(name: "India", background: "coming-soon")
+                    CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "China"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
         ]
@@ -146,21 +146,21 @@ extension MenuViewController {
     func spain() -> [ContinentModel] {
         [
             ContinentModel(
-                name: "Europe",
+                name: String(localized: "Europe"),
                 countries: [
-                    CountryModel(name: "England", background: "england-selo"),
-                    CountryModel(name: "France", background: "france-selo"),
-                    CountryModel(name: "Spain", background: "spain-selo"),
-                    CountryModel(name: "Italy", background: "coming-soon")
+                    CountryModel(name: String(localized: "England"), background: "england-selo"),
+                    CountryModel(name: String(localized: "France"), background: "france-selo"),
+                    CountryModel(name: String(localized: "Spain"), background: "spain-selo"),
+                    CountryModel(name: String(localized: "Italy"), background: "coming-soon")
                 ]
             ),
             ContinentModel(
-                name: "Asia",
+                name: String(localized: "Asia"),
                 countries: [
-                    CountryModel(name: "Japan", background: "coming-soon"),
-                    CountryModel(name: "China", background: "coming-soon"),
-                    CountryModel(name: "South Korea", background: "coming-soon"),
-                    CountryModel(name: "India", background: "coming-soon")
+                    CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "China"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
         ]

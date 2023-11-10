@@ -9,7 +9,7 @@ class HistoryView: UIView {
     var skipButton: UIButton = {
         let skipButton = UIButton()
         skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitle("Skip", for: .normal)
+        skipButton.setTitle(String(localized: "Skip"), for: .normal)
         skipButton.titleLabel?.font = UIFont(name: "Pally-Regular", size: 22)
         skipButton.setTitleColor(.black, for: .normal)
         skipButton.titleLabel?.numberOfLines = 0

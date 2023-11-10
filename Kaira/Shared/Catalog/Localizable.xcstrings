@@ -1,0 +1,592 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add to album" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add to album"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continua"
+          }
+        }
+      }
+    },
+    "Asia" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ásia"
+          }
+        }
+      }
+    },
+    "China" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "China"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "China"
+          }
+        }
+      }
+    },
+    "England" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "England"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglaterra"
+          }
+        }
+      }
+    },
+    "EnglandHistoryTextLocalized1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espera aí... Onde eu vim parar? Que barulheira é essa? POR QUE ESTOU TÃO PEQUENA? Quem é essa comigo?!"
+          }
+        }
+      }
+    },
+    "EnglandHistoryTextLocalized2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esse lugar...eu me lembro daqui. Parece com o dia em que...é como se eu estivesse numa memória, mas não tenho certeza de qual. Alguma coisa está faltando...Preciso da sua ajuda!!"
+          }
+        }
+      }
+    },
+    "EnglandHistoryTextLocalized3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It is clear! Now I remember. The Big Ben! I visited England with my mother for the first time that day. But how did opening that box get me here? Why is this happening?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claro! Só poderia ser. O Big Ben! Eu visitei a Inglaterra pela primeira vez com minha mãe nesse dia. Mas COMO abrir minha caixa me trouxe pra cá? Por que isso tá acontecendo?!?"
+          }
+        }
+      }
+    },
+    "EnglandHistoryTextLocalized4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anyway, I need to get out of this situation, but it brings back so many good memories. I can still remember and see myself playing in the park with my mother."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preciso entender e sair disso o quanto antes! Mas isso me traz tantas lembranças boas. Ainda me lembro e sinto como é estar brincando no parque com minha mãe, que saudade dela."
+          }
+        }
+      }
+    },
+    "EnglandUnlockStampTextLocalized" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touching this stamp that I received from my mother on our trip literally transported me to one of the happiest memories of my childhood. It's like a vision. But how? Why?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocar nesse selo que ganhei nessa viagem conseguiu me transportar, literalmente, pra uma das lembranças mais felizes da minha infância. É como se fosse uma visão. Mas como? Por que?"
+          }
+        }
+      }
+    },
+    "Europe" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Europe"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Europa"
+          }
+        }
+      }
+    },
+    "France" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "France"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "França"
+          }
+        }
+      }
+    },
+    "FranceHistoryTextLocalized1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "And suddenly I'm on my first day of school in France??!?! I don't remember smiling like that. The things I experienced at that time... if I stopped here, I already know what comes next."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E de repente estou no meu primeiro dia de aula na França??!?! Não me lembro de estar feliz assim esse dia. As coisas que vivi essa época... se parei por aqui, já sei que memória está me aguardando."
+          }
+        }
+      }
+    },
+    "FranceHistoryTextLocalized2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When I changed schools, I didn't imagine I would feel so alone. No matter how much I worked on my accent or tried to be cool... I couldn't belong to any group. But these things happen, right?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando mudei de escola, não imaginava que me sentiria tão sozinha. Por mais que eu tentasse ser legal ou escondesse meu sotaque, não me encaixava em nenhum grupo... Mas essas coisas acontecem, né?"
+          }
+        }
+      }
+    },
+    "FranceHistoryTextLocalized3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In one of my attempts to find 'my place' in school, I remember making a decision that resulted in one of the best things I have today. Joining the book club!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numa das mil tentativas de encontrar o “meu lugar” na escola, lembro que tomei uma decisão que mais tarde resultou numa das melhores coisas que tenho hoje. Entrei no clube do livro!"
+          }
+        }
+      }
+    },
+    "FranceHistoryTextLocalized4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When I signed up so apprehensively, I had no idea that it would lead me to meet Chloé. She also didn't have many friends there, and when she saw how insecure I was, she understood what I was feeling."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando me inscrevi cheia de inseguranças, não fazia ideia que isso me levaria a conhecer a Chloé. Ela também não tinha muitos amigos lá e quando viu que eu estava na mesma situação, entendeu exatamente como eu me sentia."
+          }
+        }
+      }
+    },
+    "FranceHistoryTextLocalized5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chloé is the best person I've ever met! So sweet, very annoying because she has a hundred skills and always helps when someone needs it... she doesn't know it, but she changed my life in so many ways."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chloé é a melhor pessoa do mundo! Tão meiga, meio chata porque tem umas cem habilidades…e sempre ajuda quando alguém precisa. Ela não sabe, mas mudou minha vida de muitas maneiras."
+          }
+        }
+      }
+    },
+    "FranceHistoryTextLocalized6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "She took me to see the snow. She spent Christmases with my family in France. She is the person who welcomed me when I needed someone the most. Damn, I have the best friend in the world."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ela quem me levou para ver a neve. Passou vários natais com minha família na França. Ela é a pessoa que me acolheu quando eu mais precisava. Caramba, eu tenho a melhor amiga do mundo."
+          }
+        }
+      }
+    },
+    "FranceUnlockStampTextLocalized" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On my 14th birthday, Chloé gave me a letter with this stamp. This is one of my favorite stamps, because Chloé and I loved eating croissants after school. I remember it like it was yesterday…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No meu aniversário de 14 anos, a Chloé me deu uma carta com esse selo...Esse é um dos meus selos favoritos, porque nós duas adorávamos comer croissants depois da escola!\nSentir e reviver esses momentos me confortou tanto!"
+          }
+        }
+      }
+    },
+    "Give a feedback!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Give a feedback!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dê um feedback!"
+          }
+        }
+      }
+    },
+    "India" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "India"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Índia"
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hi there, let's see where I start... my name is Kaira! So... I'd love to share more about my work, my daily routine (which is quite tiring), my hobbies... but I'm in the middle of a home move!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oi você aí! Hm, vejamos por onde eu começo... meu nome é Kaira! Eu até conversaria sobre meu trabalho, meus passatempos, minha rotina (um tédio, diga-se de passagem)... mas eu tô no meio de uma mudança!"
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like many things in my life right now, the basement is a mess. The boxes seem to multiply every time I look. But wait...is that really what I'm thinking???"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assim como muitas coisas na minha vida atualmente, o porão tá um desastre. As caixas parecem se multiplicar toda vez que eu olho (já disse que odeio mudanças?). Mas espera aí...aquilo é realmente o que eu tô pensando?!?"
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My stamps! Oh God... how I loved that. How could I forget they exist?! Finally something happy in the middle of this mess…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minha coleção de selos! Ah, como eu amava colecionar...como eu pude esquecer da existência deles?! Bom, finalmente algo bom no meio de toda essa confusão..."
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oh, I've been looking for this letter for ages and it was right here! And that stamp?! The day I got it... Looking at it like this, I almost feel like I'm…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MEU DEUS! Eu procurei essa caixa por anos e ela estava bem aqui! E esse selo?! Ah, o dia que eu o ganhei...olhando assim eu quase sinto como se eu estivesse..."
+          }
+        }
+      }
+    },
+    "IntroHistoryTextLocalized5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "THEEEEEREEEE!!!!!!!!! WHAAAAAT IS HAPPENNNNNING?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LÁAAAAAAAAAAAAAAA!!!!! O QUEEE TÁAAA A-ACONTECENDOOOO????"
+          }
+        }
+      }
+    },
+    "Italy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Italy"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Itália"
+          }
+        }
+      }
+    },
+    "Japan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japan"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japão"
+          }
+        }
+      }
+    },
+    "Play" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jogar"
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pular"
+          }
+        }
+      }
+    },
+    "South Korea" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "South Korea"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coréia do Sul"
+          }
+        }
+      }
+    },
+    "Spain" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spain"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espanha"
+          }
+        }
+      }
+    },
+    "SpainHistoryTextLocalized" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okay, now back to 17?!?! At that time, my family decided to spend their holidays in Spain. We stayed in Barcelona for 3 months, and it was a time of great maturity for me."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ok, agora de volta aos 17?!?! Nessa época minha família decidiu passar férias na Espanha. Ficamos 3 meses em Barcelona, esse tempo foi um divisor de águas pra mim no quesito maturidade."
+          }
+        }
+      }
+    },
+    "SpainHistoryTextLocalized2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Barcelona, I decided to get a part-time job, to try to save some money. It was my first time doing a job interview, and I was really nervous. It gave me a strange feeling of butterflies in my stomach...but in a bad way."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lá eu decidi arranjar um emprego meio-período, pra ver se finalmente juntava uma grana. Foi a primeira vez que fiz uma entrevista de emprego, fiquei TÃO nervosa. Foi o primeiro frio na barriga que senti... mas de um jeito péssimo."
+          }
+        }
+      }
+    },
+    "SpainHistoryTextLocalized3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Even though I felt insecure during the interview, I ended up being hired. I remember that, when I received the news, I was radiant, glowing with happiness. My first job was a big achievement for me…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mesmo gaguejando, suando frio e cheia de nervosismo, fui contratada!! A sensação quando recebi a notícia foi incomparável. Me senti feliz, capaz…um quentinho no coração, sabe? Meu primeiro emprego veio com tudo!"
+          }
+        }
+      }
+    },
+    "SpainHistoryTextLocalized4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The job I got was as an assistant in a bakery. Decorate cakes, put empanadas in the oven, serve customers, organize shelves... Even though it was a lot of work, I loved everyday life at the bakery."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O emprego que consegui foi como auxiliar numa padaria. Decorar bolos, colocar empanadas no forno, atender clientes, organizar prateleiras... Era muito corrido, mesmo assim eu adorava"
+          }
+        }
+      }
+    },
+    "SpainHistoryTextLocalized5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Getting my first job made me learn how to handle my money. Even though the salary wasn't that high, I started saving money for my next trips. Every time I put in a coin, I imagined myself traveling around…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conseguir meu primeiro emprego me fez aprender a lidar com dinheiro. Mesmo que o salário não fosse lá essas coisas, consegui guardar dinheiro para as próximas viagens. Cada moeda que eu juntava já me fazia sonhar com minha próxima aventura…"
+          }
+        }
+      }
+    },
+    "SpainUnlockStampTextLocalized" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I bought this stamp at El Prat Airport, when I was leaving Barcelona. I loved Spain and everything it gave me. To this day, Barcelona is one of my favorite places in the whole world!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprei este selo no aeroporto El Prat, quando estava saindo de Barcelona. (pois é, faz anos que coleciono selos). Amo a Espanha e tudo que consegui lá. Barcelona é um dos meus lugares favoritos da vida!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

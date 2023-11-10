@@ -24,7 +24,7 @@ class UnlockedStampView: UIView {
     var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Add to album", for: .normal)
+        button.setTitle(String(localized: "Add to album"), for: .normal)
         button.layer.cornerRadius = 15
         button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         button.titleLabel?.font = UIFont(name: "Pally-Regular", size: 22)

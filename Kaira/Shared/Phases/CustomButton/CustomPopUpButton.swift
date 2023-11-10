@@ -83,7 +83,7 @@ class CustomPopup: SKSpriteNode {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     let fAction = SKAction.scale(by: 1.5, duration: 0.1)
                     let sAction = SKAction.scale(by: 0.66, duration: 0.1)
-                    let sequence = SKAction.sequence([fAction, sAction])
+                    let sequence = SKAction.sequence([sAction, fAction])
                     node.run(sequence)
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
                         self.isSoundEffectOn.toggle()
@@ -96,7 +96,7 @@ class CustomPopup: SKSpriteNode {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     let fAction = SKAction.scale(by: 1.5, duration: 0.1)
                     let sAction = SKAction.scale(by: 0.66, duration: 0.1)
-                    let sequence = SKAction.sequence([fAction, sAction])
+                    let sequence = SKAction.sequence([sAction, fAction])
                     node.run(sequence)
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
                         self.isBackgroundSoundOn.toggle()
@@ -117,7 +117,7 @@ class CustomPopup: SKSpriteNode {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     let fAction = SKAction.scale(by: 1.5, duration: 0.1)
                     let sAction = SKAction.scale(by: 0.66, duration: 0.1)
-                    let sequence = SKAction.sequence([fAction, sAction])
+                    let sequence = SKAction.sequence([sAction, fAction])
                     node.run(sequence)
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.22) {
                         self.close()
@@ -128,7 +128,7 @@ class CustomPopup: SKSpriteNode {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     let fAction = SKAction.scale(by: 1.2, duration: 0.1)
                     let sAction = SKAction.scale(by: 0.83, duration: 0.1)
-                    let sequence = SKAction.sequence([fAction, sAction])
+                    let sequence = SKAction.sequence([sAction, fAction])
                     node.run(sequence)
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.22) {
                         self.navController!.dismiss(animated: true)
