@@ -77,7 +77,7 @@ struct FrancePhaseStructure: PhaseStructure {
             HistoryViewController(historyPages: [self.historyPages[0], self.historyPages[1], self.historyPages[2]], onFinishButtonPressed: nil),
             HistoryViewController(historyPages: [self.historyPages[3], self.historyPages[4]], onFinishButtonPressed: nil),
             HistoryViewController(historyPages: [self.historyPages[5]]) {
-                    customDelegate.didUpdateData(data: 2)
+                    customDelegate.didUpdateData(data: 1)
             }
         ]
 

@@ -47,7 +47,7 @@ extension MenuViewController: DataDelegate {
     func didUpdateData(data: Int) {
         if data == 1 {
             if lastPressed == String(localized: "England") {
-                self.continentModel[0].countries[data].background = "france-selo"
+                self.continentModel[data-1].countries[data].background = "france-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+1 {
                     self.progress = data+1
@@ -55,7 +55,7 @@ extension MenuViewController: DataDelegate {
                 }
             }
             if lastPressed == String(localized: "France") {
-                self.continentModel[0].countries[data+1].background = "spain-selo"
+                self.continentModel[data-1].countries[data+1].background = "spain-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+2 {
                     self.progress = data+2
@@ -63,10 +63,18 @@ extension MenuViewController: DataDelegate {
                 }
             }
             if lastPressed == String(localized: "Spain") {
-                self.continentModel[0].countries[data+2].background = "italy-selo"
+                self.continentModel[data-1].countries[data+2].background = "italy-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+3 {
                     self.progress = data+3
+                    saveInfo(self.progress)
+                }
+            }
+            if lastPressed == String(localized: "Italy") {
+                self.continentModel[data].countries[data-1].background = "coming-soon"
+                menuView.menuCollectionView.reloadData()
+                if self.progress < data+4 {
+                    self.progress = data+4
                     saveInfo(self.progress)
                 }
             }
@@ -89,6 +97,7 @@ extension MenuViewController {
         let data = UserDefaults.standard.integer(forKey: "progress")
         self.progress = data
         continentModel = setupFirst(self.progress)
+        print(self.progress)
     }
 
     func saveInfo(_ value: Int) {
@@ -109,7 +118,7 @@ extension MenuViewController {
         case 4:
             return italy()
         default:
-            return england()
+            return italy()
         }
     }
 
