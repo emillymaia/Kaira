@@ -55,6 +55,7 @@
 		EE77BAA12AFBC665009AB571 /* TestPhaseStruc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA02AFBC665009AB571 /* TestPhaseStruc.swift */; };
 		EE77BAA42AFD0A2B009AB571 /* MatchImageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA32AFD0A2B009AB571 /* MatchImageScene.swift */; };
 		EE77BAA62AFD0A38009AB571 /* MatchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA52AFD0A38009AB571 /* MatchImageViewController.swift */; };
+		EE77BAA82AFE6BE1009AB571 /* ItalyPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA72AFE6BE1009AB571 /* ItalyPhaseStructure.swift */; };
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
 		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
@@ -133,6 +134,7 @@
 		EE77BAA02AFBC665009AB571 /* TestPhaseStruc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPhaseStruc.swift; sourceTree = "<group>"; };
 		EE77BAA32AFD0A2B009AB571 /* MatchImageScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchImageScene.swift; sourceTree = "<group>"; };
 		EE77BAA52AFD0A38009AB571 /* MatchImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchImageViewController.swift; sourceTree = "<group>"; };
+		EE77BAA72AFE6BE1009AB571 /* ItalyPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalyPhaseStructure.swift; sourceTree = "<group>"; };
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
 				EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */,
+				EE77BAA72AFE6BE1009AB571 /* ItalyPhaseStructure.swift */,
 			);
 			path = Phases;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
 				AB3C8F642AE6EF860057924D /* SettingsViewController.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
+				EE77BAA82AFE6BE1009AB571 /* ItalyPhaseStructure.swift in Sources */,
 				EE77BAA12AFBC665009AB571 /* TestPhaseStruc.swift in Sources */,
 				AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */,
 				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
