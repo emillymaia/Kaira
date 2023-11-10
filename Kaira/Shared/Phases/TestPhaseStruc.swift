@@ -14,6 +14,28 @@ struct TestPhaseStructure: PhaseStructure {
     init(_ customDelegate: DataDelegate) {
         let englandGamePhaseModel = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
             "england-game-objective",
+            "mi-blue-image",
+            "mi-blue-off",
+            "mi-blue-on",
+            "mi-green-image",
+            "mi-green-off",
+            "mi-green-on",
+            "mi-orange-image",
+            "mi-orange-off",
+            "mi-orange-on",
+            "mi-pink-image",
+            "mi-pink-off",
+            "mi-pink-on",
+            "mi-purple-image",
+            "mi-purple-off",
+            "mi-purple-on",
+            "mi-red-image",
+            "mi-red-off",
+            "mi-red-on",
+        ])
+
+        let englandGamePhaseModel2 = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
+            "england-game-objective",
             "flag-background",
             "flag-1",
             "flag-2",
@@ -30,7 +52,7 @@ struct TestPhaseStructure: PhaseStructure {
         let unlockunlockEnglandStampLabel = "Wow, I remember I won and sent a letter to my grandmother, I remember the breeze, the taste of my childhood."
 
         let unlockEnglandStampView = UnlockedStampViewController(stampImage: "england-selo", label: unlockunlockEnglandStampLabel, onFinishButtonPressed: nil)
-        let englandFindGame = FlagViewController()
+        let englandFindGame = MatchImageViewController()
         englandFindGame.gamePhaseModel = englandGamePhaseModel
         englandFindGame.customDelegate = customDelegate
 

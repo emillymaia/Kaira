@@ -1,7 +1,7 @@
 import SpriteKit
 // swiftlint: disable all
 
-class FlagScene: SKScene, SKPhysicsContactDelegate {
+class MatchImageScene: SKScene, SKPhysicsContactDelegate {
 
     var gamePhaseModel: GamePhaseModel?
 
@@ -14,16 +14,14 @@ class FlagScene: SKScene, SKPhysicsContactDelegate {
     var currentNode: SKNode?
 
     var lastZPos = 1
-
     var lastXYpos: [CGFloat] = []
 
-    var  XposArray: [CGFloat] = []
-    var  YposArray: [CGFloat] = []
+    var XposArray: [CGFloat] = []
+    var YposArray: [CGFloat] = []
 
     private var pauseButton: SKSpriteNode?
 
     var backgroundList: [String] = []
-    var colorList: Int = 0
 
     private lazy var customPopUp: CustomPopup = {
         let view = CustomPopup()
@@ -44,16 +42,17 @@ class FlagScene: SKScene, SKPhysicsContactDelegate {
         viewWidth = (scene?.frame.width)!
         viewHeight = (scene?.frame.height)!
         lockScreenInteraction = false
+        print(XposArray)
+        print(YposArray)
+        setupPositionals()
         setupBottomBar()
         setupButtons()
         setupSprites(assets: gamePhaseModel!.assets)
-        setupBackgroundList()
-        setupCircle()
     }
 
 }
 
-extension FlagScene {
+extension MatchImageScene {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
@@ -114,13 +113,23 @@ extension FlagScene {
                         (self.currentNode?.position.y)! <= (node.frame.maxY) ?
                         true : false
 
-                        if intersectPositionX && intersectPositionY {
-                            if Int((self.currentNode?.name)!) == self.backgroundList.firstIndex(of: node.name!) {
-                                node.alpha = 1.0
-                                self.currentNode?.alpha = 0.0
-                                self.colorList += 1
-                                if self.colorList == 3 {
-                                    self.pressButton()
+                        if touchedNodes.count <= 2 {
+                            if intersectPositionX && intersectPositionY {
+                                if self.verifyColor(self.currentNode!, node) {
+                                    self.currentNode?.position = CGPoint(x: (node.position.x), y: (node.position.y))
+                                    if (node.name?.contains("on"))! {
+                                        node.alpha = 1.0
+                                    } else {
+                                        node.alpha = 0.0
+                                    }
+                                    self.currentNode?.alpha = 0.0
+                                    if self.didWon() {
+                                        self.pressButton()
+                                    }
+                                } else {
+                                    if !(self.lastXYpos.isEmpty) {
+                                        self.currentNode?.position = CGPoint(x: self.lastXYpos[0], y: self.lastXYpos[1])
+                                    }
                                 }
                             }
                         } else {
@@ -141,7 +150,17 @@ extension FlagScene {
     }
 }
 
-extension FlagScene {
+extension MatchImageScene {
+
+    func verifyColor(_ current: SKNode, _ state: SKNode) -> Bool {
+        let values = ["blue", "green", "orange", "pink", "purple", "red"]
+        for item in values {
+            if (current.name?.contains(item))! && (state.name?.contains(item))! {
+                return true
+            }
+        }
+        return false
+    }
 
     func setupBottomBar() {
         let bottomNode = SKSpriteNode(imageNamed: (gamePhaseModel?.assets[0])!)
@@ -177,72 +196,133 @@ extension FlagScene {
         var filteredAssets = assets
         filteredAssets.removeFirst()
 
-        for image in filteredAssets {
+        let splitList3 = filteredAssets.filter({ $0.contains("image") })
 
-            let tempImage = UIImage(named: image)
+        let onofflist = filteredAssets.filter({ !splitList3.contains($0) })
 
+        var iteratorX = 0
+        var iteratorY = 0
+        var iteratorList = 0
+        for _ in 0...5 {
+
+            let tempImage = UIImage(named: onofflist[iteratorList])
             let backgroundTexture = SKTexture(image: tempImage!)
 
             let background = SKSpriteNode(texture: backgroundTexture)
-            if viewHeight < 700 {
-                background.size = CGSize(
-                    width: ((view?.frame.width)!*0.79),
-                    height: ((view?.frame.height)!*0.62)
-                )
-                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/53)
-            } else {
-                background.size = CGSize(
-                    width: ((view?.frame.width)!*0.95),
-                    height: ((view?.frame.height)!*0.45)
-                )
-                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/15)
-            }
+            background.name = onofflist[iteratorList]
+            background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+            background.position = CGPoint(x: self.XposArray[iteratorX], y: self.YposArray[iteratorY])
             background.zPosition = -10
-            if image != filteredAssets.first {
-                background.alpha = 0.0
-                background.name = image
-                background.zPosition = 50
-            } else {
-                background.name = "setup"
-            }
             addChild(background)
+
+            //
+
+            let tempImage1 = UIImage(named: onofflist[iteratorList+1])
+            let backgroundTexture1 = SKTexture(image: tempImage1!)
+
+            let background1 = SKSpriteNode(texture: backgroundTexture1)
+            background1.name = onofflist[iteratorList+1]
+            background1.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+            background1.position = CGPoint(x: self.XposArray[iteratorX], y: self.YposArray[iteratorY])
+            background1.zPosition = -10
+            background1.alpha = 0.0
+            addChild(background1)
+
+            //
+
+            iteratorX += 1
+            iteratorList += 2
+            if iteratorX > 2 {
+                iteratorX = 0
+                iteratorY += 1
+                if iteratorY > 1 {
+                    iteratorY = 0
+                }
+            }
         }
+
+        iteratorX = 0
+        iteratorY = 0
+        iteratorList = 0
+
+        var randomList: [CGPoint] = [
+            CGPoint(x: XposArray[0], y: YposArray[2]),
+            CGPoint(x: XposArray[1], y: YposArray[2]),
+            CGPoint(x: XposArray[2], y: YposArray[2]),
+            CGPoint(x: XposArray[0], y: YposArray[3]),
+            CGPoint(x: XposArray[1], y: YposArray[3]),
+            CGPoint(x: XposArray[2], y: YposArray[3]),
+        ]
+
+        for _ in 0...5 {
+
+            let tempImage2 = UIImage(named: splitList3[iteratorList])
+            let backgroundTexture2 = SKTexture(image: tempImage2!)
+
+            let background2 = SKSpriteNode(texture: backgroundTexture2)
+            background2.name = splitList3[iteratorList]
+            background2.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+
+            let posValue = randomList.randomElement()
+            randomList.removeAll(where: { $0 == posValue })
+
+            if let posValue {
+                background2.position = posValue
+            }
+
+            background2.zPosition = -10
+            addChild(background2)
+
+            iteratorList += 1
+        }
+
+        setupBackgroundList(onofflist)
+        print(onofflist)
+        print(backgroundList)
     }
 
     private func pauseScreenInteraction() {
         lockScreenInteraction = false
     }
 
-    private func setupBackgroundList() {
-        for index in 2...4 {
-            self.backgroundList.append((gamePhaseModel?.assets[index])!)
+    private func setupBackgroundList(_ array: [String]) {
+        self.backgroundList = array
+    }
+
+    private func didWon() -> Bool {
+        let onList = backgroundList.filter({ $0.contains("on") })
+        var check = 0
+        for item in onList {
+            scene?.enumerateChildNodes(withName: item, using: { node, _ in
+                if node.alpha == 1.0 {
+                    check += 1
+                }
+            })
+        }
+        if check == 6 {
+            return true
+        } else {
+            return false
         }
     }
 
-    func setupCircle() {
+    func setupPositionals() {
 
-        let circle = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle.position = CGPoint(x: 110, y: 220)
-        circle.strokeColor = SKColor.black
-        circle.glowWidth = 1.0
-        circle.fillColor = UIColor(red: 0/255, green: 140/255, blue: 69/255, alpha: 1.0)
-        circle.name = "0"
-        addChild(circle)
+        let Xpos1 = viewWidth*0.25 // 25% --
+        let Xpos2 = viewWidth*0.5 // 50% --
+        let Xpos3 = viewWidth*0.75 // 75% --
 
-        let circle2 = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle2.position = CGPoint(x: 220, y: 220)
-        circle2.strokeColor = SKColor.black
-        circle2.glowWidth = 1.0
-        circle2.fillColor = UIColor(red: 244/255, green: 249/255, blue: 255/255, alpha: 1.0)
-        circle2.name = "1"
-        addChild(circle2)
+        let Ypos1 = viewHeight*0.75 // 75%
+        let Ypos2 = viewHeight*0.6 // 65%
+        let Ypos3 = viewHeight*0.45 // 40% --
+        let Ypos4 = viewHeight*0.3 // 30% --
 
-        let circle3 = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle3.position = CGPoint(x: 330, y: 220)
-        circle3.strokeColor = SKColor.black
-        circle3.glowWidth = 1.0
-        circle3.fillColor = UIColor(red: 205/255, green: 33/255, blue: 42/255, alpha: 1.0)
-        circle3.name = "2"
-        addChild(circle3)
+        self.XposArray = [
+            Xpos1, Xpos2, Xpos3
+        ]
+
+        self.YposArray = [
+            Ypos1, Ypos2, Ypos3, Ypos4
+        ]
     }
 }
