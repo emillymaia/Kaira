@@ -50,6 +50,11 @@
 		EE182F8B2A9F6FE000CE30C8 /* KairaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */; };
 		EE182F8D2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */; };
 		EE77BA912AF27E52009AB571 /* PhaseStructureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BA902AF27E52009AB571 /* PhaseStructureProtocol.swift */; };
+		EE77BA9D2AFBBC18009AB571 /* FlagScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BA9C2AFBBC18009AB571 /* FlagScene.swift */; };
+		EE77BA9F2AFBBC32009AB571 /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BA9E2AFBBC32009AB571 /* FlagViewController.swift */; };
+		EE77BAA12AFBC665009AB571 /* TestPhaseStruc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA02AFBC665009AB571 /* TestPhaseStruc.swift */; };
+		EE77BAA42AFD0A2B009AB571 /* MatchImageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA32AFD0A2B009AB571 /* MatchImageScene.swift */; };
+		EE77BAA62AFD0A38009AB571 /* MatchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA52AFD0A38009AB571 /* MatchImageViewController.swift */; };
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
 		EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */; };
@@ -123,6 +128,11 @@
 		EE182F8A2A9F6FE000CE30C8 /* KairaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITests.swift; sourceTree = "<group>"; };
 		EE182F8C2A9F6FE000CE30C8 /* KairaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE77BA902AF27E52009AB571 /* PhaseStructureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseStructureProtocol.swift; sourceTree = "<group>"; };
+		EE77BA9C2AFBBC18009AB571 /* FlagScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagScene.swift; sourceTree = "<group>"; };
+		EE77BA9E2AFBBC32009AB571 /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
+		EE77BAA02AFBC665009AB571 /* TestPhaseStruc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPhaseStruc.swift; sourceTree = "<group>"; };
+		EE77BAA32AFD0A2B009AB571 /* MatchImageScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchImageScene.swift; sourceTree = "<group>"; };
+		EE77BAA52AFD0A38009AB571 /* MatchImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchImageViewController.swift; sourceTree = "<group>"; };
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		EEC53F892ABB1ED400B24261 /* GamePhaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhaseModel.swift; sourceTree = "<group>"; };
@@ -211,6 +221,8 @@
 		ABDFC89D2AB232A600F19D1A /* Mechanics */ = {
 			isa = PBXGroup;
 			children = (
+				EE77BAA22AFD09F9009AB571 /* MatchImageMechanic */,
+				EE77BA9B2AFBBC09009AB571 /* FlagMachanic */,
 				EEDCA6512AE6BEF9008C0C29 /* DragAndDropMechanic */,
 				EE06092C2AC3121200BCC58C /* SignatureMechanic */,
 				EE0609252AC1A6FA00BCC58C /* FindImageMechanic */,
@@ -249,6 +261,7 @@
 			children = (
 				EE0609382ACEC4A100BCC58C /* CustomButton */,
 				EE0609322ACE0C5E00BCC58C /* EnglandPhaseStructure.swift */,
+				EE77BAA02AFBC665009AB571 /* TestPhaseStruc.swift */,
 				EE0609342ACE0E7D00BCC58C /* IntroPhaseStructure.swift */,
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
 				EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */,
@@ -363,6 +376,24 @@
 				EE06092A2AC309E500BCC58C /* MenuViewControllerExtensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EE77BA9B2AFBBC09009AB571 /* FlagMachanic */ = {
+			isa = PBXGroup;
+			children = (
+				EE77BA9C2AFBBC18009AB571 /* FlagScene.swift */,
+				EE77BA9E2AFBBC32009AB571 /* FlagViewController.swift */,
+			);
+			path = FlagMachanic;
+			sourceTree = "<group>";
+		};
+		EE77BAA22AFD09F9009AB571 /* MatchImageMechanic */ = {
+			isa = PBXGroup;
+			children = (
+				EE77BAA32AFD0A2B009AB571 /* MatchImageScene.swift */,
+				EE77BAA52AFD0A38009AB571 /* MatchImageViewController.swift */,
+			);
+			path = MatchImageMechanic;
 			sourceTree = "<group>";
 		};
 		EEC53F832ABB1B5500B24261 /* Enums */ = {
@@ -550,15 +581,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDFC88B2AA7618000F19D1A /* ContinentModel.swift in Sources */,
+				EE77BAA42AFD0A2B009AB571 /* MatchImageScene.swift in Sources */,
 				ABDFC8912AAB65DC00F19D1A /* MenuViewController.swift in Sources */,
 				EEC53F8A2ABB1ED400B24261 /* GamePhaseModel.swift in Sources */,
 				AB3C8F342AE0170A0057924D /* SoundManager.swift in Sources */,
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
 				AB3C8F642AE6EF860057924D /* SettingsViewController.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
+				EE77BAA12AFBC665009AB571 /* TestPhaseStruc.swift in Sources */,
 				AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */,
 				EE06092E2AC3123A00BCC58C /* SignatureScene.swift in Sources */,
 				EE0609372ACE0F0100BCC58C /* FrancePhaseStructure.swift in Sources */,
+				EE77BA9F2AFBBC32009AB571 /* FlagViewController.swift in Sources */,
 				AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */,
 				AB3C8F5B2AE5A55C0057924D /* HomeScreenViewController.swift in Sources */,
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
@@ -566,7 +600,9 @@
 				AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */,
+				EE77BAA62AFD0A38009AB571 /* MatchImageViewController.swift in Sources */,
 				AB3C8F622AE60A1C0057924D /* CustomSettingsViewCell.swift in Sources */,
+				EE77BA9D2AFBBC18009AB571 /* FlagScene.swift in Sources */,
 				ABDFC8932AABF9E700F19D1A /* MenuSectionHeaderView.swift in Sources */,
 				EE06092B2AC309E500BCC58C /* MenuViewControllerExtensions.swift in Sources */,
 				EE0609292AC1A73000BCC58C /* FindImageViewController.swift in Sources */,
