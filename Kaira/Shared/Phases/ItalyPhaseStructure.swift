@@ -45,46 +45,46 @@ struct ItalyPhaseStructure: PhaseStructure {
 
         let unlockItalyStampView = UnlockedStampViewController(
             stampImage: "italy-selo",
-            label: "Texto Stamp Italy Selo",
+            label: String(localized: "ItalyUnlockStampTextLocalized"),
             onFinishButtonPressed: nil
         )
 
         self.historyPages = [
             HistoryPageModel(
                 image: "italy-1",
-                text: "TEXTO ITALY 01",
+                text: String(localized: "ItalyHistoryTextLocalized1"),
                 button: .next,
                 skipViewController: italyFlagGame
             ),
             HistoryPageModel(
                 image: "italy-2",
-                text: "TEXTO ITALY 02",
+                text: String(localized: "ItalyHistoryTextLocalized2"),
                 button: .finish,
                 nextViewController: italyFlagGame,
                 skipViewController: italyFlagGame
             ),
             HistoryPageModel(
                 image: "italy-3",
-                text: "TEXTO ITALY 03",
+                text: String(localized: "ItalyHistoryTextLocalized3"),
                 button: .next,
                 skipViewController: italyMatchImageGame
             ),
             HistoryPageModel(
                 image: "italy-4",
-                text: "TEXTO ITALY 04",
+                text: String(localized: "ItalyHistoryTextLocalized4"),
                 button: .next,
                 skipViewController: italyMatchImageGame
             ),
             HistoryPageModel(
                 image: "italy-5",
-                text: "TEXTO ITALY 05",
+                text: String(localized: "ItalyHistoryTextLocalized5"),
                 button: .finish,
                 nextViewController: italyMatchImageGame,
                 skipViewController: italyMatchImageGame
             ),
             HistoryPageModel(
                 image: "italy-6",
-                text: "TEXTO ITALY 06",
+                text: String(localized: "ItalyHistoryTextLocalized6"),
                 button: .next,
                 nextViewController: unlockItalyStampView,
                 skipViewController: unlockItalyStampView

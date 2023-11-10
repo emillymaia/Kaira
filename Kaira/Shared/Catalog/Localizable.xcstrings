@@ -19,6 +19,12 @@
     },
     "Asia" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asia"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -411,6 +417,118 @@
         }
       }
     },
+    "ItalyHistoryTextLocalized1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At 18 I finished school...and I couldn't get into any university. Every day I compared myself to my friends. I felt behind in life. I felt like everyone was better than me. It was a very difficult time for me…"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aos 18 anos terminei a escola... e não consegui entrar em nenhuma universidade. Comecei a me comparar com meus amigos... me senti atrasada na vida, sabe? Como se todos fossem melhores do que eu. Foi um período bem difícil para mim."
+          }
+        }
+      }
+    },
+    "ItalyHistoryTextLocalized2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My family suggested I try another path for now. I was a storm of feelings. Everything in my head was a mess. After my family convinced me to try something new, I went to Italy, where my grandma Stella lived."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apesar do apoio da minha família para fazer outra coisa da vida, tudo era tempestade de sentimentos. Minha cabeça estava uma bagunça. Depois de muito insistirem, eles me convenceram a tentar algo novo. Então decidi ir para a Itália, onde morava minha avó Stella."
+          }
+        }
+      }
+    },
+    "ItalyHistoryTextLocalized3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My best choice ever! When I arrived at my grandmother's house, I had such a good feeling...It's so good to remember that. We hadn't seen each other since I was 7 years old. Since grandpa passed away, grandma didn't want to go out anymore, and she ended up becoming more reclusive at home."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A melhor escolha de todas! Assim que cheguei na casa da minha avó tive uma sensação tão boa... é bom demais relembrar isso. Não nos víamos desde os meus 7 anos. Desde que o vovô faleceu, a vovó foi deixando de nos visitar…até parar totalmente de sair de casa."
+          }
+        }
+      }
+    },
+    "ItalyHistoryTextLocalized4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My grandmother Stella is very friendly, and makes an AMAZING lasagna. She is my paternal grandmother, and has lived in Naples since she was 20 years old.\nShe loves knitting, and always wore the same perfume every day."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minha avó Stella é um amor de pessoa e faz uma lasanha INCRÍVEL. Ela é minha avó paterna e mora em Nápoles desde os 20 anos.\nAdora tricotar e usava o mesmo perfume todos os dias. Que saudade!"
+          }
+        }
+      }
+    },
+    "ItalyHistoryTextLocalized5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I spent 1 year living with her. She took me to see everything in Italy, and we always took care of the garden in the mornings. My grandma always listened to me and took care of me with all the love in the world."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passei 1 ano morando com ela (uma ótima fase da minha vida, você vai ver). Ela me levou para conhecer tudo na Itália, e sempre cuidávamos do jardim juntinhas, toda manhã. Minha avó sempre me ouviu e cuidou de mim com todo amor do mundo."
+          }
+        }
+      }
+    },
+    "ItalyHistoryTextLocalized6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My grandmother always believed in me, and always motivated me to continue studying for university. Every day I studied a little, and... I felt that my moment would come."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minha avó sempre acreditou em mim e sempre me motivou a continuar estudando para a universidade. Cada dia eu estudava um pouco…eu  sentia que o meu momento iria chegar, ele TINHA que chegar."
+          }
+        }
+      }
+    },
+    "ItalyUnlockStampTextLocalized" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I got this stamp from my grandmother when we traveled to Venice. We spent a weekend there and it was incredible. Colorful houses are the most beautiful thing I've ever seen. In fact, she gave me the most beautiful stamps in my collection, (you'll see hahah)."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganhei esse selo da minha avó quando viajamos para Veneza. Passamos um fim de semana lá e foi surreal. As casas coloridas são a coisa mais linda que já vi. Aliás, ela meu deu os selos mais bonitos da minha coleção, (você vai ver hahah)."
+          }
+        }
+      }
+    },
     "Japan" : {
       "localizations" : {
         "en" : {
@@ -501,7 +619,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Ok, agora de volta aos 17?!?! Nessa época minha família decidiu passar férias na Espanha. Ficamos 3 meses em Barcelona, esse tempo foi um divisor de águas pra mim no quesito maturidade."
           }
         }
