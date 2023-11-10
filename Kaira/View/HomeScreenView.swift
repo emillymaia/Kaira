@@ -19,7 +19,7 @@ final class HomeScreenView: UIView {
     private let playButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Play", for: .normal)
+        button.setTitle(String(localized: "Play"), for: .normal)
         button.layer.cornerRadius = 15
         button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         button.titleLabel?.font = UIFont(name: "Pally-Medium", size: 22)
@@ -34,7 +34,6 @@ final class HomeScreenView: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "icon-kaira 1")
-//        image.sizeThatFits(CGSize(width: 310, height: 533))
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -42,7 +41,7 @@ final class HomeScreenView: UIView {
     private let feedbackLink: UIButton = {
         let link = UIButton()
         link.translatesAutoresizingMaskIntoConstraints = false
-        link.setTitle("Give a feedback!", for: .normal)
+        link.setTitle(String(localized: "Give a feedback!"), for: .normal)
         link.titleLabel?.font = UIFont(name: "Pally-Regular", size: 20)
         link.titleLabel?.textColor = .gray
         link.setTitleColor(.gray, for: .normal)

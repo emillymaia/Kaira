@@ -8,21 +8,21 @@ final class MenuViewController: UIViewController {
     var lastPressed = ""
     var continentModel: [ContinentModel] = [
         ContinentModel(
-            name: "Europe",
+            name: String(localized: "Europe"),
             countries: [
-                CountryModel(name: "England", background: "england-selo"),
-                CountryModel(name: "France", background: "locked-selo"),
-                CountryModel(name: "Spain", background: "locked-selo"),
-                CountryModel(name: "Italy", background: "coming-soon")
+                CountryModel(name: String(localized: "England"), background: "england-selo"),
+                CountryModel(name: String(localized: "France"), background: "locked-selo"),
+                CountryModel(name: String(localized: "Spain"), background: "locked-selo"),
+                CountryModel(name: String(localized: "Italy"), background: "coming-soon")
             ]
         ),
         ContinentModel(
-            name: "Asia",
+            name: String(localized: "Asia"),
             countries: [
-                CountryModel(name: "Japan", background: "coming-soon"),
-                CountryModel(name: "China", background: "coming-soon"),
-                CountryModel(name: "South Korea", background: "coming-soon"),
-                CountryModel(name: "India", background: "coming-soon")
+                CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                CountryModel(name: String(localized: "China"), background: "coming-soon"),
+                CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
+                CountryModel(name: String(localized: "India"), background: "coming-soon")
             ]
         ),
     ]
