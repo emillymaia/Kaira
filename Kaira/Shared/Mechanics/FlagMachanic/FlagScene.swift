@@ -186,10 +186,10 @@ extension FlagScene {
             let background = SKSpriteNode(texture: backgroundTexture)
             if viewHeight < 700 {
                 background.size = CGSize(
-                    width: ((view?.frame.width)!*0.79),
-                    height: ((view?.frame.height)!*0.62)
+                    width: ((view?.frame.width)!*0.75),
+                    height: ((view?.frame.height)!*0.52)
                 )
-                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/53)
+                background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/10)
             } else {
                 background.size = CGSize(
                     width: ((view?.frame.width)!*0.95),
@@ -221,28 +221,54 @@ extension FlagScene {
 
     func setupCircle() {
 
-        let circle = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle.position = CGPoint(x: 110, y: 220)
-        circle.strokeColor = SKColor.black
-        circle.glowWidth = 1.0
-        circle.fillColor = UIColor(red: 0/255, green: 140/255, blue: 69/255, alpha: 1.0)
-        circle.name = "0"
-        addChild(circle)
+        if viewHeight < 700 {
+            let circle = SKShapeNode(circleOfRadius: 30) // Create circle
+            circle.position = CGPoint(x: (scene?.size.width)!*0.25, y: viewHeight/3.8)
+            circle.strokeColor = SKColor.black
+            circle.glowWidth = 1.0
+            circle.fillColor = UIColor(red: 0/255, green: 140/255, blue: 69/255, alpha: 1.0)
+            circle.name = "0"
+            addChild(circle)
 
-        let circle2 = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle2.position = CGPoint(x: 220, y: 220)
-        circle2.strokeColor = SKColor.black
-        circle2.glowWidth = 1.0
-        circle2.fillColor = UIColor(red: 244/255, green: 249/255, blue: 255/255, alpha: 1.0)
-        circle2.name = "1"
-        addChild(circle2)
+            let circle2 = SKShapeNode(circleOfRadius: 30) // Create circle
+            circle2.position = CGPoint(x: (scene?.size.width)!*0.5, y: viewHeight/3.8)
+            circle2.strokeColor = SKColor.black
+            circle2.glowWidth = 1.0
+            circle2.fillColor = UIColor(red: 244/255, green: 249/255, blue: 255/255, alpha: 1.0)
+            circle2.name = "1"
+            addChild(circle2)
 
-        let circle3 = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle3.position = CGPoint(x: 330, y: 220)
-        circle3.strokeColor = SKColor.black
-        circle3.glowWidth = 1.0
-        circle3.fillColor = UIColor(red: 205/255, green: 33/255, blue: 42/255, alpha: 1.0)
-        circle3.name = "2"
-        addChild(circle3)
+            let circle3 = SKShapeNode(circleOfRadius: 30) // Create circle
+            circle3.position = CGPoint(x: (scene?.size.width)!*0.75, y: viewHeight/3.8)
+            circle3.strokeColor = SKColor.black
+            circle3.glowWidth = 1.0
+            circle3.fillColor = UIColor(red: 205/255, green: 33/255, blue: 42/255, alpha: 1.0)
+            circle3.name = "2"
+            addChild(circle3)
+        } else {
+            let circle = SKShapeNode(circleOfRadius: 40) // Create circle
+            circle.position = CGPoint(x: (scene?.size.width)!*0.25, y: viewHeight/4)
+            circle.strokeColor = SKColor.black
+            circle.glowWidth = 1.0
+            circle.fillColor = UIColor(red: 0/255, green: 140/255, blue: 69/255, alpha: 1.0)
+            circle.name = "0"
+            addChild(circle)
+
+            let circle2 = SKShapeNode(circleOfRadius: 40) // Create circle
+            circle2.position = CGPoint(x: (scene?.size.width)!*0.5, y: viewHeight/4)
+            circle2.strokeColor = SKColor.black
+            circle2.glowWidth = 1.0
+            circle2.fillColor = UIColor(red: 244/255, green: 249/255, blue: 255/255, alpha: 1.0)
+            circle2.name = "1"
+            addChild(circle2)
+
+            let circle3 = SKShapeNode(circleOfRadius: 40) // Create circle
+            circle3.position = CGPoint(x: (scene?.size.width)!*0.75, y: viewHeight/4)
+            circle3.strokeColor = SKColor.black
+            circle3.glowWidth = 1.0
+            circle3.fillColor = UIColor(red: 205/255, green: 33/255, blue: 42/255, alpha: 1.0)
+            circle3.name = "2"
+            addChild(circle3)
+        }
     }
 }
