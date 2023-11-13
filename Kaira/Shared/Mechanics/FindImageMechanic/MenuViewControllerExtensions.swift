@@ -14,7 +14,7 @@ extension MenuViewController {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupSpain()
         }
-        if continent == "Italy" {
+        if continent == String(localized: "Italy") {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupItaly()
         }
@@ -46,6 +46,7 @@ extension MenuViewController {
 extension MenuViewController: DataDelegate {
     func didUpdateData(data: Int) {
         if data == 1 {
+            print(lastPressed)
             if lastPressed == String(localized: "England") {
                 self.continentModel[data-1].countries[data].background = "france-selo"
                 menuView.menuCollectionView.reloadData()
