@@ -222,7 +222,7 @@ extension FlagScene {
     func setupCircle() {
 
         let circle = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle.position = CGPoint(x: 110, y: 220)
+        circle.position = CGPoint(x: (scene?.size.width)!*0.25, y: viewHeight/4)
         circle.strokeColor = SKColor.black
         circle.glowWidth = 1.0
         circle.fillColor = UIColor(red: 0/255, green: 140/255, blue: 69/255, alpha: 1.0)
@@ -230,7 +230,7 @@ extension FlagScene {
         addChild(circle)
 
         let circle2 = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle2.position = CGPoint(x: 220, y: 220)
+        circle2.position = CGPoint(x: (scene?.size.width)!*0.5, y: viewHeight/4)
         circle2.strokeColor = SKColor.black
         circle2.glowWidth = 1.0
         circle2.fillColor = UIColor(red: 244/255, green: 249/255, blue: 255/255, alpha: 1.0)
@@ -238,7 +238,7 @@ extension FlagScene {
         addChild(circle2)
 
         let circle3 = SKShapeNode(circleOfRadius: 40) // Create circle
-        circle3.position = CGPoint(x: 330, y: 220)
+        circle3.position = CGPoint(x: (scene?.size.width)!*0.75, y: viewHeight/4)
         circle3.strokeColor = SKColor.black
         circle3.glowWidth = 1.0
         circle3.fillColor = UIColor(red: 205/255, green: 33/255, blue: 42/255, alpha: 1.0)
