@@ -23,6 +23,8 @@ class DragAndDropScene: SKScene, SKPhysicsContactDelegate {
 
     var backgroundList: [String] = []
 
+    var winnerList: [String] = []
+
     private lazy var customPopUp: CustomPopup = {
         let view = CustomPopup()
         view.size = CGSize(width: 250, height: 260)
@@ -47,6 +49,7 @@ class DragAndDropScene: SKScene, SKPhysicsContactDelegate {
         setupBottomBar()
         setupButtons()
         setupSprites(assets: gamePhaseModel!.assets)
+        print(winnerList)
     }
 
 }
@@ -229,8 +232,16 @@ extension DragAndDropScene {
                 self.backgroundList.append((gamePhaseModel?.assets[index])!)
             }
         } else {
+            var filteredList = gamePhaseModel?.assets
+            filteredList?.removeFirst()
+            filteredList?.removeFirst()
+            filteredList?.removeFirst()
+            filteredList?.removeFirst()
             for index in 1...3 {
                 self.backgroundList.append((gamePhaseModel?.assets[index])!)
+                let winner = filteredList?.randomElement()
+                self.winnerList.append(winner!)
+                filteredList?.removeAll(where:{ $0 == winner })
             }
         }
     }
@@ -257,6 +268,48 @@ extension DragAndDropScene {
             }
             return false
         } else {
+            guard let gameNodes = gamePhaseModel?.assets else { return false }
+
+            let verify1: Bool = childNode(withName: gameNodes[1])?.position ==
+            childNode(withName: winnerList[0])?.position ? true : false
+            let verify2: Bool = childNode(withName: gameNodes[1])?.position ==
+            childNode(withName: winnerList[1])?.position ? true : false
+            let verify3: Bool = childNode(withName: gameNodes[1])?.position ==
+            childNode(withName: winnerList[2])?.position ? true : false
+
+            var cert1: Bool = false
+            if verify1 || verify2 || verify3 {
+                cert1 = true
+            }
+
+            let verify4: Bool = childNode(withName: gameNodes[2])?.position ==
+            childNode(withName: winnerList[0])?.position ? true : false
+            let verify5: Bool = childNode(withName: gameNodes[2])?.position ==
+            childNode(withName: winnerList[1])?.position ? true : false
+            let verify6: Bool = childNode(withName: gameNodes[2])?.position ==
+            childNode(withName: winnerList[2])?.position ? true : false
+
+            var cert2: Bool = false
+            if verify4 || verify5 || verify6 {
+                cert2 = true
+            }
+
+            let verify7: Bool = childNode(withName: gameNodes[3])?.position ==
+            childNode(withName: winnerList[0])?.position ? true : false
+            let verify8: Bool = childNode(withName: gameNodes[3])?.position ==
+            childNode(withName: winnerList[1])?.position ? true : false
+            let verify9: Bool = childNode(withName: gameNodes[3])?.position ==
+            childNode(withName: winnerList[2])?.position ? true : false
+
+            var cert3: Bool = false
+            if verify7 || verify8 || verify9 {
+                cert3 = true
+            }
+
+            if cert1 && cert2 && cert3 {
+                return true
+            }
+
             return false
         }
     }

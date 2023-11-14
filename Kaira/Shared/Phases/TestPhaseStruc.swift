@@ -34,7 +34,7 @@ struct TestPhaseStructure: PhaseStructure {
             "mi-red-on",
         ])
 
-        let englandGamePhaseModel2 = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
+        let _ = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
             "england-game-objective",
             "flag-background",
             "flag-1",

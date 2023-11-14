@@ -102,7 +102,7 @@ extension FlagScene {
 
             if let touch = touches.first, let _ = self.currentNode {
                 let touchLocation = touch.location(in: self)
-                let touchedNodes = self.nodes(at: touchLocation)
+                let _ = self.nodes(at: touchLocation)
                 for item in backgroundList {
                     scene?.enumerateChildNodes(withName: item, using: { node, _ in
                         let intersectPositionX: Bool =

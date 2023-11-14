@@ -18,6 +18,10 @@ extension MenuViewController {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupItaly()
         }
+        if continent == String(localized: "Japan") {
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+            preSetupJapan()
+        }
     }
 
     func preSetup<T: PhaseStructure>(_ phase: T.Type) {
@@ -40,6 +44,9 @@ extension MenuViewController {
     }
     func preSetupItaly() {
         preSetup(ItalyPhaseStructure.self)
+    }
+    func preSetupJapan() {
+        preSetup(JapanPhaseStructure.self)
     }
 }
 
@@ -71,10 +78,18 @@ extension MenuViewController: DataDelegate {
                 }
             }
             if lastPressed == String(localized: "Italy") {
-                self.continentModel[data].countries[data-1].background = "coming-soon"
+                self.continentModel[data].countries[data-1].background = "japan-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+4 {
                     self.progress = data+4
+                    saveInfo(self.progress)
+                }
+            }
+            if lastPressed == String(localized: "Japan") {
+                self.continentModel[data].countries[data].background = "coming-soon"
+                menuView.menuCollectionView.reloadData()
+                if self.progress < data+5 {
+                    self.progress = data+5
                     saveInfo(self.progress)
                 }
             }
@@ -118,7 +133,9 @@ extension MenuViewController {
         case 4:
             return italy()
         case 5:
-            return italy()
+            return japan()
+        case 6:
+            return japan()
         default:
             return england()
         }
@@ -207,6 +224,28 @@ extension MenuViewController {
                 name: String(localized: "Asia"),
                 countries: [
                     CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "China"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "India"), background: "coming-soon")
+                ]
+            )
+        ]
+    }
+    func japan() -> [ContinentModel] {
+        [
+            ContinentModel(
+                name: String(localized: "Europe"),
+                countries: [
+                    CountryModel(name: String(localized: "England"), background: "england-selo"),
+                    CountryModel(name: String(localized: "France"), background: "france-selo"),
+                    CountryModel(name: String(localized: "Spain"), background: "spain-selo"),
+                    CountryModel(name: String(localized: "Italy"), background: "italy-selo")
+                ]
+            ),
+            ContinentModel(
+                name: String(localized: "Asia"),
+                countries: [
+                    CountryModel(name: String(localized: "Japan"), background: "japan-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
                     CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")

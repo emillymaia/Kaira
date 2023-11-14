@@ -7,22 +7,13 @@ struct EnglandPhaseStructure: PhaseStructure {
     var customDelegate: DataDelegate?
 
     init(_ customDelegate: DataDelegate) {
-//        let englandGamePhaseModel = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
-//            "england-game-objective",
-//            "england-game-winner",
-//            "england-game-image-1",
-//            "england-game-image-2",
-//            "england-game-image-3",
-//            "england-game-image-4",
-//        ])
-
-        let englandGamePhaseModel = GamePhaseModel(countryName: "Japan", background: "", assets: [ // interpolar string
-            "japan-game-objective",
-            "japan-game-winner",
-            "japan-game-image-1",
-            "japan-game-image-2",
-            "japan-game-image-3",
-            "japan-game-image-4",
+        let englandGamePhaseModel = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
+            "england-game-objective",
+            "england-game-winner",
+            "england-game-image-1",
+            "england-game-image-2",
+            "england-game-image-3",
+            "england-game-image-4",
         ])
 
         let englandFindGame = FindImageViewController()
