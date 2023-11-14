@@ -42,11 +42,11 @@ class DragAndDropScene: SKScene, SKPhysicsContactDelegate {
         viewWidth = (scene?.frame.width)!
         viewHeight = (scene?.frame.height)!
         lockScreenInteraction = false
+        setupBackgroundList()
         setupPositionals()
         setupBottomBar()
         setupButtons()
         setupSprites(assets: gamePhaseModel!.assets)
-        setupBackgroundList()
     }
 
 }
@@ -174,24 +174,49 @@ extension DragAndDropScene {
         var filteredAssets = assets
         filteredAssets.removeFirst()
 
-        var iteratorX = 0
-        var iteratorY = 0
-        for image in filteredAssets {
+        if self.gamePhaseModel?.countryName == "Spain" {
+            var iteratorX = 0
+            var iteratorY = 0
+            for image in filteredAssets {
 
-            let tempImage = UIImage(named: image)
+                let tempImage = UIImage(named: image)
 
-            let backgroundTexture = SKTexture(image: tempImage!)
+                let backgroundTexture = SKTexture(image: tempImage!)
 
-            let background = SKSpriteNode(texture: backgroundTexture)
-            background.name = image
-            background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
-            background.position = CGPoint(x: self.XposArray[iteratorX], y: self.YposArray[iteratorY])
-            background.zPosition = -10
-            addChild(background)
+                let background = SKSpriteNode(texture: backgroundTexture)
+                background.name = image
+                background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+                background.position = CGPoint(x: self.XposArray[iteratorX], y: self.YposArray[iteratorY])
+                background.zPosition = -10
+                addChild(background)
 
-            iteratorX += 1
-            iteratorY += 1
+                iteratorX += 1
+                iteratorY += 1
+            }
+        } else {
+            var iteratorX = 0
+            var iteratorY = 0
+            for image in filteredAssets {
+
+                let tempImage = UIImage(named: image)
+
+                let backgroundTexture = SKTexture(image: tempImage!)
+
+                let background = SKSpriteNode(texture: backgroundTexture)
+                background.name = image
+                background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+                background.position = CGPoint(x: self.XposArray[iteratorX], y: self.YposArray[iteratorY])
+                background.zPosition = -10
+                addChild(background)
+
+                iteratorX += 1
+                if iteratorX > 2 {
+                    iteratorX = 0
+                    iteratorY += 1
+                }
+            }
         }
+
     }
 
     private func pauseScreenInteraction() {
@@ -199,54 +224,86 @@ extension DragAndDropScene {
     }
 
     private func setupBackgroundList() {
-        for index in 1...5 {
-            self.backgroundList.append((gamePhaseModel?.assets[index])!)
+        if self.gamePhaseModel?.countryName == "Spain" {
+            for index in 1...5 {
+                self.backgroundList.append((gamePhaseModel?.assets[index])!)
+            }
+        } else {
+            for index in 1...3 {
+                self.backgroundList.append((gamePhaseModel?.assets[index])!)
+            }
         }
     }
 
     private func didWon() -> Bool {
-        guard let gameNodes = gamePhaseModel?.assets else { return false }
 
-        let verify1: Bool = childNode(withName: gameNodes[1])?.position ==
-        childNode(withName: gameNodes[10])?.position ? true : false
-        let verify2: Bool = childNode(withName: gameNodes[2])?.position ==
-        childNode(withName: gameNodes[9])?.position ? true : false
-        let verify3: Bool = childNode(withName: gameNodes[3])?.position ==
-        childNode(withName: gameNodes[7])?.position ? true : false
-        let verify4: Bool = childNode(withName: gameNodes[4])?.position ==
-        childNode(withName: gameNodes[13])?.position ? true : false
-        let verify5: Bool = childNode(withName: gameNodes[5])?.position ==
-        childNode(withName: gameNodes[12])?.position ? true : false
+        if self.gamePhaseModel?.countryName == "Spain" {
 
-        if verify1 && verify2 && verify3 && verify4 && verify5 {
-            return true
+            guard let gameNodes = gamePhaseModel?.assets else { return false }
+
+            let verify1: Bool = childNode(withName: gameNodes[1])?.position ==
+            childNode(withName: gameNodes[10])?.position ? true : false
+            let verify2: Bool = childNode(withName: gameNodes[2])?.position ==
+            childNode(withName: gameNodes[9])?.position ? true : false
+            let verify3: Bool = childNode(withName: gameNodes[3])?.position ==
+            childNode(withName: gameNodes[7])?.position ? true : false
+            let verify4: Bool = childNode(withName: gameNodes[4])?.position ==
+            childNode(withName: gameNodes[13])?.position ? true : false
+            let verify5: Bool = childNode(withName: gameNodes[5])?.position ==
+            childNode(withName: gameNodes[12])?.position ? true : false
+
+            if verify1 && verify2 && verify3 && verify4 && verify5 {
+                return true
+            }
+            return false
+        } else {
+            return false
         }
-        return false
     }
 
     func setupPositionals() {
-        let Xpos1 = viewWidth*0.33 //33%
-        let Xpos2 = viewWidth*0.66 // 66% --
-        let Xpos3 = viewWidth*0.25 // 25% --
-        let Xpos4 = viewWidth*0.5 // 50% --
-        let Xpos5 = viewWidth*0.75 // 75% --
+        if self.gamePhaseModel?.countryName == "Spain" {
+            let Xpos1 = viewWidth*0.33 //33%
+            let Xpos2 = viewWidth*0.66 // 66% --
+            let Xpos3 = viewWidth*0.25 // 25% --
+            let Xpos4 = viewWidth*0.5 // 50% --
+            let Xpos5 = viewWidth*0.75 // 75% --
 
-        let Ypos1 = viewHeight*0.75 // 75%
-        let Ypos2 = viewHeight*0.65 // 65%
-        let Ypos3 = viewHeight*0.5 // 50% --
-        let Ypos4 = viewHeight*0.4 // 40% --
-        let Ypos5 = viewHeight*0.3 // 30% --
+            let Ypos1 = viewHeight*0.75 // 75%
+            let Ypos2 = viewHeight*0.65 // 65%
+            let Ypos3 = viewHeight*0.5 // 50% --
+            let Ypos4 = viewHeight*0.4 // 40% --
+            let Ypos5 = viewHeight*0.3 // 30% --
 
-        self.XposArray = [
-            Xpos1, Xpos2, Xpos3, Xpos4, Xpos5,
-            Xpos1, Xpos2, Xpos3, Xpos4, Xpos5,
-            Xpos3, Xpos4, Xpos5,
-        ]
+            self.XposArray = [
+                Xpos1, Xpos2, Xpos3, Xpos4, Xpos5,
+                Xpos1, Xpos2, Xpos3, Xpos4, Xpos5,
+                Xpos3, Xpos4, Xpos5,
+            ]
 
-        self.YposArray = [
-            Ypos1, Ypos1, Ypos2, Ypos2, Ypos2,
-            Ypos3, Ypos3, Ypos4, Ypos4, Ypos4,
-            Ypos5, Ypos5, Ypos5
-        ]
+            self.YposArray = [
+                Ypos1, Ypos1, Ypos2, Ypos2, Ypos2,
+                Ypos3, Ypos3, Ypos4, Ypos4, Ypos4,
+                Ypos5, Ypos5, Ypos5
+            ]
+        } else {
+
+            let Xpos1 = viewWidth*0.25 // 25% --
+            let Xpos2 = viewWidth*0.5 // 50% --
+            let Xpos3 = viewWidth*0.75 // 75% --
+
+            let Ypos1 = viewHeight*0.75 // 75%
+            let Ypos2 = viewHeight*0.56 // 65%
+            let Ypos3 = viewHeight*0.43 // 40% --
+            let Ypos4 = viewHeight*0.3 // 30% --
+
+            self.XposArray = [
+                Xpos1, Xpos2, Xpos3
+            ]
+
+            self.YposArray = [
+                Ypos1, Ypos2, Ypos3, Ypos4
+            ]
+        }
     }
 }
