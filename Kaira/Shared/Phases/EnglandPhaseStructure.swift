@@ -29,12 +29,14 @@ struct EnglandPhaseStructure: PhaseStructure {
                 image: "england-1",
                 text: String(localized: "EnglandHistoryTextLocalized1"),
                 button: .next,
+                audio: "CheckEffect",
                 skipViewController: englandFindGame
             ),
             HistoryPageModel(
                 image: "england-2",
                 text: String(localized: "EnglandHistoryTextLocalized2"),
                 button: .finish,
+                audio: "CheckEffect",
                 nextViewController: englandFindGame,
                 skipViewController: englandFindGame
             ),

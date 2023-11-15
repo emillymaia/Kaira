@@ -115,7 +115,7 @@ extension HistoryViewController {
     }
 
     func setSound(_ sound: String) {
-        SoundManager.shared.playBackgroundMusic(sound)
+        SoundManager.shared.playEffectSound(sound)
     }
 
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {

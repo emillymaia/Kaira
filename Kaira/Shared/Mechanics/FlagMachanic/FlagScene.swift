@@ -186,7 +186,7 @@ extension FlagScene {
             let background = SKSpriteNode(texture: backgroundTexture)
             if viewHeight < 700 {
                 background.size = CGSize(
-                    width: ((view?.frame.width)!*0.75),
+                    width: ((view?.frame.width)!*0.85),
                     height: ((view?.frame.height)!*0.52)
                 )
                 background.position = CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + viewHeight/10)

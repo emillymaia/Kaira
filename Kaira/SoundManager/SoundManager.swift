@@ -36,6 +36,7 @@ class SoundManager: NSObject {
                 backgroundMusicPlayer?.setVolume(0.3, fadeDuration: 1)
 
                 effectSoundPlayer = try AVAudioPlayer(contentsOf: url)
+                effectSoundPlayer?.numberOfLoops = 0
                 effectSoundPlayer?.prepareToPlay()
                 effectSoundPlayer?.delegate = self
                 effectSoundPlayer?.play()
