@@ -15,6 +15,7 @@ struct EnglandPhaseStructure: PhaseStructure {
             "england-game-image-3",
             "england-game-image-4",
         ])
+
         let englandFindGame = FindImageViewController()
         englandFindGame.gamePhaseModel = englandGamePhaseModel
         englandFindGame.customDelegate = customDelegate

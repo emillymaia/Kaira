@@ -79,12 +79,8 @@ class CustomPopup: SKSpriteNode {
 
             for node in nodesAtLocation {
                 if node.name == "soundEffectButton" {
-                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    let fAction = SKAction.scale(by: 1.5, duration: 0.1)
-                    let sAction = SKAction.scale(by: 0.66, duration: 0.1)
-                    let sequence = SKAction.sequence([sAction, fAction])
-                    node.run(sequence)
+                    node.run(animate(0.66, 1.5))
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
                         self.isSoundEffectOn.toggle()
                         let textureName = self.isSoundEffectOn ? "SoundOn" : "SoundOff"
@@ -92,19 +88,13 @@ class CustomPopup: SKSpriteNode {
                         UserDefaults.standard.set(self.isSoundEffectOn, forKey: "isSoundEffectOn")
                     }
                 } else if node.name == "backgroundSoundButton" {
-                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    let fAction = SKAction.scale(by: 1.5, duration: 0.1)
-                    let sAction = SKAction.scale(by: 0.66, duration: 0.1)
-                    let sequence = SKAction.sequence([sAction, fAction])
-                    node.run(sequence)
+                    node.run(animate(0.66, 1.5))
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
                         self.isBackgroundSoundOn.toggle()
                         let textureName = self.isBackgroundSoundOn ? "MusicOn" : "MusicOff"
                         self.backgroundSoundButton.texture = SKTexture(imageNamed: textureName)
-
                         UserDefaultsManager.shared.isBackgroundSoundOn = self.isBackgroundSoundOn
-
                         if self.isBackgroundSoundOn {
                             self.startMusic()
                         } else {
@@ -112,24 +102,14 @@ class CustomPopup: SKSpriteNode {
                         }
                     }
                 } else if node.name == "dismissButton" {
-
-                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    let fAction = SKAction.scale(by: 1.5, duration: 0.1)
-                    let sAction = SKAction.scale(by: 0.66, duration: 0.1)
-                    let sequence = SKAction.sequence([sAction, fAction])
-                    node.run(sequence)
+                    node.run(animate(0.66, 1.5))
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.22) {
                         self.close()
                     }
                 } else if node.name == "backToMenuButton" {
-
-                    // MARCAR PARA LEMBRAR DPS
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                    let fAction = SKAction.scale(by: 1.2, duration: 0.1)
-                    let sAction = SKAction.scale(by: 0.83, duration: 0.1)
-                    let sequence = SKAction.sequence([sAction, fAction])
-                    node.run(sequence)
+                    node.run(animate(0.83, 1.2))
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.22) {
                         self.navController!.dismiss(animated: true)
                     }
@@ -151,5 +131,12 @@ extension CustomPopup {
 
     func pauseMusic() {
         SoundManager.shared.stopBackgroundMusic()
+    }
+
+    func animate(_ sValue: CGFloat, _ fValue: CGFloat) -> SKAction {
+        let fAction = SKAction.scale(by: fValue, duration: 0.1) // 1.2 1.5
+        let sAction = SKAction.scale(by: sValue, duration: 0.1) // 0.83 0.66
+        let sequence = SKAction.sequence([sAction, fAction])
+        return sequence
     }
 }

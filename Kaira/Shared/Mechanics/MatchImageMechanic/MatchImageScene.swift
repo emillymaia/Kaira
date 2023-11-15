@@ -42,8 +42,6 @@ class MatchImageScene: SKScene, SKPhysicsContactDelegate {
         viewWidth = (scene?.frame.width)!
         viewHeight = (scene?.frame.height)!
         lockScreenInteraction = false
-        print(XposArray)
-        print(YposArray)
         setupPositionals()
         setupBottomBar()
         setupButtons()
@@ -277,8 +275,6 @@ extension MatchImageScene {
         }
 
         setupBackgroundList(onofflist)
-        print(onofflist)
-        print(backgroundList)
     }
 
     private func pauseScreenInteraction() {

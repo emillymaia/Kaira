@@ -119,17 +119,32 @@ extension FindImageScene {
 
     func setupSprites(assets: [String]) {
 
-        for index in 1 ... 29 {
-            let imageName = assets[Int.random(in: 0...assets.count-1)]
-            let imageNode = SKSpriteNode(imageNamed: imageName)
-            imageNode.size = CGSize(width: viewHeight/9, height: viewHeight/9)
-            imageNode.position = CGPoint(
-                x: Double.random(in: viewWidth/5...viewWidth-(viewWidth/5)),
-                y: Double.random(in: viewHeight/5...viewHeight-(viewHeight/5))
-            )
-            imageNode.name = "\(String(describing: imageName)) \(index)"
-            imageNode.zPosition = 0
-            self.addChild(imageNode)
+        if self.gamePhaseModel?.countryName == "Japan" {
+            for index in 1 ... 49 {
+                let imageName = assets[Int.random(in: 0...assets.count-1)]
+                let imageNode = SKSpriteNode(imageNamed: imageName)
+                imageNode.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+                imageNode.position = CGPoint(
+                    x: Double.random(in: viewWidth/5...viewWidth-(viewWidth/5)),
+                    y: Double.random(in: viewHeight/5...viewHeight-(viewHeight/5))
+                )
+                imageNode.name = "\(String(describing: imageName)) \(index)"
+                imageNode.zPosition = 0
+                self.addChild(imageNode)
+            }
+        } else {
+            for index in 1 ... 29 {
+                let imageName = assets[Int.random(in: 0...assets.count-1)]
+                let imageNode = SKSpriteNode(imageNamed: imageName)
+                imageNode.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+                imageNode.position = CGPoint(
+                    x: Double.random(in: viewWidth/5...viewWidth-(viewWidth/5)),
+                    y: Double.random(in: viewHeight/5...viewHeight-(viewHeight/5))
+                )
+                imageNode.name = "\(String(describing: imageName)) \(index)"
+                imageNode.zPosition = 0
+                self.addChild(imageNode)
+            }
         }
     }
 
