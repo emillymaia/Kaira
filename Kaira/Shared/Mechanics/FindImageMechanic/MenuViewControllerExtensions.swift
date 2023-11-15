@@ -155,7 +155,7 @@ extension MenuViewController {
             ContinentModel(
                 name: String(localized: "Asia"),
                 countries: [
-                    CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
                     CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
@@ -178,7 +178,7 @@ extension MenuViewController {
             ContinentModel(
                 name: String(localized: "Asia"),
                 countries: [
-                    CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
                     CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
@@ -201,7 +201,7 @@ extension MenuViewController {
             ContinentModel(
                 name: String(localized: "Asia"),
                 countries: [
-                    CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
                     CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
@@ -223,7 +223,7 @@ extension MenuViewController {
             ContinentModel(
                 name: String(localized: "Asia"),
                 countries: [
-                    CountryModel(name: String(localized: "Japan"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
                     CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
