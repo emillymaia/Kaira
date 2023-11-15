@@ -134,8 +134,8 @@ extension CustomPopup {
     }
 
     func animate(_ sValue: CGFloat, _ fValue: CGFloat) -> SKAction {
-        let fAction = SKAction.scale(by: fValue, duration: 0.1) //1.2 1.5
-        let sAction = SKAction.scale(by: sValue, duration: 0.1) //0.83 0.66
+        let fAction = SKAction.scale(by: fValue, duration: 0.1) // 1.2 1.5
+        let sAction = SKAction.scale(by: sValue, duration: 0.1) // 0.83 0.66
         let sequence = SKAction.sequence([sAction, fAction])
         return sequence
     }

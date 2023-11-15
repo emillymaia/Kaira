@@ -34,14 +34,6 @@ struct TestPhaseStructure: PhaseStructure {
             "mi-red-on",
         ])
 
-        let _ = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
-            "england-game-objective",
-            "flag-background",
-            "flag-1",
-            "flag-2",
-            "flag-3",
-        ])
-
         self.texts = [ // passa pra um doc.
             "Wait... Where am I? Why is everyone so loud? WHY AM I SO SMALL? Who’s with me?",
             "This place...I remember it. It feels like that day when...it's like I'm in a memory, but I'm not sure. Something is missing...Help me!!",

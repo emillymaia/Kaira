@@ -207,7 +207,12 @@ extension DragAndDropScene {
 
                 let background = SKSpriteNode(texture: backgroundTexture)
                 background.name = image
-                background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+                if winnerList.contains(image) {
+                    background.size = CGSize(width: (viewHeight/9)+7, height: (viewHeight/9)+7)
+
+                } else {
+                    background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
+                }
                 background.position = CGPoint(x: self.XposArray[iteratorX], y: self.YposArray[iteratorY])
                 background.zPosition = -10
                 addChild(background)
