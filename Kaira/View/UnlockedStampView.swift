@@ -27,7 +27,7 @@ class UnlockedStampView: UIView {
         button.setTitle(String(localized: "Add to album"), for: .normal)
         button.layer.cornerRadius = 15
         button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        button.titleLabel?.font = UIFont(name: "Pally-Regular", size: 22)
+        button.titleLabel?.font = UIFont(name: "Pally-Bold", size: 22)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.numberOfLines = 0
         button.layer.borderWidth = 3
