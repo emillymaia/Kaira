@@ -43,7 +43,7 @@ struct TestPhaseStructure: PhaseStructure {
 
         let unlockunlockEnglandStampLabel = "Wow, I remember I won and sent a letter to my grandmother, I remember the breeze, the taste of my childhood."
 
-        let unlockEnglandStampView = UnlockedStampViewController(stampImage: "england-selo", label: unlockunlockEnglandStampLabel, onFinishButtonPressed: nil)
+        let unlockEnglandStampView = UnlockedStampViewController(stampImage: "england-selo", label: unlockunlockEnglandStampLabel, sound: "EnglandAddToAlbum", onFinishButtonPressed: nil)
         let englandFindGame = MatchImageViewController()
         englandFindGame.gamePhaseModel = englandGamePhaseModel
         englandFindGame.customDelegate = customDelegate

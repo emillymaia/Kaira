@@ -30,6 +30,7 @@ struct SpainPhaseStructure: PhaseStructure {
         let unlockSpainStampView = UnlockedStampViewController(
             stampImage: "spain-selo",
             label: String(localized: "SpainUnlockStampTextLocalized"),
+            sound: "SpainAddToAlbum",
             onFinishButtonPressed: nil
         )
 
@@ -38,24 +39,28 @@ struct SpainPhaseStructure: PhaseStructure {
                 image: "spain-1",
                 text: String(localized: "SpainHistoryTextLocalized"),
                 button: .next,
+                audio: "SpainNarration1",
                 skipViewController: spainGame
             ),
             HistoryPageModel(
                 image: "spain-2",
                 text: String(localized: "SpainHistoryTextLocalized2"),
                 button: .next,
+                audio: "SpainNarration2",
                 skipViewController: spainGame
             ),
             HistoryPageModel(
                 image: "spain-3",
                 text: String(localized: "SpainHistoryTextLocalized3"),
                 button: .next,
+                audio: "SpainNarration3",
                 skipViewController: spainGame
             ),
             HistoryPageModel(
                 image: "spain-4",
                 text: String(localized: "SpainHistoryTextLocalized4"),
                 button: .finish,
+                audio: "SpainNarration4",
                 nextViewController: spainGame,
                 skipViewController: spainGame
             ),
@@ -63,6 +68,7 @@ struct SpainPhaseStructure: PhaseStructure {
                 image: "spain-5",
                 text: String(localized: "SpainHistoryTextLocalized5"),
                 button: .next,
+                audio: "SpainNarration5",
                 nextViewController: unlockSpainStampView,
                 skipViewController: unlockSpainStampView
             ),

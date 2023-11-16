@@ -3,6 +3,7 @@ import UIKit
 class UnlockedStampViewController: UIViewController {
     var stampImage: String
     var label: String
+    var sound: String?
     var customDelegate: DataDelegate?
     var onFinishButtonPressed: (() -> Void)?
     private lazy var unlockedStampView: UnlockedStampView = {
@@ -13,10 +14,11 @@ class UnlockedStampViewController: UIViewController {
         return view
     }()
 
-    init(stampImage: String, label: String, onFinishButtonPressed:(() -> Void)?) {
+    init(stampImage: String, label: String, sound: String, onFinishButtonPressed:(() -> Void)?) {
         self.onFinishButtonPressed = onFinishButtonPressed
         self.stampImage = stampImage
         self.label = label
+        self.sound = sound
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -35,6 +37,7 @@ class UnlockedStampViewController: UIViewController {
 extension UnlockedStampViewController {
     private func updatePage() {
 //        setImageAndText()
+        setSound(sound ?? " ")
         unlockedStampView.stampImage.image = UIImage(named: stampImage)
         unlockedStampView.text.text = label
     }
@@ -43,6 +46,7 @@ extension UnlockedStampViewController {
         onFinishButtonPressed?()
         // verificar chamadas de didUpdateData
         customDelegate?.didUpdateData(data: 1)
+        SoundManager.shared.stopBackgroundMusic()
         navigationController?.dismiss(animated: true)
     }
 }
@@ -70,4 +74,8 @@ extension UnlockedStampViewController {
             completion: nil
         )
     }
+
+    func setSound(_ sound: String) {
+            SoundManager.shared.playBackgroundMusic(sound)
+        }
 }

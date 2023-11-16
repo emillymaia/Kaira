@@ -46,6 +46,7 @@ struct ItalyPhaseStructure: PhaseStructure {
         let unlockItalyStampView = UnlockedStampViewController(
             stampImage: "italy-selo",
             label: String(localized: "ItalyUnlockStampTextLocalized"),
+            sound: "ItalyAddToAlbum",
             onFinishButtonPressed: nil
         )
 
@@ -54,12 +55,14 @@ struct ItalyPhaseStructure: PhaseStructure {
                 image: "italy-1",
                 text: String(localized: "ItalyHistoryTextLocalized1"),
                 button: .next,
+                audio: "ItalyNarration1",
                 skipViewController: italyFlagGame
             ),
             HistoryPageModel(
                 image: "italy-2",
                 text: String(localized: "ItalyHistoryTextLocalized2"),
                 button: .finish,
+                audio: "ItalyNarration2",
                 nextViewController: italyFlagGame,
                 skipViewController: italyFlagGame
             ),
@@ -67,18 +70,21 @@ struct ItalyPhaseStructure: PhaseStructure {
                 image: "italy-3",
                 text: String(localized: "ItalyHistoryTextLocalized3"),
                 button: .next,
+                audio: "ItalyNarration3",
                 skipViewController: italyMatchImageGame
             ),
             HistoryPageModel(
                 image: "italy-4",
                 text: String(localized: "ItalyHistoryTextLocalized4"),
                 button: .next,
+                audio: "ItalyNarration4",
                 skipViewController: italyMatchImageGame
             ),
             HistoryPageModel(
                 image: "italy-5",
                 text: String(localized: "ItalyHistoryTextLocalized5"),
                 button: .finish,
+                audio: "ItalyNarration5",
                 nextViewController: italyMatchImageGame,
                 skipViewController: italyMatchImageGame
             ),
@@ -86,6 +92,7 @@ struct ItalyPhaseStructure: PhaseStructure {
                 image: "italy-6",
                 text: String(localized: "ItalyHistoryTextLocalized6"),
                 button: .next,
+                audio: "ItalyNarration6",
                 nextViewController: unlockItalyStampView,
                 skipViewController: unlockItalyStampView
             )

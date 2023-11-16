@@ -9,27 +9,32 @@ struct IntroPhaseStructure {
             HistoryPageModel(
                 image: "intro-1",
                 text: String(localized: "IntroHistoryTextLocalized1"),
-                button: .next
+                button: .next,
+                audio: "IntroNarration1"
             ),
             HistoryPageModel(
                 image: "intro-2",
                 text: String(localized: "IntroHistoryTextLocalized2"),
-                button: .next
+                button: .next,
+                audio: "IntroNarration2"
             ),
             HistoryPageModel(
                 image: "intro-3",
                 text: String(localized: "IntroHistoryTextLocalized3"),
-                button: .next
+                button: .next,
+                audio: "IntroNarration3"
             ),
             HistoryPageModel(
                 image: "intro-4",
                 text: String(localized: "IntroHistoryTextLocalized4"),
-                button: .next
+                button: .next,
+                audio: "IntroNarration4"
             ),
             HistoryPageModel(
                 image: "intro-5",
                 text: String(localized: "IntroHistoryTextLocalized5"),
                 button: .end,
+                audio: "IntroNarration5",
                 nextViewController: MenuViewController()
             )
         ]

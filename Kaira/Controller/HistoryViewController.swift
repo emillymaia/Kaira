@@ -76,6 +76,7 @@ extension HistoryViewController {
 
     private func handleSkipButtonPress() {
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        SoundManager.shared.stopBackgroundMusic()
         if UserDefaultsManager.shared.didUserReceivedOnboarding == false {
             let viewController = HomeScreenViewController()
             viewController.navigationItem.setHidesBackButton(true, animated: false)
