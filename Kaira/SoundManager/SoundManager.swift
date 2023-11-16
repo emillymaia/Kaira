@@ -15,7 +15,7 @@ class SoundManager: NSObject {
         if let url = Bundle.main.url(forResource: filename, withExtension: "mp3") {
             do {
                 backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url)
-                backgroundMusicPlayer?.numberOfLoops = -1
+                backgroundMusicPlayer?.numberOfLoops = 0
                 backgroundMusicPlayer?.prepareToPlay()
                 backgroundMusicPlayer?.play()
             } catch {

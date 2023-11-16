@@ -284,7 +284,7 @@
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No meu aniversário de 14 anos, a Chloé me deu uma carta com esse selo...Esse é um dos meus selos favoritos, porque nós duas adorávamos comer croissants depois da escola!\nSentir e reviver esses momentos me confortou tanto!"
+            "value" : "No meu aniversário de 14 anos, a Chloé me deu uma carta com esse selo...Esse é um dos meus selos favoritos, porque nós duas adorávamos comer croissants depois da escola!"
           }
         }
       }
@@ -541,6 +541,118 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Japão"
+          }
+        }
+      }
+    },
+    "JapanHistoryTextLocalized1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At 20 i realize my biggest dream at that time: I GOT INTO UNIVERSITY! I was approved for the Fashion Design course in Shibuya, Japan.\nThis is definitely one of the greatest achievements of my entire life."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Com 20 anos, e depois de estudar muito…CONSEGUI ENTRAR NA FACULDADE!!!\nFui aprovada para o curso de Design de Moda, em Shibuya, no Japão. Essa definitivamente é uma das maiores conquistas da minha vida inteira."
+          }
+        }
+      }
+    },
+    "JapanHistoryTextLocalized2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To live this new phase in my life, I decided to say goodbye to long hair and create a new me. At home, I took scissors, watched some tutorials on the internet and started cutting. It was difficult at first, but I eventually got the hang of it."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para viver essa nova fase da minha vida, decidi dar adeus aos cabelos longos e criar um novo eu. Em casa, peguei uma tesoura, assisti uns tutoriais na internet e comecei a cortar. Tinha TUDO pra dar errado, mas não é que ficou bonitinho?!"
+          }
+        }
+      }
+    },
+    "JapanHistoryTextLocalized3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I was EXTREMELY happy with my new haircut and moving to Japan. When I arrived, I was met at the airport by a university employee, who took me to my room on campus."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cabelo novo, lugar novo...eu estava EXTREMAMENTE feliz com minha mudança, nem acreditava que era real. A ficha só caiu quando cheguei e fui recebida no aeroporto por um funcionário da universidade, que me levou para o meu quarto no campus."
+          }
+        }
+      }
+    },
+    "JapanHistoryTextLocalized4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At university, I fell in love with the world of Fashion. I took many classes on culture, drawing, sewing, art history, modeling and communication. University was a place where I really discovered who I was, and what I wanted to be."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na universidade, me apaixonei pelo universo da Moda. Fiz muitas aulas sobre cultura, desenho, costura, história da arte, modelagem e comunicação. A universidade foi um lugar onde eu realmente descobri quem eu era, e o que eu queria ser."
+          }
+        }
+      }
+    },
+    "JapanHistoryTextLocalized5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Being in Japan was totally incredible for me. The values and customs of Japanese culture are charming and inspiring. What I loved most was the food, I totally fell in love with the broths and sushi!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estar no Japão foi totalmente incrível pra mim.  Os valores e costumes da cultura japonesa são encantadores e inspiradores. O que eu mais amei foi a comida, me apaixonei totalmente pelos caldos e sushis!"
+          }
+        }
+      }
+    },
+    "JapanHistoryTextLocalized6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Random fact: Japan got me hooked on Karaoke!!!\nIn the first week living in Shibuya, I met a Karaoke with other university students. I loved! It became a routine for me, and I went to Karaoke every Friday after studying."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fato curioso: o Japão me viciou em Karaokê!!! Na primeira semana morando em Shibuya, conheci um Karaoke com outros estudantes da universidade e amei, lá eles animam muitooo esse tipo de festa. Logo virou rotina,  eu ia no Karaoke toda sexta-feira depois da aula."
+          }
+        }
+      }
+    },
+    "JapanUnlockStampTextLocalized" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I bought this stamp in a small souvenir shop next to the university. It reminds me of when I visited Mount Fuji, it was the most beautiful view I've ever seen!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprei esse selo em uma lojinha pequena de souvenirs ao lado da universidade. Ele me lembra quando visitei o Monte Fuji, foi a vista mais linda que já vi!"
           }
         }
       }

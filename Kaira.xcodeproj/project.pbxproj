@@ -8,6 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		AB0BCBE92AFCFE360091ED17 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCBE82AFCFE360091ED17 /* Localizable.xcstrings */; };
+		AB0BCC1F2B058A030091ED17 /* IntroNarration1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC1E2B058A030091ED17 /* IntroNarration1.mp3 */; };
+		AB0BCC242B058A0E0091ED17 /* IntroNarration3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC202B058A0E0091ED17 /* IntroNarration3.mp3 */; };
+		AB0BCC252B058A0E0091ED17 /* IntroNarration4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC212B058A0E0091ED17 /* IntroNarration4.mp3 */; };
+		AB0BCC262B058A0E0091ED17 /* IntroNarration5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC222B058A0E0091ED17 /* IntroNarration5.mp3 */; };
+		AB0BCC272B058A0E0091ED17 /* IntroNarration2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC232B058A0E0091ED17 /* IntroNarration2.mp3 */; };
+		AB0BCC2C2B058A2B0091ED17 /* EnglandNarration1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC282B058A2B0091ED17 /* EnglandNarration1.mp3 */; };
+		AB0BCC2D2B058A2B0091ED17 /* EnglandNarration3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC292B058A2B0091ED17 /* EnglandNarration3.mp3 */; };
+		AB0BCC2E2B058A2B0091ED17 /* EnglandNarration2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC2A2B058A2B0091ED17 /* EnglandNarration2.mp3 */; };
+		AB0BCC2F2B058A2B0091ED17 /* EnglandNarration4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC2B2B058A2B0091ED17 /* EnglandNarration4.mp3 */; };
+		AB0BCC312B058A320091ED17 /* EnglandAddToAlbum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC302B058A320091ED17 /* EnglandAddToAlbum.mp3 */; };
+		AB0BCC382B058A5B0091ED17 /* FranceNarration5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC322B058A5A0091ED17 /* FranceNarration5.mp3 */; };
+		AB0BCC392B058A5B0091ED17 /* FranceNarration1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC332B058A5A0091ED17 /* FranceNarration1.mp3 */; };
+		AB0BCC3A2B058A5B0091ED17 /* FranceNarration6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC342B058A5A0091ED17 /* FranceNarration6.mp3 */; };
+		AB0BCC3B2B058A5B0091ED17 /* FranceNarration2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC352B058A5A0091ED17 /* FranceNarration2.mp3 */; };
+		AB0BCC3C2B058A5B0091ED17 /* FranceNarration3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC362B058A5B0091ED17 /* FranceNarration3.mp3 */; };
+		AB0BCC3D2B058A5B0091ED17 /* FranceNarration4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC372B058A5B0091ED17 /* FranceNarration4.mp3 */; };
+		AB0BCC3F2B058A630091ED17 /* FranceAddToAlbum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC3E2B058A630091ED17 /* FranceAddToAlbum.mp3 */; };
+		AB0BCC422B058AF30091ED17 /* SpainNarration2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC402B058AF20091ED17 /* SpainNarration2.mp3 */; };
+		AB0BCC432B058AF30091ED17 /* SpainNarration1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC412B058AF30091ED17 /* SpainNarration1.mp3 */; };
+		AB0BCC462B058AFE0091ED17 /* SpainNarration4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC442B058AFE0091ED17 /* SpainNarration4.mp3 */; };
+		AB0BCC472B058AFE0091ED17 /* SpainNarration3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC452B058AFE0091ED17 /* SpainNarration3.mp3 */; };
+		AB0BCC492B058B040091ED17 /* SpainNarration5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC482B058B040091ED17 /* SpainNarration5.mp3 */; };
+		AB0BCC4B2B058B0A0091ED17 /* SpainAddToAlbum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC4A2B058B0A0091ED17 /* SpainAddToAlbum.mp3 */; };
+		AB0BCC522B058C760091ED17 /* ItalyNarration3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC4C2B058C750091ED17 /* ItalyNarration3.mp3 */; };
+		AB0BCC532B058C760091ED17 /* ItalyNarration2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC4D2B058C750091ED17 /* ItalyNarration2.mp3 */; };
+		AB0BCC542B058C760091ED17 /* ItalyNarration4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC4E2B058C750091ED17 /* ItalyNarration4.mp3 */; };
+		AB0BCC552B058C760091ED17 /* ItalyNarration5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC4F2B058C760091ED17 /* ItalyNarration5.mp3 */; };
+		AB0BCC562B058C760091ED17 /* ItalyNarration1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC502B058C760091ED17 /* ItalyNarration1.mp3 */; };
+		AB0BCC572B058C760091ED17 /* ItalyNarration6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC512B058C760091ED17 /* ItalyNarration6.mp3 */; };
+		AB0BCC592B058DE60091ED17 /* ItalyAddToAlbum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC582B058DE60091ED17 /* ItalyAddToAlbum.mp3 */; };
+		AB0BCC602B06303B0091ED17 /* JapanNarration2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC5A2B06303A0091ED17 /* JapanNarration2.mp3 */; };
+		AB0BCC612B06303B0091ED17 /* JapanNarration6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC5B2B06303A0091ED17 /* JapanNarration6.mp3 */; };
+		AB0BCC622B06303B0091ED17 /* JapanNarration3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC5C2B06303B0091ED17 /* JapanNarration3.mp3 */; };
+		AB0BCC632B06303B0091ED17 /* JapanNarration4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC5D2B06303B0091ED17 /* JapanNarration4.mp3 */; };
+		AB0BCC642B06303B0091ED17 /* JapanNarration1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC5E2B06303B0091ED17 /* JapanNarration1.mp3 */; };
+		AB0BCC652B06303B0091ED17 /* JapanNarration5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC5F2B06303B0091ED17 /* JapanNarration5.mp3 */; };
+		AB0BCC672B0630570091ED17 /* JapanAddToAlbum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB0BCC662B0630570091ED17 /* JapanAddToAlbum.mp3 */; };
 		AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */; };
 		AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */; };
 		AB3C8F2C2AD1CC750057924D /* MenuAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */; };
@@ -84,6 +121,43 @@
 
 /* Begin PBXFileReference section */
 		AB0BCBE82AFCFE360091ED17 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		AB0BCC1E2B058A030091ED17 /* IntroNarration1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IntroNarration1.mp3; sourceTree = "<group>"; };
+		AB0BCC202B058A0E0091ED17 /* IntroNarration3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IntroNarration3.mp3; sourceTree = "<group>"; };
+		AB0BCC212B058A0E0091ED17 /* IntroNarration4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IntroNarration4.mp3; sourceTree = "<group>"; };
+		AB0BCC222B058A0E0091ED17 /* IntroNarration5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IntroNarration5.mp3; sourceTree = "<group>"; };
+		AB0BCC232B058A0E0091ED17 /* IntroNarration2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IntroNarration2.mp3; sourceTree = "<group>"; };
+		AB0BCC282B058A2B0091ED17 /* EnglandNarration1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EnglandNarration1.mp3; sourceTree = "<group>"; };
+		AB0BCC292B058A2B0091ED17 /* EnglandNarration3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EnglandNarration3.mp3; sourceTree = "<group>"; };
+		AB0BCC2A2B058A2B0091ED17 /* EnglandNarration2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EnglandNarration2.mp3; sourceTree = "<group>"; };
+		AB0BCC2B2B058A2B0091ED17 /* EnglandNarration4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EnglandNarration4.mp3; sourceTree = "<group>"; };
+		AB0BCC302B058A320091ED17 /* EnglandAddToAlbum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EnglandAddToAlbum.mp3; sourceTree = "<group>"; };
+		AB0BCC322B058A5A0091ED17 /* FranceNarration5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FranceNarration5.mp3; sourceTree = "<group>"; };
+		AB0BCC332B058A5A0091ED17 /* FranceNarration1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FranceNarration1.mp3; sourceTree = "<group>"; };
+		AB0BCC342B058A5A0091ED17 /* FranceNarration6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FranceNarration6.mp3; sourceTree = "<group>"; };
+		AB0BCC352B058A5A0091ED17 /* FranceNarration2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FranceNarration2.mp3; sourceTree = "<group>"; };
+		AB0BCC362B058A5B0091ED17 /* FranceNarration3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FranceNarration3.mp3; sourceTree = "<group>"; };
+		AB0BCC372B058A5B0091ED17 /* FranceNarration4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FranceNarration4.mp3; sourceTree = "<group>"; };
+		AB0BCC3E2B058A630091ED17 /* FranceAddToAlbum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FranceAddToAlbum.mp3; sourceTree = "<group>"; };
+		AB0BCC402B058AF20091ED17 /* SpainNarration2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpainNarration2.mp3; sourceTree = "<group>"; };
+		AB0BCC412B058AF30091ED17 /* SpainNarration1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpainNarration1.mp3; sourceTree = "<group>"; };
+		AB0BCC442B058AFE0091ED17 /* SpainNarration4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpainNarration4.mp3; sourceTree = "<group>"; };
+		AB0BCC452B058AFE0091ED17 /* SpainNarration3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpainNarration3.mp3; sourceTree = "<group>"; };
+		AB0BCC482B058B040091ED17 /* SpainNarration5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpainNarration5.mp3; sourceTree = "<group>"; };
+		AB0BCC4A2B058B0A0091ED17 /* SpainAddToAlbum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpainAddToAlbum.mp3; sourceTree = "<group>"; };
+		AB0BCC4C2B058C750091ED17 /* ItalyNarration3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItalyNarration3.mp3; sourceTree = "<group>"; };
+		AB0BCC4D2B058C750091ED17 /* ItalyNarration2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItalyNarration2.mp3; sourceTree = "<group>"; };
+		AB0BCC4E2B058C750091ED17 /* ItalyNarration4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItalyNarration4.mp3; sourceTree = "<group>"; };
+		AB0BCC4F2B058C760091ED17 /* ItalyNarration5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItalyNarration5.mp3; sourceTree = "<group>"; };
+		AB0BCC502B058C760091ED17 /* ItalyNarration1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItalyNarration1.mp3; sourceTree = "<group>"; };
+		AB0BCC512B058C760091ED17 /* ItalyNarration6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItalyNarration6.mp3; sourceTree = "<group>"; };
+		AB0BCC582B058DE60091ED17 /* ItalyAddToAlbum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ItalyAddToAlbum.mp3; sourceTree = "<group>"; };
+		AB0BCC5A2B06303A0091ED17 /* JapanNarration2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JapanNarration2.mp3; sourceTree = "<group>"; };
+		AB0BCC5B2B06303A0091ED17 /* JapanNarration6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JapanNarration6.mp3; sourceTree = "<group>"; };
+		AB0BCC5C2B06303B0091ED17 /* JapanNarration3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JapanNarration3.mp3; sourceTree = "<group>"; };
+		AB0BCC5D2B06303B0091ED17 /* JapanNarration4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JapanNarration4.mp3; sourceTree = "<group>"; };
+		AB0BCC5E2B06303B0091ED17 /* JapanNarration1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JapanNarration1.mp3; sourceTree = "<group>"; };
+		AB0BCC5F2B06303B0091ED17 /* JapanNarration5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JapanNarration5.mp3; sourceTree = "<group>"; };
+		AB0BCC662B0630570091ED17 /* JapanAddToAlbum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JapanAddToAlbum.mp3; sourceTree = "<group>"; };
 		AB3C8F252AD0BBCD0057924D /* UnlockedStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedStampView.swift; sourceTree = "<group>"; };
 		AB3C8F272AD0F1F30057924D /* UnlockedStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedStampViewController.swift; sourceTree = "<group>"; };
 		AB3C8F2B2AD1CC750057924D /* MenuAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAnimations.swift; sourceTree = "<group>"; };
@@ -178,9 +252,102 @@
 			path = Catalog;
 			sourceTree = "<group>";
 		};
+		AB0BCC172B0589A50091ED17 /* Narration */ = {
+			isa = PBXGroup;
+			children = (
+				AB0BCC1D2B0589DA0091ED17 /* Japan */,
+				AB0BCC1C2B0589D50091ED17 /* Italy */,
+				AB0BCC1B2B0589C80091ED17 /* Spain */,
+				AB0BCC1A2B0589BE0091ED17 /* France */,
+				AB0BCC192B0589B30091ED17 /* England */,
+				AB0BCC182B0589AD0091ED17 /* Intro */,
+			);
+			path = Narration;
+			sourceTree = "<group>";
+		};
+		AB0BCC182B0589AD0091ED17 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				AB0BCC1E2B058A030091ED17 /* IntroNarration1.mp3 */,
+				AB0BCC232B058A0E0091ED17 /* IntroNarration2.mp3 */,
+				AB0BCC202B058A0E0091ED17 /* IntroNarration3.mp3 */,
+				AB0BCC212B058A0E0091ED17 /* IntroNarration4.mp3 */,
+				AB0BCC222B058A0E0091ED17 /* IntroNarration5.mp3 */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		AB0BCC192B0589B30091ED17 /* England */ = {
+			isa = PBXGroup;
+			children = (
+				AB0BCC282B058A2B0091ED17 /* EnglandNarration1.mp3 */,
+				AB0BCC2A2B058A2B0091ED17 /* EnglandNarration2.mp3 */,
+				AB0BCC292B058A2B0091ED17 /* EnglandNarration3.mp3 */,
+				AB0BCC2B2B058A2B0091ED17 /* EnglandNarration4.mp3 */,
+				AB0BCC302B058A320091ED17 /* EnglandAddToAlbum.mp3 */,
+			);
+			path = England;
+			sourceTree = "<group>";
+		};
+		AB0BCC1A2B0589BE0091ED17 /* France */ = {
+			isa = PBXGroup;
+			children = (
+				AB0BCC332B058A5A0091ED17 /* FranceNarration1.mp3 */,
+				AB0BCC352B058A5A0091ED17 /* FranceNarration2.mp3 */,
+				AB0BCC362B058A5B0091ED17 /* FranceNarration3.mp3 */,
+				AB0BCC372B058A5B0091ED17 /* FranceNarration4.mp3 */,
+				AB0BCC322B058A5A0091ED17 /* FranceNarration5.mp3 */,
+				AB0BCC342B058A5A0091ED17 /* FranceNarration6.mp3 */,
+				AB0BCC3E2B058A630091ED17 /* FranceAddToAlbum.mp3 */,
+			);
+			path = France;
+			sourceTree = "<group>";
+		};
+		AB0BCC1B2B0589C80091ED17 /* Spain */ = {
+			isa = PBXGroup;
+			children = (
+				AB0BCC412B058AF30091ED17 /* SpainNarration1.mp3 */,
+				AB0BCC402B058AF20091ED17 /* SpainNarration2.mp3 */,
+				AB0BCC452B058AFE0091ED17 /* SpainNarration3.mp3 */,
+				AB0BCC442B058AFE0091ED17 /* SpainNarration4.mp3 */,
+				AB0BCC482B058B040091ED17 /* SpainNarration5.mp3 */,
+				AB0BCC4A2B058B0A0091ED17 /* SpainAddToAlbum.mp3 */,
+			);
+			path = Spain;
+			sourceTree = "<group>";
+		};
+		AB0BCC1C2B0589D50091ED17 /* Italy */ = {
+			isa = PBXGroup;
+			children = (
+				AB0BCC502B058C760091ED17 /* ItalyNarration1.mp3 */,
+				AB0BCC4D2B058C750091ED17 /* ItalyNarration2.mp3 */,
+				AB0BCC4C2B058C750091ED17 /* ItalyNarration3.mp3 */,
+				AB0BCC4E2B058C750091ED17 /* ItalyNarration4.mp3 */,
+				AB0BCC4F2B058C760091ED17 /* ItalyNarration5.mp3 */,
+				AB0BCC512B058C760091ED17 /* ItalyNarration6.mp3 */,
+				AB0BCC582B058DE60091ED17 /* ItalyAddToAlbum.mp3 */,
+			);
+			path = Italy;
+			sourceTree = "<group>";
+		};
+		AB0BCC1D2B0589DA0091ED17 /* Japan */ = {
+			isa = PBXGroup;
+			children = (
+				AB0BCC5E2B06303B0091ED17 /* JapanNarration1.mp3 */,
+				AB0BCC5A2B06303A0091ED17 /* JapanNarration2.mp3 */,
+				AB0BCC5C2B06303B0091ED17 /* JapanNarration3.mp3 */,
+				AB0BCC5D2B06303B0091ED17 /* JapanNarration4.mp3 */,
+				AB0BCC5F2B06303B0091ED17 /* JapanNarration5.mp3 */,
+				AB0BCC5B2B06303A0091ED17 /* JapanNarration6.mp3 */,
+				AB0BCC662B0630570091ED17 /* JapanAddToAlbum.mp3 */,
+			);
+			path = Japan;
+			sourceTree = "<group>";
+		};
 		AB3C8F352AE017250057924D /* SoundManager */ = {
 			isa = PBXGroup;
 			children = (
+				AB0BCC172B0589A50091ED17 /* Narration */,
 				AB3C8F6B2AE8074B0057924D /* backgroundSound.mp3 */,
 				AB3C8F302AE0170A0057924D /* CheckEffect.mp3 */,
 				AB3C8F312AE0170A0057924D /* SoundManager.swift */,
@@ -534,13 +701,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0BCC242B058A0E0091ED17 /* IntroNarration3.mp3 in Resources */,
+				AB0BCC3A2B058A5B0091ED17 /* FranceNarration6.mp3 in Resources */,
+				AB0BCC262B058A0E0091ED17 /* IntroNarration5.mp3 in Resources */,
+				AB0BCC562B058C760091ED17 /* ItalyNarration1.mp3 in Resources */,
 				ABDFC89C2AAF447100F19D1A /* Pally-Regular.otf in Resources */,
 				ABDFC89B2AAF447100F19D1A /* Pally-Bold.otf in Resources */,
+				AB0BCC592B058DE60091ED17 /* ItalyAddToAlbum.mp3 in Resources */,
+				AB0BCC2C2B058A2B0091ED17 /* EnglandNarration1.mp3 in Resources */,
 				ABDFC89A2AAF447100F19D1A /* Pally-Medium.otf in Resources */,
+				AB0BCC392B058A5B0091ED17 /* FranceNarration1.mp3 in Resources */,
 				AB3C8F6C2AE8074B0057924D /* backgroundSound.mp3 in Resources */,
+				AB0BCC632B06303B0091ED17 /* JapanNarration4.mp3 in Resources */,
+				AB0BCC602B06303B0091ED17 /* JapanNarration2.mp3 in Resources */,
+				AB0BCC552B058C760091ED17 /* ItalyNarration5.mp3 in Resources */,
+				AB0BCC4B2B058B0A0091ED17 /* SpainAddToAlbum.mp3 in Resources */,
+				AB0BCC462B058AFE0091ED17 /* SpainNarration4.mp3 in Resources */,
+				AB0BCC1F2B058A030091ED17 /* IntroNarration1.mp3 in Resources */,
+				AB0BCC542B058C760091ED17 /* ItalyNarration4.mp3 in Resources */,
+				AB0BCC312B058A320091ED17 /* EnglandAddToAlbum.mp3 in Resources */,
+				AB0BCC3D2B058A5B0091ED17 /* FranceNarration4.mp3 in Resources */,
+				AB0BCC472B058AFE0091ED17 /* SpainNarration3.mp3 in Resources */,
 				AB3C8F332AE0170A0057924D /* CheckEffect.mp3 in Resources */,
+				AB0BCC3B2B058A5B0091ED17 /* FranceNarration2.mp3 in Resources */,
+				AB0BCC252B058A0E0091ED17 /* IntroNarration4.mp3 in Resources */,
+				AB0BCC612B06303B0091ED17 /* JapanNarration6.mp3 in Resources */,
+				AB0BCC272B058A0E0091ED17 /* IntroNarration2.mp3 in Resources */,
+				AB0BCC642B06303B0091ED17 /* JapanNarration1.mp3 in Resources */,
+				AB0BCC382B058A5B0091ED17 /* FranceNarration5.mp3 in Resources */,
+				AB0BCC652B06303B0091ED17 /* JapanNarration5.mp3 in Resources */,
+				AB0BCC532B058C760091ED17 /* ItalyNarration2.mp3 in Resources */,
+				AB0BCC572B058C760091ED17 /* ItalyNarration6.mp3 in Resources */,
+				AB0BCC622B06303B0091ED17 /* JapanNarration3.mp3 in Resources */,
+				AB0BCC2E2B058A2B0091ED17 /* EnglandNarration2.mp3 in Resources */,
+				AB0BCC422B058AF30091ED17 /* SpainNarration2.mp3 in Resources */,
+				AB0BCC2D2B058A2B0091ED17 /* EnglandNarration3.mp3 in Resources */,
 				AB0BCBE92AFCFE360091ED17 /* Localizable.xcstrings in Resources */,
+				AB0BCC672B0630570091ED17 /* JapanAddToAlbum.mp3 in Resources */,
+				AB0BCC522B058C760091ED17 /* ItalyNarration3.mp3 in Resources */,
+				AB0BCC2F2B058A2B0091ED17 /* EnglandNarration4.mp3 in Resources */,
+				AB0BCC492B058B040091ED17 /* SpainNarration5.mp3 in Resources */,
+				AB0BCC3C2B058A5B0091ED17 /* FranceNarration3.mp3 in Resources */,
+				AB0BCC3F2B058A630091ED17 /* FranceAddToAlbum.mp3 in Resources */,
 				EE182F732A9F6FE000CE30C8 /* Assets.xcassets in Resources */,
+				AB0BCC432B058AF30091ED17 /* SpainNarration1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

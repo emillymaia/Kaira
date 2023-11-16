@@ -42,47 +42,54 @@ struct JapanPhaseStructure: PhaseStructure {
 
         let unlockJapanStampView = UnlockedStampViewController(
             stampImage: "japan-selo",
-            label: "UNLOCK JAPAN SELO TEXT",
+            label: String(localized: "JapanUnlockStampTextLocalized"),
+            sound: "JapanAddToAlbum",
             onFinishButtonPressed: nil
         )
 
         self.historyPages = [
             HistoryPageModel(
                 image: "japan-1",
-                text: "JAPAN TEXT 1",
+                text: String(localized: "JapanHistoryTextLocalized1"),
                 button: .next,
+                audio: "JapanNarration1",
                 skipViewController: japanDnDGame
             ),
             HistoryPageModel(
                 image: "japan-2",
-                text: "JAPAN TEXT 2",
+                text: String(localized: "JapanHistoryTextLocalized2"),
                 button: .next,
+                audio: "JapanNarration2",
                 skipViewController: japanDnDGame
             ),
             HistoryPageModel(
                 image: "japan-3",
-                text: "JAPAN TEXT 3",
+                text: String(localized: "JapanHistoryTextLocalized3"),
                 button: .next,
+                audio: "JapanNarration3",
                 skipViewController: japanDnDGame
             ),
             HistoryPageModel(
                 image: "japan-4",
-                text: "JAPAN TEXT 4",
+                text: String(localized: "JapanHistoryTextLocalized4"),
                 button: .finish,
+                audio: "JapanNarration4",
                 nextViewController: japanDnDGame,
                 skipViewController: japanDnDGame
             ),
             HistoryPageModel(
                 image: "japan-5",
-                text: "JAPAN TEXT 5",
+                text: String(localized: "JapanHistoryTextLocalized5"),
                 button: .next,
+                audio: "JapanNarration5",
                 nextViewController: japanFindGame,
                 skipViewController: japanFindGame
             ),
             HistoryPageModel(
                 image: "japan-6",
-                text: "JAPAN TEXT 6",
+                text: String(localized: "JapanHistoryTextLocalized6"),
                 button: .next,
+                audio: "JapanNarration6",
                 nextViewController: unlockJapanStampView,
                 skipViewController: unlockJapanStampView
             ),

@@ -28,6 +28,7 @@ struct FrancePhaseStructure: PhaseStructure {
         let unlockFranceStampView = UnlockedStampViewController(
             stampImage: "france-selo",
             label: String(localized: "FranceUnlockStampTextLocalized"),
+            sound: "FranceAddToAlbum",
             onFinishButtonPressed: nil
         )
 
@@ -36,18 +37,21 @@ struct FrancePhaseStructure: PhaseStructure {
                 image: "france-1",
                 text: String(localized: "FranceHistoryTextLocalized1"),
                 button: .next,
+                audio: "FranceNarration1",
                 skipViewController: franceSignGame
             ),
             HistoryPageModel(
                 image: "france-2",
                 text: String(localized: "FranceHistoryTextLocalized2"),
                 button: .next,
+                audio: "FranceNarration2",
                 skipViewController: franceSignGame
             ),
             HistoryPageModel(
                 image: "france-3",
                 text: String(localized: "FranceHistoryTextLocalized3"),
                 button: .finish,
+                audio: "FranceNarration3",
                 nextViewController: franceSignGame,
                 skipViewController: franceSignGame
             ),
@@ -55,12 +59,14 @@ struct FrancePhaseStructure: PhaseStructure {
                 image: "france-4",
                 text: String(localized: "FranceHistoryTextLocalized4"),
                 button: .next,
+                audio: "FranceNarration4",
                 skipViewController: franceFindGame
             ),
             HistoryPageModel(
                 image: "france-5",
                 text: String(localized: "FranceHistoryTextLocalized5"),
                 button: .finish,
+                audio: "FranceNarration5",
                 nextViewController: franceFindGame,
                 skipViewController: franceFindGame
             ),
@@ -68,6 +74,7 @@ struct FrancePhaseStructure: PhaseStructure {
                 image: "france-6",
                 text: String(localized: "FranceHistoryTextLocalized6"),
                 button: .next,
+                audio: "FranceNarration6",
                 nextViewController: unlockFranceStampView,
                 skipViewController: unlockFranceStampView
             )

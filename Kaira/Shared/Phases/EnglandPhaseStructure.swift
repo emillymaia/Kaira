@@ -22,6 +22,7 @@ struct EnglandPhaseStructure: PhaseStructure {
         let unlockEnglandStampView = UnlockedStampViewController(
             stampImage: "england-selo",
             label: String(localized:"EnglandUnlockStampTextLocalized"),
+            sound: "EnglandAddToAlbum",
             onFinishButtonPressed: nil
         )
 
@@ -30,12 +31,14 @@ struct EnglandPhaseStructure: PhaseStructure {
                 image: "england-1",
                 text: String(localized: "EnglandHistoryTextLocalized1"),
                 button: .next,
+                audio: "EnglandNarration1",
                 skipViewController: englandFindGame
             ),
             HistoryPageModel(
                 image: "england-2",
                 text: String(localized: "EnglandHistoryTextLocalized2"),
                 button: .finish,
+                audio: "EnglandNarration2",
                 nextViewController: englandFindGame,
                 skipViewController: englandFindGame
             ),
@@ -43,12 +46,14 @@ struct EnglandPhaseStructure: PhaseStructure {
                 image: "england-3",
                 text: String(localized: "EnglandHistoryTextLocalized3"),
                 button: .next,
+                audio: "EnglandNarration3",
                 skipViewController: unlockEnglandStampView
             ),
             HistoryPageModel(
                 image: "england-4",
                 text: String(localized: "EnglandHistoryTextLocalized4"),
                 button: .next,
+                audio: "EnglandNarration4",
                 nextViewController: unlockEnglandStampView,
                 skipViewController: unlockEnglandStampView
             ),
