@@ -118,6 +118,11 @@ extension DragAndDropScene {
                         if touchedNodes.count <= 2 {
                             if intersectPositionX && intersectPositionY {
                                 self.currentNode?.position = CGPoint(x: (node.position.x), y: (node.position.y))
+                                if self.gamePhaseModel?.countryName == "Japan" {
+                                    if self.winnerList.contains((self.currentNode?.name)!) {
+                                        self.backgroundList.append((self.currentNode?.name)!)
+                                    }
+                                }
                             }
                         } else {
                             if !(self.lastXYpos.isEmpty) {
@@ -208,7 +213,7 @@ extension DragAndDropScene {
                 let background = SKSpriteNode(texture: backgroundTexture)
                 background.name = image
                 if winnerList.contains(image) {
-                    background.size = CGSize(width: (viewHeight/9)+7, height: (viewHeight/9)+7)
+                    background.size = CGSize(width: (viewHeight/9), height: (viewHeight/9))
 
                 } else {
                     background.size = CGSize(width: viewHeight/9, height: viewHeight/9)
