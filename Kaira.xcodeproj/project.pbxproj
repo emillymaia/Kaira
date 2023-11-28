@@ -93,6 +93,7 @@
 		EE77BAA42AFD0A2B009AB571 /* MatchImageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA32AFD0A2B009AB571 /* MatchImageScene.swift */; };
 		EE77BAA62AFD0A38009AB571 /* MatchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA52AFD0A38009AB571 /* MatchImageViewController.swift */; };
 		EE77BAA82AFE6BE1009AB571 /* ItalyPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77BAA72AFE6BE1009AB571 /* ItalyPhaseStructure.swift */; };
+		EE7FC2AA2B14DB7C001C15C3 /* SubMenuSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7FC2A92B14DB7C001C15C3 /* SubMenuSectionHeaderView.swift */; };
 		EEC310872B03FAC300AC8EA5 /* JapanPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC310862B03FAC300AC8EA5 /* JapanPhaseStructure.swift */; };
 		EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */; };
 		EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */; };
@@ -210,6 +211,7 @@
 		EE77BAA32AFD0A2B009AB571 /* MatchImageScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchImageScene.swift; sourceTree = "<group>"; };
 		EE77BAA52AFD0A38009AB571 /* MatchImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchImageViewController.swift; sourceTree = "<group>"; };
 		EE77BAA72AFE6BE1009AB571 /* ItalyPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalyPhaseStructure.swift; sourceTree = "<group>"; };
+		EE7FC2A92B14DB7C001C15C3 /* SubMenuSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuSectionHeaderView.swift; sourceTree = "<group>"; };
 		EEC310862B03FAC300AC8EA5 /* JapanPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanPhaseStructure.swift; sourceTree = "<group>"; };
 		EEC53F842ABB1B6A00B24261 /* ButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeEnum.swift; sourceTree = "<group>"; };
 		EEC53F872ABB1D5100B24261 /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				ABDFC88E2AAB4E7200F19D1A /* MenuCollectionCellView.swift */,
 				ABDFC8922AABF9E700F19D1A /* MenuSectionHeaderView.swift */,
 				AB3C8F612AE60A1C0057924D /* CustomSettingsViewCell.swift */,
+				EE7FC2A92B14DB7C001C15C3 /* SubMenuSectionHeaderView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				EEC53F852ABB1B6A00B24261 /* ButtonTypeEnum.swift in Sources */,
 				EE0609352ACE0E7D00BCC58C /* IntroPhaseStructure.swift in Sources */,
 				AB3C8F262AD0BBCD0057924D /* UnlockedStampView.swift in Sources */,
+				EE7FC2AA2B14DB7C001C15C3 /* SubMenuSectionHeaderView.swift in Sources */,
 				ABDFC88D2AA7620000F19D1A /* CountryModel.swift in Sources */,
 				EE0609302AC3124800BCC58C /* SignatureViewController.swift in Sources */,
 				EE77BAA62AFD0A38009AB571 /* MatchImageViewController.swift in Sources */,

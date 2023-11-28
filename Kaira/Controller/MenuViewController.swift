@@ -89,6 +89,16 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
+            if indexPath.section == 0 {
+                guard let subHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SubMenuSectionHeaderView.identifier, for: indexPath) as? SubMenuSectionHeaderView else {
+                    return UICollectionReusableView()
+                }
+                let continentName = continentModel[indexPath.section].name
+                subHeader.title.text = continentName
+                subHeader.title.textAlignment = .center
+                subHeader.customDelegate = self
+                return subHeader
+            }
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MenuSectionHeaderView.identifier, for: indexPath) as? MenuSectionHeaderView else {
                 return UICollectionReusableView()
             }
@@ -102,14 +112,18 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 22)
+        return CGSize(width: collectionView.frame.width, height: 65)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 24
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 24, left: 39, bottom: 48, right: 39)
+        if section == 0 {
+            return UIEdgeInsets(top: 75, left: 39, bottom: 48, right: 39)
+        }
+
+        return UIEdgeInsets(top: 25, left: 39, bottom: 48, right: 39)
     }
 }
