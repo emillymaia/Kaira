@@ -5,6 +5,7 @@ struct IntroPhaseStructure {
     var historyPages: [HistoryPageModel] = []
 
     init() {
+        UserDefaultsManager.shared.isBackgroundSoundOn = true
         self.historyPages =  [
             HistoryPageModel(
                 image: "intro-1",
