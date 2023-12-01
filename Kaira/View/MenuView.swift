@@ -2,17 +2,8 @@ import UIKit
 import SpriteKit
 
 final class MenuView: UIView {
-    private let configurationsButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
 
-    private let stampsButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+    var customDelegate: DataDelegate?
 
     private var collectionViewLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -30,6 +21,9 @@ final class MenuView: UIView {
         collection.register(MenuSectionHeaderView.self,
                             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                             withReuseIdentifier: MenuSectionHeaderView.identifier)
+        collection.register(SubMenuSectionHeaderView.self,
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                            withReuseIdentifier: SubMenuSectionHeaderView.identifier)
         return collection
     }()
 
@@ -53,11 +47,10 @@ extension MenuView {
             menuCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             menuCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+
     }
 
     private func addSubviews() {
-        addSubview(configurationsButton)
-        addSubview(stampsButton)
         addSubview(menuCollectionView)
     }
 }

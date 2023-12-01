@@ -94,6 +94,22 @@ extension MenuViewController: DataDelegate {
                 }
             }
         }
+
+        if data == 2 {
+            let initialController = UINavigationController(rootViewController: SettingsViewController())
+            initialController.navigationItem.setHidesBackButton(false, animated: false)
+            initialController.modalPresentationStyle = .overFullScreen
+            initialController.modalTransitionStyle = .crossDissolve
+            present(initialController, animated: true)
+        }
+
+        if data == 3 {
+            let initialController = UINavigationController(rootViewController: SettingsViewController())
+            initialController.navigationItem.setHidesBackButton(false, animated: false)
+            initialController.modalPresentationStyle = .overFullScreen
+            initialController.modalTransitionStyle = .crossDissolve
+            present(initialController, animated: true)
+        }
     }
 }
 

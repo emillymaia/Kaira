@@ -12,7 +12,8 @@ final class SettingsViewController: UIViewController {
             self?.handlePrivacyButtonPressed()
         }
         view.didPressRateUsButton = { [weak self] in
-            self?.handleRateUsButtonPressed()
+            self?.dismiss(animated: true)
+//            self?.handleRateUsButtonPressed()
         }
 
         return view

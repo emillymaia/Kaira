@@ -44,16 +44,16 @@ extension MenuSectionHeaderView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             rectangle.topAnchor.constraint(equalTo: topAnchor),
-            rectangle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 39),
-            rectangle.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: -13),
+            rectangle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            rectangle.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: -20),
             rectangle.bottomAnchor.constraint(equalTo: bottomAnchor),
 
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
             title.centerYAnchor.constraint(equalTo: centerYAnchor),
 
             rectangle2.topAnchor.constraint(equalTo: topAnchor),
-            rectangle2.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 13),
-            rectangle2.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -39),
+            rectangle2.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 20),
+            rectangle2.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             rectangle2.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
