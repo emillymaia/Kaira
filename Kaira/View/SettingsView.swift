@@ -12,19 +12,21 @@ final class SettingsView: UIView {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.font = UIFont(name: "Pally-Bold", size: 35)
-        title.text = "Settings"
+        title.text = String(localized: "Settings")
         title.textColor = .black
+        title.textAlignment = .center
         return title
     }()
 
-    private lazy var musicBackgroundSetting = CustomSettingsViewCell(labelTitle: "Sounds", settingType: .sounds)
-    private lazy var soundBackgroundSetting = CustomSettingsViewCell(labelTitle: "Music", settingType: .music)
-    private lazy var vibrationBackgroundSetting = CustomSettingsViewCell(labelTitle: "Vibration", settingType: .vibration)
+    private lazy var musicBackgroundSetting = CustomSettingsViewCell(labelTitle: String(localized: "Sounds"), settingType: .sounds)
+    private lazy var soundBackgroundSetting = CustomSettingsViewCell(labelTitle: String(localized: "Music"), settingType: .music)
+    private lazy var vibrationBackgroundSetting = CustomSettingsViewCell(labelTitle: String(localized: "Vibration"), settingType: .vibration)
 
     private lazy var star: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "icon-star")
+        image.contentMode = .scaleAspectFit
         
         return image
     }()
@@ -32,7 +34,7 @@ final class SettingsView: UIView {
     private lazy var rateUsTitle: UIButton = {
         let title = UIButton()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.setTitle("Rate Us!", for: .normal)
+        title.setTitle(String(localized: "Rate Us!"), for: .normal)
         title.titleLabel?.font = UIFont(name: "Pally-Regular", size: 35)
         title.setTitleColor(.black, for: .normal)
         title.titleLabel?.textColor = .black
@@ -43,22 +45,24 @@ final class SettingsView: UIView {
     private lazy var termsLink: UIButton = {
         let link = UIButton()
         link.translatesAutoresizingMaskIntoConstraints = false
-        link.setTitle("Terms of Service", for: .normal)
+        link.setTitle(String(localized: "Terms of Service"), for: .normal)
         link.titleLabel?.font = UIFont(name: "Pally-Regular", size: 16)
         link.titleLabel?.textColor = .gray
         link.setTitleColor(.gray, for: .normal)
         link.titleLabel?.numberOfLines = 0
+        link.titleLabel?.textAlignment = .center
         return link
     }()
 
     private lazy var policyLink: UIButton = {
         let link = UIButton()
         link.translatesAutoresizingMaskIntoConstraints = false
-        link.setTitle("Privacy Policy", for: .normal)
+        link.setTitle(String(localized: "Privacy Policy"), for: .normal)
         link.titleLabel?.font = UIFont(name: "Pally-Regular", size: 16)
         link.titleLabel?.textColor = .gray
         link.setTitleColor(.gray, for: .normal)
         link.titleLabel?.numberOfLines = 0
+        link.titleLabel?.textAlignment = .center
         return link
     }()
 
@@ -107,8 +111,8 @@ extension SettingsView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FrameConstants.screenWidth * 0.33),
-            title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(FrameConstants.screenWidth * 0.33)),
+            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FrameConstants.screenWidth * 0.20),
+            title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(FrameConstants.screenWidth * 0.20)),
 
             musicBackgroundSetting.topAnchor.constraint(equalTo: title.bottomAnchor, constant: FrameConstants.screenHeight * 0.04),
             musicBackgroundSetting.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FrameConstants.screenWidth * 0.1),
@@ -124,10 +128,10 @@ extension SettingsView {
 
             star.topAnchor.constraint(equalTo: vibrationBackgroundSetting.bottomAnchor, constant: FrameConstants.screenHeight * 0.036),
             star.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FrameConstants.screenWidth * 0.3),
-            star.trailingAnchor.constraint(equalTo: rateUsTitle.leadingAnchor, constant: -(FrameConstants.screenWidth * 0.02)),
+            star.trailingAnchor.constraint(equalTo: rateUsTitle.leadingAnchor, constant: (FrameConstants.screenWidth * 0.001)),
 
             rateUsTitle.topAnchor.constraint(equalTo: vibrationBackgroundSetting.bottomAnchor, constant: FrameConstants.screenHeight * 0.02),
-            rateUsTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(FrameConstants.screenWidth * 0.3)),
+            rateUsTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -(FrameConstants.screenWidth * 0.28)),
 
             termsLink.topAnchor.constraint(equalTo: rateUsTitle.bottomAnchor, constant: FrameConstants.screenHeight * 0.02),
             termsLink.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FrameConstants.screenWidth * 0.35),

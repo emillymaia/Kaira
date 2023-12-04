@@ -1,5 +1,4 @@
 struct EnglandPhaseStructure: PhaseStructure {
-    // swiftlint: disable all
     let name = "England"
     var historyVC: [HistoryViewController] = []
     var historyPages: [HistoryPageModel] = []
@@ -7,7 +6,7 @@ struct EnglandPhaseStructure: PhaseStructure {
     var customDelegate: DataDelegate?
 
     init(_ customDelegate: DataDelegate) {
-        let englandGamePhaseModel = GamePhaseModel(countryName: "England", background: "", assets: [ // interpolar string
+        let englandGamePhaseModel = GamePhaseModel(countryName: "England", background: "", assets: [
             "england-game-objective",
             "england-game-winner",
             "england-game-image-1",

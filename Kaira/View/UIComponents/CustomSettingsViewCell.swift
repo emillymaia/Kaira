@@ -17,6 +17,8 @@ final class CustomSettingsViewCell: UIView {
             UserDefaults.standard.set(newValue, forKey: "isBackgroundSoundOn")
         }
     }
+    var sounds: Bool = true
+    var vibration: Bool = true
 
     private lazy var title: UILabel = {
         let title = UILabel()
@@ -58,11 +60,19 @@ extension CustomSettingsViewCell {
             isBackgroundSoundOn.toggle()
             let backgroundImage = isBackgroundSoundOn ? "button-selected" : "button-unselected"
             button.setImage(UIImage(named: backgroundImage), for: .normal)
-            UserDefaults.standard.set(isBackgroundSoundOn, forKey: "isBackgroundSoundOn")
+            if self.isBackgroundSoundOn {
+                self.startMusic()
+            } else {
+                self.pauseMusic()
+            }
         case .sounds:
-             print("sounds")
+            sounds.toggle()
+            let backgroundImage = sounds ? "button-selected" : "button-unselected"
+            button.setImage(UIImage(named: backgroundImage), for: .normal)
         case .vibration:
-             print("vibration")
+            vibration.toggle()
+            let backgroundImage = vibration ? "button-selected" : "button-unselected"
+            button.setImage(UIImage(named: backgroundImage), for: .normal)
         }
     }
 
@@ -88,5 +98,15 @@ extension CustomSettingsViewCell {
     private func addSubviews() {
         addSubview(title)
         addSubview(button)
+    }
+}
+
+extension CustomSettingsViewCell {
+    func startMusic() {
+        SoundManager.shared.playBackgroundMusic("backgroundSound")
+    }
+
+    func pauseMusic() {
+        SoundManager.shared.stopBackgroundMusic()
     }
 }
