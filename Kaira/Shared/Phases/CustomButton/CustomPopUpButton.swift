@@ -34,6 +34,21 @@ class CustomPopup: SKSpriteNode {
         label.fontName = "Pally-Bold"
         addChild(label)
 
+        let preferredLanguages = Locale.preferredLanguages
+        var backMenuImageName: String = ""
+        var backGameImageName: String = ""
+
+        if let primaryLanguage = preferredLanguages.first {
+            if primaryLanguage.lowercased().hasPrefix("en") {
+                backMenuImageName = "BackToMenuButton"
+                backGameImageName = "ContinueButton"
+            } else {
+                backMenuImageName = "VoltarAoMenuButton"
+                backGameImageName = "RetomarButton"
+                label.text = "Pausado"
+            }
+        }
+
         soundEffectButton = SKSpriteNode(imageNamed: "SoundOn")
         soundEffectButton.position = CGPoint(x: 2-30, y: -popupSize.height / 2 + 170)
         soundEffectButton.name = "soundEffectButton"
@@ -46,13 +61,13 @@ class CustomPopup: SKSpriteNode {
         backgroundSoundButton.size = CGSize(width: 50, height: 50)
         self.addChild(backgroundSoundButton)
 
-        backToMenuButton = SKSpriteNode(imageNamed: "BackToMenuButton")
+        backToMenuButton = SKSpriteNode(imageNamed: backMenuImageName)
         backToMenuButton.position = CGPoint(x: 0, y: -popupSize.height / 2 + 40)
         backToMenuButton.name = "backToMenuButton"
         backToMenuButton.size = CGSize(width: 195, height: 50)
         self.addChild(backToMenuButton)
 
-        dismissButton = SKSpriteNode(imageNamed: "ContinueButton")
+        dismissButton = SKSpriteNode(imageNamed: backGameImageName)
         dismissButton.position = CGPoint(x: 0, y: -popupSize.height / 2 + 100)
         dismissButton.name = "dismissButton"
         dismissButton.size = CGSize(width: 145, height: 50)
@@ -111,6 +126,11 @@ class CustomPopup: SKSpriteNode {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     node.run(animate(0.83, 1.2))
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.22) {
+                        if self.isBackgroundSoundOn {
+                            self.startMusic()
+                        } else {
+                            self.pauseMusic()
+                        }
                         self.navController!.dismiss(animated: true)
                     }
                 }

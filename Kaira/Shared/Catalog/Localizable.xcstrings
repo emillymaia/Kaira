@@ -459,7 +459,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "A melhor escolha de todas! Assim que cheguei na casa da minha avó tive uma sensação tão boa... é bom demais relembrar isso. Não nos víamos desde os meus 7 anos. Desde que o vovô faleceu, a vovó foi deixando de nos visitar…até parar totalmente de sair."
           }
         }
@@ -523,7 +523,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Ganhei esse selo da minha avó quando viajamos para Veneza. Passamos um fim de semana lá e foi surreal. As casas coloridas são a coisa mais linda que já vi. Aliás, ela meu deu os selos mais bonitos da minha coleção, (você vai ver hahah)."
           }
         }
@@ -657,6 +657,22 @@
         }
       }
     },
+    "Music" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Music"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Música"
+          }
+        }
+      }
+    },
     "Play" : {
       "localizations" : {
         "en" : {
@@ -673,6 +689,54 @@
         }
       }
     },
+    "Privacy Policy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de Privacidade"
+          }
+        }
+      }
+    },
+    "Rate Us!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate Us!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avalie !"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurações"
+          }
+        }
+      }
+    },
     "Skip" : {
       "localizations" : {
         "en" : {
@@ -685,6 +749,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pular"
+          }
+        }
+      }
+    },
+    "Sounds" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sounds"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sons"
           }
         }
       }
@@ -813,6 +893,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comprei este selo no aeroporto El Prat, quando estava saindo de Barcelona. (pois é, faz anos que coleciono selos). Amo a Espanha e tudo que consegui lá. Barcelona é um dos meus lugares favoritos da vida!"
+          }
+        }
+      }
+    },
+    "Terms of Service" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Service"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termos de Serviço"
+          }
+        }
+      }
+    },
+    "Vibration" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibration"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibração"
           }
         }
       }
