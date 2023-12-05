@@ -70,7 +70,6 @@ extension MenuViewController: UICollectionViewDelegate {
             }
         } else {
             self.lastPressed = cell.name
-            print(cell.name)
             if let selectedCell = collectionView.cellForItem(at: indexPath) {
                 UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 selectedCell.animateClick()

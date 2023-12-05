@@ -93,7 +93,7 @@ extension MenuViewController: DataDelegate {
                 }
             }
             if lastPressed == String(localized: "Japan") {
-                self.continentModel[data].countries[data].background = "england-selo"
+                self.continentModel[data].countries[data].background = "south-korea-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+5 {
                     self.progress = data+5
@@ -143,7 +143,6 @@ extension MenuViewController {
         let data = UserDefaults.standard.integer(forKey: "progress")
         self.progress = data
         continentModel = setupFirst(self.progress)
-        print(self.progress)
     }
 
     func saveInfo(_ value: Int) {
@@ -301,7 +300,7 @@ extension MenuViewController {
                 name: String(localized: "Asia"),
                 countries: [
                     CountryModel(name: String(localized: "Japan"), background: "japan-selo"),
-                    CountryModel(name: String(localized: "South Korea"), background: "england-selo"),
+                    CountryModel(name: String(localized: "South Korea"), background: "south-korea-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]

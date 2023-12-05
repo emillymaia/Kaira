@@ -20,7 +20,7 @@ struct SouthKoreaPhaseStructure: PhaseStructure {
         southKoreaFindGame.gamePhaseModel = southKoreaGamePhaseModel
         southKoreaFindGame.customDelegate = customDelegate
         let unlockSouthKoreaStampView = UnlockedStampViewController(
-            stampImage: "england-selo",
+            stampImage: "south-korea-selo",
             label: "South KOREA STAMP TEXT 1",
             sound: "SouthkoreaAddToAlbum",
             onFinishButtonPressed: nil
