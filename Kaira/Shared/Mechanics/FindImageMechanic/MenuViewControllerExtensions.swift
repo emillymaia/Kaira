@@ -22,6 +22,10 @@ extension MenuViewController {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             preSetupJapan()
         }
+        if continent == "South Korea" {
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+            preSetupSouthKorea()
+        }
     }
 
     func preSetup<T: PhaseStructure>(_ phase: T.Type) {
@@ -47,6 +51,9 @@ extension MenuViewController {
     }
     func preSetupJapan() {
         preSetup(JapanPhaseStructure.self)
+    }
+    func preSetupSouthKorea() {
+        preSetup(SouthKoreaPhaseStructure.self)
     }
 }
 
@@ -86,10 +93,18 @@ extension MenuViewController: DataDelegate {
                 }
             }
             if lastPressed == String(localized: "Japan") {
-                self.continentModel[data].countries[data].background = "coming-soon"
+                self.continentModel[data].countries[data].background = "england-selo"
                 menuView.menuCollectionView.reloadData()
                 if self.progress < data+5 {
                     self.progress = data+5
+                    saveInfo(self.progress)
+                }
+            }
+            if lastPressed == String(localized: "South Korea") {
+                self.continentModel[data].countries[data+1].background = "coming-soon"
+                menuView.menuCollectionView.reloadData()
+                if self.progress < data+6 {
+                    self.progress = data+6
                     saveInfo(self.progress)
                 }
             }
@@ -151,7 +166,9 @@ extension MenuViewController {
         case 5:
             return japan()
         case 6:
-            return japan()
+            return southKorea()
+        case 7:
+            return southKorea()
         default:
             return england()
         }
@@ -172,8 +189,8 @@ extension MenuViewController {
                 name: String(localized: "Asia"),
                 countries: [
                     CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
+                    CountryModel(name: String(localized: "South Korea"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
-                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
@@ -195,8 +212,8 @@ extension MenuViewController {
                 name: String(localized: "Asia"),
                 countries: [
                     CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
+                    CountryModel(name: String(localized: "South Korea"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
-                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
@@ -218,8 +235,8 @@ extension MenuViewController {
                 name: String(localized: "Asia"),
                 countries: [
                     CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
+                    CountryModel(name: String(localized: "South Korea"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
-                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
@@ -240,8 +257,8 @@ extension MenuViewController {
                 name: String(localized: "Asia"),
                 countries: [
                     CountryModel(name: String(localized: "Japan"), background: "locked-selo"),
+                    CountryModel(name: String(localized: "South Korea"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
-                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
@@ -262,8 +279,30 @@ extension MenuViewController {
                 name: String(localized: "Asia"),
                 countries: [
                     CountryModel(name: String(localized: "Japan"), background: "japan-selo"),
+                    CountryModel(name: String(localized: "South Korea"), background: "locked-selo"),
                     CountryModel(name: String(localized: "China"), background: "coming-soon"),
-                    CountryModel(name: String(localized: "South Korea"), background: "coming-soon"),
+                    CountryModel(name: String(localized: "India"), background: "coming-soon")
+                ]
+            )
+        ]
+    }
+    func southKorea() -> [ContinentModel] {
+        [
+            ContinentModel(
+                name: String(localized: "Europe"),
+                countries: [
+                    CountryModel(name: String(localized: "England"), background: "england-selo"),
+                    CountryModel(name: String(localized: "France"), background: "france-selo"),
+                    CountryModel(name: String(localized: "Spain"), background: "spain-selo"),
+                    CountryModel(name: String(localized: "Italy"), background: "italy-selo")
+                ]
+            ),
+            ContinentModel(
+                name: String(localized: "Asia"),
+                countries: [
+                    CountryModel(name: String(localized: "Japan"), background: "japan-selo"),
+                    CountryModel(name: String(localized: "South Korea"), background: "england-selo"),
+                    CountryModel(name: String(localized: "China"), background: "coming-soon"),
                     CountryModel(name: String(localized: "India"), background: "coming-soon")
                 ]
             )
