@@ -101,6 +101,7 @@
 		EEDCA6502AE6BEE2008C0C29 /* SpainPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */; };
 		EEDCA6532AE6BF0C008C0C29 /* DragAndDropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */; };
 		EEDCA6552AE6BF39008C0C29 /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */; };
+		EEF8048B2B1F3D0B00E91223 /* SouthKoreaPhaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8048A2B1F3D0B00E91223 /* SouthKoreaPhaseStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +220,7 @@
 		EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainPhaseStructure.swift; sourceTree = "<group>"; };
 		EEDCA6522AE6BF0C008C0C29 /* DragAndDropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropScene.swift; sourceTree = "<group>"; };
 		EEDCA6542AE6BF39008C0C29 /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
+		EEF8048A2B1F3D0B00E91223 /* SouthKoreaPhaseStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouthKoreaPhaseStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +443,7 @@
 				EE0609362ACE0F0100BCC58C /* FrancePhaseStructure.swift */,
 				EEDCA64F2AE6BEE2008C0C29 /* SpainPhaseStructure.swift */,
 				EE77BAA72AFE6BE1009AB571 /* ItalyPhaseStructure.swift */,
+				EEF8048A2B1F3D0B00E91223 /* SouthKoreaPhaseStructure.swift */,
 			);
 			path = Phases;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				EEC53F882ABB1D5100B24261 /* DataDelegateProtocol.swift in Sources */,
 				AB3C8F642AE6EF860057924D /* SettingsViewController.swift in Sources */,
 				ABDFC88F2AAB4E7200F19D1A /* MenuCollectionCellView.swift in Sources */,
+				EEF8048B2B1F3D0B00E91223 /* SouthKoreaPhaseStructure.swift in Sources */,
 				EE77BAA82AFE6BE1009AB571 /* ItalyPhaseStructure.swift in Sources */,
 				EE77BAA12AFBC665009AB571 /* TestPhaseStruc.swift in Sources */,
 				AB3C8F282AD0F1F30057924D /* UnlockedStampViewController.swift in Sources */,
